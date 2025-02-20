@@ -1,0 +1,4 @@
+Port: COM3
+Parameters: ['4', '60', '5', 'Min']
+Mode: Mode 5
+ FlipState: False
