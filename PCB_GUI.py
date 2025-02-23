@@ -7,7 +7,7 @@ import ennocure_controller
 from ennocure_controller import EnnocureEU
 from serial.tools import list_ports
 import re
-import ast  # נשתמש להמרת מחרוזת לרשימה אמיתית
+import ast
 
 import os
 import os.path as op
@@ -18,7 +18,6 @@ from functools import partial
 import datetime
 
 file_channels = "fileChannels.txt"
-#file_parameters = "fileParameters.txt"
 file_LastOpening = "LastOpening.txt"
 
 
@@ -115,7 +114,7 @@ class GUI:
         #self.loadAndApplyStateprocess stopped(1,file_channels)
         self.setAllLastParameters()
         self.window.show()
-        exit_code = qApp.exec()  # שומר את קוד היציאה
+        exit_code = qApp.exec()
         if exit_code == 0:
             self.closeWindow(exit_code)
 
@@ -124,7 +123,7 @@ class GUI:
         if self.is_connected:
             self.window.OutPut.appendPlainText("Already connected.")
             return
-        self.is_connected = True  # עדכון המצב לחיבור פעיל
+        self.is_connected = True
         self.logger.setLevel(logging.DEBUG)
         ch = logging.StreamHandler()
         ch.setLevel(logging.DEBUG)
@@ -151,8 +150,8 @@ class GUI:
             self.window.OutPut.appendPlainText("Something wrong with connection")
 
         txt_file.close()
-        self.setPCMode(self.PC_mode)  #הוספת השורה
-        self.setSubMode(self.sub_mode)  #הוספת השורה
+        self.setPCMode(self.PC_mode)
+        self.setSubMode(self.sub_mode)
         #שתי השורות גורמות להדפסה כפולה של המצב הנשלח
 
         txt_file = open("ennocure_eu_logger.txt", "r")
@@ -166,12 +165,10 @@ class GUI:
         else:
             self.window.OutPut.appendPlainText("Something wrong with mode setting please check connection and try again")
 
-        #self.parametersFromFile(1)
-
     def closeWindow(self,exit_code):
         print("The program has closed")
         self.logger.info("The program has closed")
-        sys.exit(exit_code)  # יצא מהתוכנית עם קוד היציאה המתאים
+        sys.exit(exit_code)
 
     def setLineType(self, line, state_id):
         """Sets the line type (Sink/Source) based on the user selection in the interface."""
@@ -187,15 +184,15 @@ class GUI:
 
         if state == 'SNK':  # אם מדובר ב-Sink
             self.lines_SRC[line], self.lines_SNK[line] = 0, 1
-            button.setStyleSheet("background-color: #b2f0b2;")  # צבע כחול בהיר
+            button.setStyleSheet("background-color: #b2f0b2;")
         elif state == 'SRC':  # אם מדובר ב-Source
             self.lines_SRC[line], self.lines_SNK[line] = 1, 0
-            button.setStyleSheet("background-color: #b2d0f7;")  # צבע ירוק בהיר
+            button.setStyleSheet("background-color: #b2d0f7;")
         else:
             self.lines_SRC[line], self.lines_SNK[line] = 0, 0
-            button.setStyleSheet("")  # איפוס צבע לברירת מחדל
+            button.setStyleSheet("")
 
-        button.repaint()  # לוודא שהכפתור מתעדכן מיידית
+        button.repaint()# refresh the button
 
         self.PCB.set_electrodes(self.lines_status * self.lines_SRC, self.lines_status * self.lines_SNK)
 
@@ -213,9 +210,7 @@ class GUI:
         else:
             self.lines_status[line] = 0
 
-        # בודק אם הקריאה היא מתוך toggleAll
         if not self.from_toggle_all:
-            #print("when toggleAll is False")
             self.PCB.set_electrodes(self.lines_status * self.lines_SRC, self.lines_status * self.lines_SNK)
             self.window.OutPut.appendPlainText(f"Line {line} {'ON' if state else 'OFF'}")
             try:
@@ -264,8 +259,6 @@ class GUI:
     def inverse(self):
         """Changes the state of the channels based on ComboBox selections and updates the channels afterward."""
         newList = []
-        #print("before inverse:")
-        #print(f"sink: {self.lines_SNK}, source: {self.lines_SRC}")
         for i in range(self.numberOfChannels):
             combo = getattr(self.window, f"Line{i}_type", None)  # Access the appropriate ComboBox
             if combo is None:
@@ -275,12 +268,6 @@ class GUI:
             newList.append(state)
 
         self.updateChannels(newList)
-
-        #print("after inverse:")
-        #print(newList)
-
-        #print(f"sink: {self.lines_SNK}, source: {self.lines_SRC}")
-
 
     def setAllLastParameters(self):
         """Reads the last saved parameters from a file and updates the UI with the values."""
@@ -292,7 +279,6 @@ class GUI:
 
             print(f"Lines read: {lines}")  # בדיקה ראשונית
 
-            # בדיקה אם יש נקודתיים בכל שורה לפני split
             for i, line in enumerate(lines[:4]):
                 if ":" not in line:
                     print(f"Invalid format in line {i}: {line}")
@@ -301,7 +287,6 @@ class GUI:
             port = lines[0].split(":", 1)[1].strip()
             self.window.editPort.setText(port)
 
-            # עיבוד `parameters`
             parameters_str = lines[1].split(":", 1)[1].strip()
             try:
                 param_list = ast.literal_eval(parameters_str)  # המרה לרשימה
@@ -404,7 +389,7 @@ class GUI:
         """Sets the time units (hours, minutes, seconds)."""
         self.totalTimeUnits = [0, 0, 0]
         self.totalTimeUnits[input_TimeUnit] = 1
-        self.window.OutPut.appendPlainText(f'Your new units are: {self.totalTimeUnits}')
+        #self.window.OutPut.appendPlainText(f'Your new units are: {self.totalTimeUnits}')
 
     def setTotalTime(self):
         """Calculates the total time based on the selected time units."""
