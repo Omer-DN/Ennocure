@@ -8,6 +8,7 @@ from ennocure_controller import EnnocureEU
 from serial.tools import list_ports
 import re
 import ast
+from PySide6.QtWidgets import QCheckBox
 
 import os
 import os.path as op
@@ -49,7 +50,7 @@ class GUI:
     is_connected = False
     doFlip = False
     toDoEvenFlip = False
-
+    checkboxes = []
     def __init__(self):
 
         """Initialize the program: Open the UI, connect buttons to functions, and load the UI."""
@@ -111,6 +112,20 @@ class GUI:
             line_button_state.append(getattr(self.window, f"Line{i}_onoff"))
             line_button_state[i].stateChanged.connect(lambda checked, i=i: self.setLineActive(checked, i))
 
+        self.checkboxes = [0] * self.numberOfChannels  # מערך מצב הקבוצות
+        self.group_checkboxes = [[] for _ in range(self.numberOfChannels)]  # שמירת כל ה-checkboxים לפי קבוצה
+        self.last_state = [0] * self.numberOfChannels  # לשמור את המצב הקודם של כל קבוצה
+
+        for i in range(self.numberOfChannels):
+            layout = getattr(self.window, f"gridLayout_{i}", None)  # קבלת ה-layout של הקבוצה
+            if layout:
+                for j in range(layout.count()):
+                    widget = layout.itemAt(j).widget()
+                    if isinstance(widget, QCheckBox):
+                        self.group_checkboxes[i].append(widget)  # שמירת ה-checkboxים של הקבוצה
+                        widget.stateChanged.connect(
+                            partial(self.updateGroupState, i, widget))  # חיבור לפונקציה שתעדכן את המצב
+
         #self.loadAndApplyStateprocess stopped(1,file_channels)
         self.setAllLastParameters()
         self.window.show()
@@ -164,6 +179,21 @@ class GUI:
             self.window.OutPut.appendPlainText("Sub_mode set to 0 (standalone base)")
         else:
             self.window.OutPut.appendPlainText("Something wrong with mode setting please check connection and try again")
+
+    def updateGroupState(self, group_index, widget, state):
+        """Updates the group state and changes all the checkboxes within it"""
+        if state == 2:
+            state = 1
+
+        if self.checkboxes[group_index] == state:
+            return
+
+        self.checkboxes[group_index] = state
+        self.last_state[group_index] = state  # עדכון המצב הקודם
+        for checkbox in self.group_checkboxes[group_index]:
+            if checkbox.isChecked() != state:
+                checkbox.setChecked(state)
+        print(f"Group {group_index} state: {self.checkboxes[group_index]}")
 
     def closeWindow(self,exit_code):
         print("The program has closed")
@@ -331,7 +361,7 @@ class GUI:
         self.window.OutPut.appendPlainText(f"port: {port}")
 
         flipState = True if self.toDoEvenFlip == 1 else False
-        content = f"Port: {port}\nParameters: {param}\nMode: {mode}\n FlipState: {flipState}"
+        content = f"Port: {port}, Parameters: {param}, Mode: {mode}, FlipState: {flipState}"
 
         with open("LastOpening.txt", "w", encoding="utf-8") as file:
             file.write(content)
@@ -570,14 +600,6 @@ class GUI:
 
     def updateChannels(self, state_values):
         """
-        Updates the channels in the GUI based on the provided state values.
-        It also updates internal data structures to reflect the current state of the channels.
-
-        Args:
-            state_values (list): A list of state values representing the channel configuration,
-                                  where 1 = Source and 0 = Sink.
-
-        Updates:
             The function updates the ComboBox elements in the GUI to reflect the correct state
             (Source or Sink), changes their background colors accordingly, and updates
             the internal `lines_SRC` and `lines_SNK` lists.
@@ -648,7 +670,6 @@ class GUI:
         try:
             self.selected_mode = self.window.ChannelsMode.currentText()  # Get selected mode from ComboBox
             mode_number = int(self.selected_mode.split()[1])  # Extract mode number from string (e.g., "Mode 2" -> 2)
-            #self.parametersFromFile(mode_number)  # Load parameters for the selected mode
             self.loadAndApplyState(mode_number, file_channels)  # Apply the state for the selected mode
 
         except (IndexError, ValueError) as e:
