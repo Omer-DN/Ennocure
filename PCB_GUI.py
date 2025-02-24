@@ -114,7 +114,6 @@ class GUI:
 
         self.checkboxes = [0] * self.numberOfChannels  # מערך מצב הקבוצות
         self.group_checkboxes = [[] for _ in range(self.numberOfChannels)]  # שמירת כל ה-checkboxים לפי קבוצה
-        self.last_state = [0] * self.numberOfChannels  # לשמור את המצב הקודם של כל קבוצה
 
         for i in range(self.numberOfChannels):
             layout = getattr(self.window, f"gridLayout_{i}", None)  # קבלת ה-layout של הקבוצה
@@ -189,11 +188,20 @@ class GUI:
             return
 
         self.checkboxes[group_index] = state
-        self.last_state[group_index] = state  # עדכון המצב הקודם
         for checkbox in self.group_checkboxes[group_index]:
             if checkbox.isChecked() != state:
                 checkbox.setChecked(state)
         print(f"Group {group_index} state: {self.checkboxes[group_index]}")
+        # קריאה לפונקציות setLineType ו- setLineActive על פי המצב
+        line = group_index  # הערוץ שתואם לקבוצה (נניח שהקבוצה מייצגת ערוץ)
+
+        if self.checkboxes[group_index] == 1:  # אם המצב 1, אנחנו מדליקים את הערוץ
+            self.setLineActive(1, line)  # הדלקת הערוץ
+            self.setLineType(line, "SRC")  # הגדרת המצב כ-Source (לפי הצורך שלך)
+        else:  # אם המצב 0, אנחנו מכבים את הערוץ
+            self.setLineActive(0, line)  # כיבוי הערוץ
+            self.setLineType(line, "SNK")  # הגדרת המצב כ-Sink (לפי הצורך שלך)
+        self.updateChannels(self.checkboxes)
 
     def closeWindow(self,exit_code):
         print("The program has closed")
@@ -210,7 +218,7 @@ class GUI:
             state = button.currentText()  # fallback ל- currentText()
 
         print(f"Line {line} state: {state}")  # הדפסה לבדיקה
-        self.window.OutPut.appendPlainText(f"Line {line} state: {state}")
+        #self.window.OutPut.appendPlainText(f"Line {line} state: {state}")
 
         if state == 'SNK':  # אם מדובר ב-Sink
             self.lines_SRC[line], self.lines_SNK[line] = 0, 1
@@ -242,7 +250,7 @@ class GUI:
 
         if not self.from_toggle_all:
             self.PCB.set_electrodes(self.lines_status * self.lines_SRC, self.lines_status * self.lines_SNK)
-            self.window.OutPut.appendPlainText(f"Line {line} {'ON' if state else 'OFF'}")
+            #self.window.OutPut.appendPlainText(f"Line {line} {'ON' if state else 'OFF'}")
             try:
                 self.PCB.gen_command_data(True)
             except Exception as error:
@@ -286,6 +294,7 @@ class GUI:
             self.toDoEvenFlip = 0
             print("flip OFF")
             self.window.OutPut.appendPlainText("flip OFF")
+
     def inverse(self):
         """Changes the state of the channels based on ComboBox selections and updates the channels afterward."""
         newList = []
@@ -303,11 +312,14 @@ class GUI:
         """Reads the last saved parameters from a file and updates the UI with the values."""
         try:
             lines = self.readFile(file_LastOpening)
-            if not lines or len(lines) < 4:
+            if len(lines) == 4:
+                #lines = content  # אם יש בדיוק 4 שורות, נסמן את content כlines
+                print(f"File content updated to: {lines}")
+            else:
                 print("File content is missing or too short")
                 return
 
-            print(f"Lines read: {lines}")  # בדיקה ראשונית
+            #print(f"Lines read: {lines}")  # בדיקה ראשונית
 
             for i, line in enumerate(lines[:4]):
                 if ":" not in line:
@@ -361,13 +373,14 @@ class GUI:
         self.window.OutPut.appendPlainText(f"port: {port}")
 
         flipState = True if self.toDoEvenFlip == 1 else False
-        content = f"Port: {port}, Parameters: {param}, Mode: {mode}, FlipState: {flipState}"
+        content = f"Port: {port}\nParameters: {param}\nMode: {mode}\nFlipState: {flipState}"
 
         with open("LastOpening.txt", "w", encoding="utf-8") as file:
             file.write(content)
 
         print("Parameters saved to LastOpening.txt")
         self.window.OutPut.appendPlainText("Parameters saved to LastOpening.txt")
+
     def setEditPort(self):
         """Updates the port based on user input, while checking the input validity."""
         editPort = self.window.editPort.text().strip()  # Removes unnecessary spaces
@@ -446,7 +459,6 @@ class GUI:
             if self.doFlip:
                 self.inverse()
             self.doFlip = not self.doFlip
-
 
         # Time and cycle management
         current_datetime = datetime.datetime.now()
@@ -555,7 +567,6 @@ class GUI:
         evenFlip = False
         numberForEvenFlip = 1
 
-
     def saveChannels(self):
         """
         Saves the current channel configuration to the file. Updates the mode's data based on
@@ -591,7 +602,7 @@ class GUI:
             with open(file_channels, "w") as file:
                 file.writelines(lines)
 
-            self.setParameters()
+            #self.setParameters()
             self.window.OutPut.appendPlainText(f"Mode {selected_mode_number} saved successfully.")
 
         except Exception as e:
@@ -614,17 +625,22 @@ class GUI:
             if int(value) == 1:  # Source
                 self.lines_SRC[i], self.lines_SNK[i] = 1, 0
                 combo.setStyleSheet("background-color: #b2f0b2;")  # Light green color
-
+                # Simulate clicking the checkbox for Source
             elif int(value) == 0:  # Sink
                 self.lines_SRC[i], self.lines_SNK[i] = 0, 1
                 combo.setStyleSheet("background-color: #b2d0f7;")  # Light blue color
-
+                # Simulate clicking the checkbox for Sink
             else:  # Unrecognized value
                 self.lines_SRC[i], self.lines_SNK[i] = 0, 0
+            self.toggleCheckbox(i, int(value))
 
-        # Uncomment to see internal values
-        # print(self.lines_SRC)
-        # print(self.lines_SNK)
+    def toggleCheckbox(self, index, state):
+        """
+        Simulate clicking the checkbox for a specific group based on the state (True for checked, False for unchecked).
+        """
+        checkbox = self.group_checkboxes[index]  # Retrieve the checkbox group
+        for cb in checkbox:
+            cb.setChecked(state)
 
     def get_state_in_file(self, mode_number, file):
         """
@@ -644,7 +660,6 @@ class GUI:
             self.window.OutPut.appendPlainText("File not found.")  # Handle file not found error
         except Exception as e:
             self.window.OutPut.appendPlainText(f"An error occurred: {e}")  # Handle other errors
-
 
     def loadAndApplyState(self, mode_number, file):
         """
