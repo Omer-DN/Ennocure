@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1097</width>
-    <height>696</height>
+    <width>1478</width>
+    <height>659</height>
    </rect>
   </property>
   <property name="font">
@@ -228,7 +228,7 @@
    <property name="layoutDirection">
     <enum>Qt::LayoutDirection::LeftToRight</enum>
    </property>
-   <layout class="QGridLayout" name="gridLayout_2">
+   <layout class="QGridLayout" name="gridLayout_2222">
     <property name="sizeConstraint">
      <enum>QLayout::SizeConstraint::SetFixedSize</enum>
     </property>
@@ -241,55 +241,6 @@
     <property name="verticalSpacing">
      <number>0</number>
     </property>
-    <item row="4" column="1">
-     <widget class="QCheckBox" name="Line3_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="11" column="2">
-     <widget class="QComboBox" name="Line10_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="11" column="1">
-     <widget class="QCheckBox" name="Line10_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="20" column="0">
-     <widget class="QLabel" name="label_26">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 19</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
     <item row="23" column="1">
      <widget class="QCheckBox" name="Line22_onoff">
       <property name="text">
@@ -297,80 +248,11 @@
       </property>
      </widget>
     </item>
-    <item row="8" column="1">
-     <widget class="QCheckBox" name="Line7_onoff">
+    <item row="6" column="1">
+     <widget class="QCheckBox" name="Line5_onoff">
       <property name="text">
        <string>On/Off</string>
       </property>
-     </widget>
-    </item>
-    <item row="19" column="0">
-     <widget class="QLabel" name="label_24">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 18</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="2">
-     <widget class="QComboBox" name="Line6_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="8" column="2">
-     <widget class="QComboBox" name="Line7_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="9" column="2">
-     <widget class="QComboBox" name="Line8_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
      </widget>
     </item>
     <item row="22" column="1">
@@ -380,29 +262,8 @@
       </property>
      </widget>
     </item>
-    <item row="13" column="1">
-     <widget class="QCheckBox" name="Line12_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="14" column="1">
-     <widget class="QCheckBox" name="Line13_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="9" column="1">
-     <widget class="QCheckBox" name="Line8_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="23" column="0">
-     <widget class="QLabel" name="label_30">
+    <item row="22" column="0">
+     <widget class="QLabel" name="label_27">
       <property name="font">
        <font>
         <pointsize>11</pointsize>
@@ -412,175 +273,7 @@
        <enum>Qt::LayoutDirection::LeftToRight</enum>
       </property>
       <property name="text">
-       <string>Line 22</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="16" column="2">
-     <widget class="QComboBox" name="Line15_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="3" column="2">
-     <widget class="QComboBox" name="Line2_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="5" column="2">
-     <widget class="QComboBox" name="Line4_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="10" column="2">
-     <widget class="QComboBox" name="Line9_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="5" column="0">
-     <widget class="QLabel" name="label_10">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 4</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="1">
-     <widget class="QCheckBox" name="Line4_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="21" column="1">
-     <widget class="QCheckBox" name="Line20_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="0">
-     <widget class="QLabel" name="label_8">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 0</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="15" column="1">
-     <widget class="QCheckBox" name="Line14_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="18" column="1">
-     <widget class="QCheckBox" name="Line17_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="9" column="0">
-     <widget class="QLabel" name="label_15">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 8</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="17" column="0">
-     <widget class="QLabel" name="label_23">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 16</string>
+       <string>Line 21</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -591,155 +284,6 @@
      <widget class="QCheckBox" name="Line16_onoff">
       <property name="text">
        <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QCheckBox" name="Line1_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="12" column="1">
-     <widget class="QCheckBox" name="Line11_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="11" column="0">
-     <widget class="QLabel" name="label_17">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 10</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="15" column="0">
-     <widget class="QLabel" name="label_19">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 14</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="1">
-     <widget class="QCheckBox" name="Line2_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="2">
-     <widget class="QComboBox" name="Line5_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="21" column="0">
-     <widget class="QLabel" name="label_28">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 20</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="10" column="1">
-     <widget class="QCheckBox" name="Line9_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="1">
-     <widget class="QCheckBox" name="Line6_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="20" column="1">
-     <widget class="QCheckBox" name="Line19_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="12" column="0">
-     <widget class="QLabel" name="label_18">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 11</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="0">
-     <widget class="QLabel" name="label_11">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 3</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </item>
@@ -761,8 +305,72 @@
       </property>
      </widget>
     </item>
-    <item row="21" column="2">
-     <widget class="QComboBox" name="Line20_type">
+    <item row="23" column="0">
+     <widget class="QLabel" name="label_30">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 22</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="QCheckBox" name="Line6_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="18" column="1">
+     <widget class="QCheckBox" name="Line17_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="0">
+     <widget class="QLabel" name="label_19">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 14</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QCheckBox" name="Line3_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="1">
+     <widget class="QCheckBox" name="Line11_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QComboBox" name="Line1_type">
       <property name="currentText">
        <string>SRC</string>
       </property>
@@ -778,8 +386,8 @@
       </item>
      </widget>
     </item>
-    <item row="14" column="0">
-     <widget class="QLabel" name="label_20">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_8">
       <property name="font">
        <font>
         <pointsize>11</pointsize>
@@ -789,15 +397,15 @@
        <enum>Qt::LayoutDirection::LeftToRight</enum>
       </property>
       <property name="text">
-       <string>Line 13</string>
+       <string>Line 0</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </item>
-    <item row="15" column="2">
-     <widget class="QComboBox" name="Line14_type">
+    <item row="4" column="2">
+     <widget class="QComboBox" name="Line3_type">
       <property name="currentText">
        <string>SRC</string>
       </property>
@@ -831,32 +439,33 @@
       </property>
      </widget>
     </item>
-    <item row="12" column="2">
-     <widget class="QComboBox" name="Line11_type">
-      <property name="currentText">
-       <string>SRC</string>
+    <item row="20" column="0">
+     <widget class="QLabel" name="label_26">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
       </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 19</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
      </widget>
     </item>
-    <item row="0" column="1">
-     <widget class="QCheckBox" name="Line0_onoff">
+    <item row="2" column="1">
+     <widget class="QCheckBox" name="Line1_onoff">
       <property name="text">
        <string>On/Off</string>
       </property>
      </widget>
     </item>
-    <item row="23" column="2">
-     <widget class="QComboBox" name="Line22_type">
+    <item row="8" column="2">
+     <widget class="QComboBox" name="Line7_type">
       <property name="currentText">
        <string>SRC</string>
       </property>
@@ -870,76 +479,6 @@
         <string>SNK</string>
        </property>
       </item>
-     </widget>
-    </item>
-    <item row="0" column="2">
-     <widget class="QComboBox" name="Line0_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="16" column="0">
-     <widget class="QLabel" name="label_22">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 15</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="2">
-     <widget class="QComboBox" name="Line3_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="3" column="0">
-     <widget class="QLabel" name="label_16">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 2</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
      </widget>
     </item>
     <item row="13" column="2">
@@ -976,41 +515,6 @@
       </item>
      </widget>
     </item>
-    <item row="7" column="0">
-     <widget class="QLabel" name="label_12">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 6</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="19" column="2">
-     <widget class="QComboBox" name="Line18_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
-     </widget>
-    </item>
     <item row="13" column="0">
      <widget class="QLabel" name="label_21">
       <property name="font">
@@ -1023,6 +527,74 @@
       </property>
       <property name="text">
        <string>Line 12</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="20" column="1">
+     <widget class="QCheckBox" name="Line19_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="16" column="1">
+     <widget class="QCheckBox" name="Line15_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="16" column="0">
+     <widget class="QLabel" name="label_22">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 15</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="18" column="0">
+     <widget class="QLabel" name="label_25">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 17</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="17" column="0">
+     <widget class="QLabel" name="label_23">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 16</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -1047,8 +619,26 @@
       </property>
      </widget>
     </item>
-    <item row="2" column="2">
-     <widget class="QComboBox" name="Line1_type">
+    <item row="9" column="0">
+     <widget class="QLabel" name="label_15">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 8</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QComboBox" name="Line2_type">
       <property name="currentText">
        <string>SRC</string>
       </property>
@@ -1062,6 +652,104 @@
         <string>SNK</string>
        </property>
       </item>
+     </widget>
+    </item>
+    <item row="19" column="0">
+     <widget class="QLabel" name="label_24">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 18</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QCheckBox" name="Line4_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="2">
+     <widget class="QComboBox" name="Line4_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QCheckBox" name="Line2_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="1">
+     <widget class="QCheckBox" name="Line14_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="2">
+     <widget class="QComboBox" name="Line11_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLabel" name="label_12">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 6</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="1">
+     <widget class="QCheckBox" name="Line8_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
      </widget>
     </item>
     <item row="10" column="0">
@@ -1082,8 +770,335 @@
       </property>
      </widget>
     </item>
+    <item row="19" column="1">
+     <widget class="QCheckBox" name="Line18_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="0">
+     <widget class="QLabel" name="label_18">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 11</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="1">
+     <widget class="QCheckBox" name="Line9_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="2">
+     <widget class="QComboBox" name="Line8_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="17" column="2">
+     <widget class="QComboBox" name="Line16_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="10" column="2">
+     <widget class="QComboBox" name="Line9_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="23" column="2">
+     <widget class="QComboBox" name="Line22_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="11" column="0">
+     <widget class="QLabel" name="label_17">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 10</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="1">
+     <widget class="QCheckBox" name="Line13_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="label_10">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 4</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="1">
+     <widget class="QCheckBox" name="Line12_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="1">
+     <widget class="QCheckBox" name="Line7_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="2">
+     <widget class="QComboBox" name="Line13_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="21" column="1">
+     <widget class="QCheckBox" name="Line20_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="16" column="2">
+     <widget class="QComboBox" name="Line15_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_16">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 2</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QCheckBox" name="Line0_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="21" column="2">
+     <widget class="QComboBox" name="Line20_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="6" column="2">
+     <widget class="QComboBox" name="Line5_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="14" column="0">
+     <widget class="QLabel" name="label_20">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 13</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="19" column="2">
+     <widget class="QComboBox" name="Line18_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
     <item row="18" column="2">
      <widget class="QComboBox" name="Line17_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_11">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 3</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QComboBox" name="Line0_type">
       <property name="currentText">
        <string>SRC</string>
       </property>
@@ -1116,15 +1131,8 @@
       </item>
      </widget>
     </item>
-    <item row="19" column="1">
-     <widget class="QCheckBox" name="Line18_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="17" column="2">
-     <widget class="QComboBox" name="Line16_type">
+    <item row="15" column="2">
+     <widget class="QComboBox" name="Line14_type">
       <property name="currentText">
        <string>SRC</string>
       </property>
@@ -1140,8 +1148,32 @@
       </item>
      </widget>
     </item>
-    <item row="18" column="0">
-     <widget class="QLabel" name="label_25">
+    <item row="7" column="2">
+     <widget class="QComboBox" name="Line6_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="11" column="1">
+     <widget class="QCheckBox" name="Line10_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="21" column="0">
+     <widget class="QLabel" name="label_28">
       <property name="font">
        <font>
         <pointsize>11</pointsize>
@@ -1151,47 +1183,15 @@
        <enum>Qt::LayoutDirection::LeftToRight</enum>
       </property>
       <property name="text">
-       <string>Line 17</string>
+       <string>Line 20</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </item>
-    <item row="22" column="0">
-     <widget class="QLabel" name="label_27">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 21</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="1">
-     <widget class="QCheckBox" name="Line5_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="16" column="1">
-     <widget class="QCheckBox" name="Line15_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="14" column="2">
-     <widget class="QComboBox" name="Line13_type">
+    <item row="11" column="2">
+     <widget class="QComboBox" name="Line10_type">
       <property name="currentText">
        <string>SRC</string>
       </property>
@@ -1482,317 +1482,6 @@
     <string>Enter Port:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>1110</x>
-     <y>200</y>
-     <width>341</width>
-     <height>331</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>picture/petch3.jpg</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QFrame" name="gridFrame_3">
-   <property name="geometry">
-    <rect>
-     <x>1270</x>
-     <y>240</y>
-     <width>16</width>
-     <height>201</height>
-    </rect>
-   </property>
-   <layout class="QGridLayout" name="gridLayout11">
-    <property name="sizeConstraint">
-     <enum>QLayout::SizeConstraint::SetFixedSize</enum>
-    </property>
-    <item row="7" column="1">
-     <widget class="QCheckBox" name="checkBox115">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="1">
-     <widget class="QCheckBox" name="checkBox113">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="10" column="1">
-     <widget class="QCheckBox" name="checkBox118">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="11" column="1">
-     <widget class="QCheckBox" name="checkBox119">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QCheckBox" name="checkBox111">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="1">
-     <widget class="QCheckBox" name="checkBox114">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QCheckBox" name="checkBox112">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="12" column="1">
-     <widget class="QCheckBox" name="checkBox1101">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="9" column="1">
-     <widget class="QCheckBox" name="checkBox117">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="8" column="1">
-     <widget class="QCheckBox" name="checkBox116">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="1">
-     <widget class="QCheckBox" name="checkBox1112">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="1">
-     <widget class="QCheckBox" name="checkBox110">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QGroupBox" name="gridGroupBox_4">
-   <property name="geometry">
-    <rect>
-     <x>1279</x>
-     <y>250</y>
-     <width>21</width>
-     <height>181</height>
-    </rect>
-   </property>
-   <layout class="QGridLayout" name="gridLayout10">
-    <property name="sizeConstraint">
-     <enum>QLayout::SizeConstraint::SetFixedSize</enum>
-    </property>
-    <item row="5" column="1">
-     <widget class="QCheckBox" name="checkBox114_2">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="1">
-     <widget class="QCheckBox" name="checkBox113_2">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="1">
-     <widget class="QCheckBox" name="checkBox116_2">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="1">
-     <widget class="QCheckBox" name="checkBox115_2">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QCheckBox" name="checkBox111_2">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="8" column="1">
-     <widget class="QCheckBox" name="checkBox117_2">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QCheckBox" name="checkBox110_2">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="1">
-     <widget class="QCheckBox" name="checkBox1112_2">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="9" column="1">
-     <widget class="QCheckBox" name="checkBox118_2">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QCheckBox" name="checkBox112_2">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="10" column="1">
-     <widget class="QCheckBox" name="checkBox119_2">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QFrame" name="gridFrame_5">
-   <property name="geometry">
-    <rect>
-     <x>1260</x>
-     <y>250</y>
-     <width>16</width>
-     <height>181</height>
-    </rect>
-   </property>
-   <layout class="QGridLayout" name="gridLayout12">
-    <property name="sizeConstraint">
-     <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
-    </property>
-    <property name="rightMargin">
-     <number>2</number>
-    </property>
-    <property name="bottomMargin">
-     <number>1</number>
-    </property>
-    <property name="horizontalSpacing">
-     <number>6</number>
-    </property>
-    <item row="6" column="1">
-     <widget class="QCheckBox" name="checkBox116_3">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QCheckBox" name="checkBox111_3">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="1">
-     <widget class="QCheckBox" name="checkBox113_3">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="1">
-     <widget class="QCheckBox" name="checkBox114_3">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QCheckBox" name="checkBox112_3">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="10" column="1">
-     <widget class="QCheckBox" name="checkBox119_4">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="8" column="1">
-     <widget class="QCheckBox" name="checkBox118_3">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="9" column="1">
-     <widget class="QCheckBox" name="checkBox119_3">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="1">
-     <widget class="QCheckBox" name="checkBox117_3">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="1">
-     <widget class="QCheckBox" name="checkBox1112_3">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QCheckBox" name="checkBox110_3">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
   <widget class="QCheckBox" name="inverstClick">
    <property name="geometry">
     <rect>
@@ -1824,29 +1513,1276 @@
     <bool>false</bool>
    </property>
   </widget>
-  <zorder>label</zorder>
-  <zorder>PC_Mode</zorder>
-  <zorder>pcmodetitle</zorder>
-  <zorder>OutPut</zorder>
-  <zorder>gridLayoutWidget</zorder>
-  <zorder>gridLayoutWidget_2</zorder>
-  <zorder>StopAlgo</zorder>
-  <zorder>PC_SubMode</zorder>
-  <zorder>submodetitle</zorder>
-  <zorder>onoff_all</zorder>
-  <zorder>ChannelsMode</zorder>
-  <zorder>label_6</zorder>
-  <zorder>SaveState</zorder>
-  <zorder>ConnectButton</zorder>
-  <zorder>RunSenario</zorder>
-  <zorder>inverseButton</zorder>
-  <zorder>showPorts</zorder>
-  <zorder>editPort</zorder>
-  <zorder>label_29</zorder>
-  <zorder>gridFrame_3</zorder>
-  <zorder>gridGroupBox_4</zorder>
-  <zorder>gridFrame_5</zorder>
-  <zorder>inverstClick</zorder>
+  <widget class="QWidget" name="gridLayoutWidget_3">
+   <property name="geometry">
+    <rect>
+     <x>1300</x>
+     <y>180</y>
+     <width>16</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_8">
+    <item row="4" column="0">
+     <widget class="QCheckBox" name="checkBox_95">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QCheckBox" name="checkBox_98">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QCheckBox" name="checkBox_92">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QCheckBox" name="checkBox_99">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QCheckBox" name="checkBox_97">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QCheckBox" name="checkBox_94">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QCheckBox" name="checkBox_93">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QCheckBox" name="checkBox_91">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_4">
+   <property name="geometry">
+    <rect>
+     <x>1320</x>
+     <y>190</y>
+     <width>16</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_7">
+    <item row="6" column="0">
+     <widget class="QCheckBox" name="checkBox_87">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QCheckBox" name="checkBox_82">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QCheckBox" name="checkBox_86">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QCheckBox" name="checkBox_83">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QCheckBox" name="checkBox_88">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QCheckBox" name="checkBox_84">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QCheckBox" name="checkBox_85">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QCheckBox" name="checkBox_81">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_5">
+   <property name="geometry">
+    <rect>
+     <x>1340</x>
+     <y>200</y>
+     <width>16</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_6">
+    <item row="3" column="0">
+     <widget class="QCheckBox" name="checkBox_74">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QCheckBox" name="checkBox_77">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QCheckBox" name="checkBox_76">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QCheckBox" name="checkBox_73">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QCheckBox" name="checkBox_75">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QCheckBox" name="checkBox_72">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QCheckBox" name="checkBox_71">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_6">
+   <property name="geometry">
+    <rect>
+     <x>1360</x>
+     <y>210</y>
+     <width>16</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_5">
+    <item row="5" column="0">
+     <widget class="QCheckBox" name="checkBox_66">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QCheckBox" name="checkBox_65">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QCheckBox" name="checkBox_62">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QCheckBox" name="checkBox_63">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QCheckBox" name="checkBox_64">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QCheckBox" name="checkBox_61">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_7">
+   <property name="geometry">
+    <rect>
+     <x>1380</x>
+     <y>220</y>
+     <width>16</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_4">
+    <item row="3" column="0">
+     <widget class="QCheckBox" name="checkBox_54">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QCheckBox" name="checkBox_53">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QCheckBox" name="checkBox_52">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QCheckBox" name="checkBox_55">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QCheckBox" name="checkBox_51">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_8">
+   <property name="geometry">
+    <rect>
+     <x>1400</x>
+     <y>230</y>
+     <width>16</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="2" column="0">
+     <widget class="QCheckBox" name="checkBox_43">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QCheckBox" name="checkBox_42">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QCheckBox" name="checkBox_44">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QCheckBox" name="checkBox_41">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_9">
+   <property name="geometry">
+    <rect>
+     <x>1420</x>
+     <y>240</y>
+     <width>16</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="1" column="0">
+     <widget class="QCheckBox" name="checkBox_32">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QCheckBox" name="checkBox_33">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QCheckBox" name="checkBox_31">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_10">
+   <property name="geometry">
+    <rect>
+     <x>1435</x>
+     <y>250</y>
+     <width>16</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_1">
+    <item row="1" column="0">
+     <widget class="QCheckBox" name="checkBox_22">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QCheckBox" name="checkBox_21">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_11">
+   <property name="geometry">
+    <rect>
+     <x>1450</x>
+     <y>260</y>
+     <width>16</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_0">
+    <item row="0" column="0">
+     <widget class="QCheckBox" name="checkBox_11">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_12">
+   <property name="geometry">
+    <rect>
+     <x>1280</x>
+     <y>170</y>
+     <width>16</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_9">
+    <item row="6" column="0">
+     <widget class="QCheckBox" name="checkBox_107">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QCheckBox" name="checkBox_108">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="0">
+     <widget class="QCheckBox" name="checkBox_109">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QCheckBox" name="checkBox_103">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QCheckBox" name="checkBox_104">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QCheckBox" name="checkBox_102">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QCheckBox" name="checkBox_106">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QCheckBox" name="checkBox_105">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="0">
+     <widget class="QCheckBox" name="checkBox_1010">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QCheckBox" name="checkBox_101">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_13">
+   <property name="geometry">
+    <rect>
+     <x>1260</x>
+     <y>160</y>
+     <width>16</width>
+     <height>221</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_10">
+    <item row="4" column="0">
+     <widget class="QCheckBox" name="checkBox_11_5">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QCheckBox" name="checkBox_126">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QCheckBox" name="checkBox_112">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QCheckBox" name="checkBox_11_6">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QCheckBox" name="checkBox_111">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QCheckBox" name="checkBox_11_4">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="0">
+     <widget class="QCheckBox" name="checkBox_9">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QCheckBox" name="checkBox_113">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="0">
+     <widget class="QCheckBox" name="checkBox_127">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QCheckBox" name="checkBox_125">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="0">
+     <widget class="QCheckBox" name="checkBox_10">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_19">
+   <property name="geometry">
+    <rect>
+     <x>1240</x>
+     <y>150</y>
+     <width>16</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_11">
+    <item row="11" column="0">
+     <widget class="QCheckBox" name="checkBox_160">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QCheckBox" name="checkBox_13">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="0">
+     <widget class="QCheckBox" name="checkBox_3">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QCheckBox" name="checkBox_8">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QCheckBox" name="checkBox_6">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QCheckBox" name="checkBox_14">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="0">
+     <widget class="QCheckBox" name="checkBox_5">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QCheckBox" name="checkBox_12">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QCheckBox" name="checkBox_2">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QCheckBox" name="checkBox_7">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="0">
+     <widget class="QCheckBox" name="checkBox_4">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QCheckBox" name="checkBox_16">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_21">
+   <property name="geometry">
+    <rect>
+     <x>1180</x>
+     <y>180</y>
+     <width>16</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_14">
+    <item row="4" column="0">
+     <widget class="QCheckBox" name="checkBox_167">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QCheckBox" name="checkBox_168">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QCheckBox" name="checkBox_169">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QCheckBox" name="checkBox_170">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QCheckBox" name="checkBox_171">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QCheckBox" name="checkBox_172">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QCheckBox" name="checkBox_173">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QCheckBox" name="checkBox_174">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_22">
+   <property name="geometry">
+    <rect>
+     <x>1120</x>
+     <y>210</y>
+     <width>16</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_17">
+    <item row="6" column="0">
+     <widget class="QCheckBox" name="checkBox_175">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QCheckBox" name="checkBox_176">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QCheckBox" name="checkBox_177">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QCheckBox" name="checkBox_178">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QCheckBox" name="checkBox_179">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QCheckBox" name="checkBox_180">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_23">
+   <property name="geometry">
+    <rect>
+     <x>1160</x>
+     <y>190</y>
+     <width>16</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_15">
+    <item row="6" column="0">
+     <widget class="QCheckBox" name="checkBox_181">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QCheckBox" name="checkBox_182">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QCheckBox" name="checkBox_183">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QCheckBox" name="checkBox_184">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QCheckBox" name="checkBox_185">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QCheckBox" name="checkBox_186">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QCheckBox" name="checkBox_187">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QCheckBox" name="checkBox_188">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_24">
+   <property name="geometry">
+    <rect>
+     <x>1200</x>
+     <y>170</y>
+     <width>16</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_13">
+    <item row="6" column="0">
+     <widget class="QCheckBox" name="checkBox_189">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QCheckBox" name="checkBox_190">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="0">
+     <widget class="QCheckBox" name="checkBox_191">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QCheckBox" name="checkBox_192">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QCheckBox" name="checkBox_193">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QCheckBox" name="checkBox_194">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QCheckBox" name="checkBox_195">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QCheckBox" name="checkBox_196">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="0">
+     <widget class="QCheckBox" name="checkBox_1013">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QCheckBox" name="checkBox_197">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_25">
+   <property name="geometry">
+    <rect>
+     <x>1140</x>
+     <y>200</y>
+     <width>16</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_16">
+    <item row="3" column="0">
+     <widget class="QCheckBox" name="checkBox_198">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QCheckBox" name="checkBox_199">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QCheckBox" name="checkBox_200">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QCheckBox" name="checkBox_201">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QCheckBox" name="checkBox_202">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QCheckBox" name="checkBox_203">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QCheckBox" name="checkBox_204">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_26">
+   <property name="geometry">
+    <rect>
+     <x>1220</x>
+     <y>160</y>
+     <width>16</width>
+     <height>221</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_12">
+    <item row="4" column="0">
+     <widget class="QCheckBox" name="checkBox_11_10">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QCheckBox" name="checkBox_205">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QCheckBox" name="checkBox_206">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QCheckBox" name="checkBox_11_11">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QCheckBox" name="checkBox_207">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QCheckBox" name="checkBox_11_12">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="0">
+     <widget class="QCheckBox" name="checkBox_19">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QCheckBox" name="checkBox_208">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="0">
+     <widget class="QCheckBox" name="checkBox_209">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QCheckBox" name="checkBox_210">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="0">
+     <widget class="QCheckBox" name="checkBox_20">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_27">
+   <property name="geometry">
+    <rect>
+     <x>1020</x>
+     <y>260</y>
+     <width>16</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_22">
+    <item row="0" column="0">
+     <widget class="QCheckBox" name="checkBox_23">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_28">
+   <property name="geometry">
+    <rect>
+     <x>1060</x>
+     <y>240</y>
+     <width>16</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_20">
+    <item row="1" column="0">
+     <widget class="QCheckBox" name="checkBox_34">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QCheckBox" name="checkBox_35">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QCheckBox" name="checkBox_36">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_29">
+   <property name="geometry">
+    <rect>
+     <x>1080</x>
+     <y>230</y>
+     <width>16</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_19">
+    <item row="2" column="0">
+     <widget class="QCheckBox" name="checkBox_45">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QCheckBox" name="checkBox_46">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QCheckBox" name="checkBox_47">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QCheckBox" name="checkBox_48">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_30">
+   <property name="geometry">
+    <rect>
+     <x>1040</x>
+     <y>250</y>
+     <width>16</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_21">
+    <item row="1" column="0">
+     <widget class="QCheckBox" name="checkBox_24">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QCheckBox" name="checkBox_25">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_31">
+   <property name="geometry">
+    <rect>
+     <x>1100</x>
+     <y>220</y>
+     <width>16</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_18">
+    <item row="2" column="0">
+     <widget class="QCheckBox" name="checkBox_57">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QCheckBox" name="checkBox_58">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QCheckBox" name="checkBox_56">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QCheckBox" name="checkBox_60">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QCheckBox" name="checkBox_59">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
  </widget>
  <resources/>
  <connections/>
