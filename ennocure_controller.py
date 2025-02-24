@@ -204,9 +204,9 @@ class EnnocureEU:
         n_bytes = len(self.data)
         command = struct.pack(f"<{n_bytes}B", *self.data)
         print(self.data)
-        # self.logger.info(f"Echo data sending: {self.data}")
+        #self.logger.info(f"Echo data sending: {self.data}")
 
-        self.ser.write(command)
+        #self.ser.write(command)
         if self.require_echo is False:
             time.sleep(0.1)
             recv = self.ser.read(len(self.data))
@@ -235,7 +235,7 @@ class EnnocureEU:
 
         # בדיקת Check Fault
         check_fault = self.echo_data[2] >> 4  # הזזת 4 ביטים ימינה
-    if check_fault == 5:
+        if check_fault == 5:
             self.logger.error("EU fault detected in echo response!")
             return False
 
