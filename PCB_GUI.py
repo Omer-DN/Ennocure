@@ -38,8 +38,8 @@ class GUI:
     cycles = 1
     cycleCounter = 0
     current_limit = 0
-    dutyCycle = 0.5  # in percent(%)
-    period = 5  # in seconds
+    dutyCycle = 0  # in percent(%)
+    period = 0  # in seconds
     totalTime = 1 * 60 * 60  # in seconds
     totalTimeUnits = [1, 0, 0]  # [hours,min,sec]
     timeFactorArray = [3600, 60, 1]
@@ -126,7 +126,6 @@ class GUI:
                             partial(self.updateGroupState, i, widget))  # חיבור לפונקציה שתעדכן את המצב
 
         #self.loadAndApplyStateprocess stopped(1,file_channels)
-        self.setAllLastParameters()
         self.window.show()
         exit_code = qApp.exec()
         if exit_code == 0:
@@ -166,6 +165,8 @@ class GUI:
         txt_file.close()
         self.setPCMode(self.PC_mode)
         self.setSubMode(self.sub_mode)
+        self.setAllLastParameters()
+
         #שתי השורות גורמות להדפסה כפולה של המצב הנשלח
 
         txt_file = open("ennocure_eu_logger.txt", "r")
@@ -217,7 +218,7 @@ class GUI:
         if state is None:
             state = button.currentText()  # fallback ל- currentText()
 
-        print(f"Line {line} state: {state}")  # הדפסה לבדיקה
+        #print(f"Line {line} state: {state}")  # הדפסה לבדיקה
         #self.window.OutPut.appendPlainText(f"Line {line} state: {state}")
 
         if state == 'SNK':  # אם מדובר ב-Sink
@@ -312,13 +313,15 @@ class GUI:
         """Reads the last saved parameters from a file and updates the UI with the values."""
         try:
             lines = self.readFile(file_LastOpening)
+            """
+            
             if len(lines) == 4:
                 #lines = content  # אם יש בדיוק 4 שורות, נסמן את content כlines
                 print(f"File content updated to: {lines}")
             else:
                 print("File content is missing or too short")
                 return
-
+            """
             #print(f"Lines read: {lines}")  # בדיקה ראשונית
 
             for i, line in enumerate(lines[:4]):
@@ -339,6 +342,7 @@ class GUI:
                 return
 
             mode = lines[2].split(":", 1)[1].strip()
+            self.loadAndApplyState(mode, file_channels)
             flipState = lines[3].split(":", 1)[1].strip()
 
             # עדכון ה-UI
