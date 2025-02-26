@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1478</width>
-    <height>659</height>
+    <width>1468</width>
+    <height>609</height>
    </rect>
   </property>
   <property name="font">
@@ -16,7 +16,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>EnnocureApp</string>
   </property>
   <widget class="QComboBox" name="PC_Mode">
    <property name="geometry">
@@ -29,7 +29,7 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>14</pointsize>
+     <pointsize>11</pointsize>
     </font>
    </property>
    <item>
@@ -40,16 +40,6 @@
    <item>
     <property name="text">
      <string>stand alone-base_invers</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>external pwm</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>external pwm and_polarity</string>
     </property>
    </item>
   </widget>
@@ -64,7 +54,7 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>14</pointsize>
+     <pointsize>11</pointsize>
     </font>
    </property>
    <property name="text">
@@ -85,7 +75,7 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>12</pointsize>
+     <pointsize>11</pointsize>
     </font>
    </property>
    <property name="readOnly">
@@ -106,14 +96,14 @@
      <widget class="QLineEdit" name="Period">
       <property name="font">
        <font>
-        <pointsize>14</pointsize>
+        <pointsize>11</pointsize>
        </font>
       </property>
       <property name="whatsThis">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="text">
-       <string>30</string>
+       <string/>
       </property>
      </widget>
     </item>
@@ -121,14 +111,14 @@
      <widget class="QLineEdit" name="TotalTime">
       <property name="font">
        <font>
-        <pointsize>14</pointsize>
+        <pointsize>11</pointsize>
        </font>
       </property>
       <property name="whatsThis">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="text">
-       <string>1</string>
+       <string/>
       </property>
      </widget>
     </item>
@@ -136,7 +126,7 @@
      <widget class="QLabel" name="label_3">
       <property name="font">
        <font>
-        <pointsize>14</pointsize>
+        <pointsize>11</pointsize>
         <bold>false</bold>
         <kerning>false</kerning>
        </font>
@@ -150,7 +140,7 @@
      <widget class="QLabel" name="label_5">
       <property name="font">
        <font>
-        <pointsize>14</pointsize>
+        <pointsize>11</pointsize>
        </font>
       </property>
       <property name="text">
@@ -162,7 +152,7 @@
      <widget class="QLabel" name="label_4">
       <property name="font">
        <font>
-        <pointsize>14</pointsize>
+        <pointsize>11</pointsize>
        </font>
       </property>
       <property name="text">
@@ -174,14 +164,14 @@
      <widget class="QLineEdit" name="DutyCycle">
       <property name="font">
        <font>
-        <pointsize>14</pointsize>
+        <pointsize>11</pointsize>
        </font>
       </property>
       <property name="toolTip">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="text">
-       <string>50</string>
+       <string/>
       </property>
      </widget>
     </item>
@@ -189,7 +179,7 @@
      <widget class="QComboBox" name="TimeUnit">
       <property name="font">
        <font>
-        <pointsize>14</pointsize>
+        <pointsize>11</pointsize>
        </font>
       </property>
       <item>
@@ -217,7 +207,7 @@
      <x>650</x>
      <y>90</y>
      <width>351</width>
-     <height>601</height>
+     <height>604</height>
     </rect>
    </property>
    <property name="font">
@@ -241,219 +231,27 @@
     <property name="verticalSpacing">
      <number>0</number>
     </property>
-    <item row="23" column="1">
-     <widget class="QCheckBox" name="Line22_onoff">
-      <property name="text">
-       <string>On/Off</string>
+    <item row="21" column="2">
+     <widget class="QComboBox" name="Line20_type">
+      <property name="currentText">
+       <string>SRC</string>
       </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
      </widget>
     </item>
     <item row="6" column="1">
      <widget class="QCheckBox" name="Line5_onoff">
       <property name="text">
        <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="22" column="1">
-     <widget class="QCheckBox" name="Line21_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="22" column="0">
-     <widget class="QLabel" name="label_27">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 21</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="17" column="1">
-     <widget class="QCheckBox" name="Line16_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="8" column="0">
-     <widget class="QLabel" name="label_13">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 7</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="23" column="0">
-     <widget class="QLabel" name="label_30">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 22</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="1">
-     <widget class="QCheckBox" name="Line6_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="18" column="1">
-     <widget class="QCheckBox" name="Line17_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="15" column="0">
-     <widget class="QLabel" name="label_19">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 14</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="1">
-     <widget class="QCheckBox" name="Line3_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="12" column="1">
-     <widget class="QCheckBox" name="Line11_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="2">
-     <widget class="QComboBox" name="Line1_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="0" column="0">
-     <widget class="QLabel" name="label_8">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 0</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="2">
-     <widget class="QComboBox" name="Line3_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="label_7">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 1</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="20" column="0">
-     <widget class="QLabel" name="label_26">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 19</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </item>
@@ -464,247 +262,8 @@
       </property>
      </widget>
     </item>
-    <item row="8" column="2">
-     <widget class="QComboBox" name="Line7_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="13" column="2">
-     <widget class="QComboBox" name="Line12_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="22" column="2">
-     <widget class="QComboBox" name="Line21_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="13" column="0">
-     <widget class="QLabel" name="label_21">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 12</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="20" column="1">
-     <widget class="QCheckBox" name="Line19_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="16" column="1">
-     <widget class="QCheckBox" name="Line15_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="16" column="0">
-     <widget class="QLabel" name="label_22">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 15</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="18" column="0">
-     <widget class="QLabel" name="label_25">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 17</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="17" column="0">
-     <widget class="QLabel" name="label_23">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 16</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="0">
-     <widget class="QLabel" name="label_9">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 5</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="9" column="0">
-     <widget class="QLabel" name="label_15">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 8</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="2">
-     <widget class="QComboBox" name="Line2_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="19" column="0">
-     <widget class="QLabel" name="label_24">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 18</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="1">
-     <widget class="QCheckBox" name="Line4_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="2">
-     <widget class="QComboBox" name="Line4_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="3" column="1">
-     <widget class="QCheckBox" name="Line2_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="15" column="1">
-     <widget class="QCheckBox" name="Line14_onoff">
+    <item row="10" column="1">
+     <widget class="QCheckBox" name="Line9_onoff">
       <property name="text">
        <string>On/Off</string>
       </property>
@@ -727,8 +286,8 @@
       </item>
      </widget>
     </item>
-    <item row="7" column="0">
-     <widget class="QLabel" name="label_12">
+    <item row="17" column="0">
+     <widget class="QLabel" name="label_23">
       <property name="font">
        <font>
         <pointsize>11</pointsize>
@@ -738,380 +297,11 @@
        <enum>Qt::LayoutDirection::LeftToRight</enum>
       </property>
       <property name="text">
-       <string>Line 6</string>
+       <string>Line 16</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
-     </widget>
-    </item>
-    <item row="9" column="1">
-     <widget class="QCheckBox" name="Line8_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="10" column="0">
-     <widget class="QLabel" name="label_14">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 9</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="19" column="1">
-     <widget class="QCheckBox" name="Line18_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="12" column="0">
-     <widget class="QLabel" name="label_18">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 11</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="10" column="1">
-     <widget class="QCheckBox" name="Line9_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="9" column="2">
-     <widget class="QComboBox" name="Line8_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="17" column="2">
-     <widget class="QComboBox" name="Line16_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="10" column="2">
-     <widget class="QComboBox" name="Line9_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="23" column="2">
-     <widget class="QComboBox" name="Line22_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="11" column="0">
-     <widget class="QLabel" name="label_17">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 10</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="14" column="1">
-     <widget class="QCheckBox" name="Line13_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="0">
-     <widget class="QLabel" name="label_10">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 4</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="13" column="1">
-     <widget class="QCheckBox" name="Line12_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="8" column="1">
-     <widget class="QCheckBox" name="Line7_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="14" column="2">
-     <widget class="QComboBox" name="Line13_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="21" column="1">
-     <widget class="QCheckBox" name="Line20_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="16" column="2">
-     <widget class="QComboBox" name="Line15_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="3" column="0">
-     <widget class="QLabel" name="label_16">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 2</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QCheckBox" name="Line0_onoff">
-      <property name="text">
-       <string>On/Off</string>
-      </property>
-     </widget>
-    </item>
-    <item row="21" column="2">
-     <widget class="QComboBox" name="Line20_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="6" column="2">
-     <widget class="QComboBox" name="Line5_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="14" column="0">
-     <widget class="QLabel" name="label_20">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 13</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="19" column="2">
-     <widget class="QComboBox" name="Line18_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="18" column="2">
-     <widget class="QComboBox" name="Line17_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="4" column="0">
-     <widget class="QLabel" name="label_11">
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LayoutDirection::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Line 3</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="2">
-     <widget class="QComboBox" name="Line0_type">
-      <property name="currentText">
-       <string>SRC</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>SRC</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>SNK</string>
-       </property>
-      </item>
      </widget>
     </item>
     <item row="20" column="2">
@@ -1148,6 +338,73 @@
       </item>
      </widget>
     </item>
+    <item row="11" column="0">
+     <widget class="QLabel" name="label_17">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 10</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="18" column="0">
+     <widget class="QLabel" name="label_25">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 17</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="2">
+     <widget class="QComboBox" name="Line4_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="17" column="1">
+     <widget class="QCheckBox" name="Line16_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QCheckBox" name="Line0_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
     <item row="7" column="2">
      <widget class="QComboBox" name="Line6_type">
       <property name="currentText">
@@ -1165,8 +422,341 @@
       </item>
      </widget>
     </item>
-    <item row="11" column="1">
-     <widget class="QCheckBox" name="Line10_onoff">
+    <item row="3" column="2">
+     <widget class="QComboBox" name="Line2_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="12" column="1">
+     <widget class="QCheckBox" name="Line11_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="18" column="2">
+     <widget class="QComboBox" name="Line17_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="QCheckBox" name="Line6_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="0">
+     <widget class="QLabel" name="label_13">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 7</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="2">
+     <widget class="QComboBox" name="Line10_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="16" column="1">
+     <widget class="QCheckBox" name="Line15_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_16">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 2</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="2">
+     <widget class="QComboBox" name="Line9_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="16" column="2">
+     <widget class="QComboBox" name="Line15_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="19" column="2">
+     <widget class="QComboBox" name="Line18_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="8" column="1">
+     <widget class="QCheckBox" name="Line7_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="22" column="2">
+     <widget class="QComboBox" name="Line21_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_8">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QCheckBox" name="Line2_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="0">
+     <widget class="QLabel" name="label_15">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 8</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="2">
+     <widget class="QComboBox" name="Line12_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="14" column="1">
+     <widget class="QCheckBox" name="Line13_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="1">
+     <widget class="QCheckBox" name="Line14_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="2">
+     <widget class="QComboBox" name="Line8_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="23" column="2">
+     <widget class="QComboBox" name="Line22_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="19" column="1">
+     <widget class="QCheckBox" name="Line18_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_7">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 1</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="2">
+     <widget class="QComboBox" name="Line3_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QCheckBox" name="Line3_onoff">
       <property name="text">
        <string>On/Off</string>
       </property>
@@ -1190,8 +780,408 @@
       </property>
      </widget>
     </item>
-    <item row="11" column="2">
-     <widget class="QComboBox" name="Line10_type">
+    <item row="13" column="0">
+     <widget class="QLabel" name="label_21">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 12</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_11">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 3</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="1">
+     <widget class="QCheckBox" name="Line12_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="23" column="0">
+     <widget class="QLabel" name="label_30">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 22</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="2">
+     <widget class="QComboBox" name="Line13_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="22" column="1">
+     <widget class="QCheckBox" name="Line21_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="1">
+     <widget class="QCheckBox" name="Line8_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="18" column="1">
+     <widget class="QCheckBox" name="Line17_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="0">
+     <widget class="QLabel" name="label_18">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 11</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="22" column="0">
+     <widget class="QLabel" name="label_27">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 21</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="20" column="1">
+     <widget class="QCheckBox" name="Line19_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="0">
+     <widget class="QLabel" name="label_19">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 14</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="19" column="0">
+     <widget class="QLabel" name="label_24">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 18</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="21" column="1">
+     <widget class="QCheckBox" name="Line20_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="0">
+     <widget class="QLabel" name="label_14">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 9</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="1">
+     <widget class="QCheckBox" name="Line10_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QComboBox" name="Line0_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label_9">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 5</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="0">
+     <widget class="QLabel" name="label_20">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 13</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="16" column="0">
+     <widget class="QLabel" name="label_22">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 15</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLabel" name="label_12">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 6</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="23" column="1">
+     <widget class="QCheckBox" name="Line22_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="2">
+     <widget class="QComboBox" name="Line7_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="6" column="2">
+     <widget class="QComboBox" name="Line5_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="17" column="2">
+     <widget class="QComboBox" name="Line16_type">
+      <property name="currentText">
+       <string>SRC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SRC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SNK</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QCheckBox" name="Line4_onoff">
+      <property name="text">
+       <string>On/Off</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="label_10">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 4</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="20" column="0">
+     <widget class="QLabel" name="label_26">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Line 19</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QComboBox" name="Line1_type">
       <property name="currentText">
        <string>SRC</string>
       </property>
@@ -1220,7 +1210,7 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>14</pointsize>
+     <pointsize>11</pointsize>
      <italic>false</italic>
      <bold>false</bold>
     </font>
@@ -1240,7 +1230,7 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>15</pointsize>
+     <pointsize>11</pointsize>
     </font>
    </property>
    <item>
@@ -1275,7 +1265,7 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>13</pointsize>
+     <pointsize>11</pointsize>
     </font>
    </property>
    <property name="text">
@@ -1314,7 +1304,7 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>14</pointsize>
+     <pointsize>11</pointsize>
     </font>
    </property>
    <item>
@@ -1352,6 +1342,11 @@
      <height>41</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
    <property name="text">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Channels Mode&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
@@ -1367,7 +1362,7 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>14</pointsize>
+     <pointsize>11</pointsize>
     </font>
    </property>
    <property name="text">
@@ -1385,7 +1380,7 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>14</pointsize>
+     <pointsize>11</pointsize>
     </font>
    </property>
    <property name="text">
@@ -1403,7 +1398,7 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>14</pointsize>
+     <pointsize>11</pointsize>
     </font>
    </property>
    <property name="text">
@@ -1421,7 +1416,7 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>14</pointsize>
+     <pointsize>11</pointsize>
     </font>
    </property>
    <property name="text">
@@ -1439,7 +1434,7 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>14</pointsize>
+     <pointsize>11</pointsize>
     </font>
    </property>
    <property name="text">
@@ -1475,7 +1470,7 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>14</pointsize>
+     <pointsize>11</pointsize>
     </font>
    </property>
    <property name="text">
@@ -1493,7 +1488,7 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>14</pointsize>
+     <pointsize>11</pointsize>
      <italic>false</italic>
      <bold>false</bold>
      <underline>false</underline>
