@@ -1,28 +1,23 @@
-import sys
-from PySide6.QtWidgets import QInputDialog
-from PySide6.QtUiTools import QUiLoader
-from PySide6.QtWidgets import QApplication
-from PySide6.QtCore import QFile, QIODevice
-import ennocure_controller
-from ennocure_controller import EnnocureEU
-from serial.tools import list_ports
-import re
-import ast
-from PySide6.QtWidgets import QCheckBox
-
 import os
 import os.path as op
+import sys
+import re
+import ast
 import logging
-from PySide6.QtCore import QTimer
-import numpy
-from functools import partial
 import datetime
+from functools import partial
+import numpy
+from serial.tools import list_ports
+from PySide6.QtCore import QFile, QIODevice, QTimer
+from PySide6.QtWidgets import QApplication, QCheckBox, QInputDialog
+from PySide6.QtUiTools import QUiLoader
+import ennocure_controller
+from ennocure_controller import EnnocureEU
 
-file_channels = "fileChannels.txt"
-file_LastOpening = "LastOpening.txt"
 
 
 class GUI:
+    file_LastOpening = "LastOpening.txt"
     logger = logging.getLogger('ennocure_eu_logger')
     state = [2]
     PCB = []
@@ -51,6 +46,8 @@ class GUI:
     doFlip = False
     toDoEvenFlip = False
     checkboxes = []
+    onoff = [0] * 23
+
     def __init__(self):
 
         """Initialize the program: Open the UI, connect buttons to functions, and load the UI."""
@@ -91,10 +88,6 @@ class GUI:
         self.window.showPorts.setStyleSheet("background-color: rgb(80, 100, 100);border: none; border-radius: 12px; padding: 5px;")
         self.window.editPort.editingFinished.connect(self.setEditPort)
         self.window.editPort.setStyleSheet("background-color: rgb(180, 180, 180);border: none; border-radius: 12px; padding: 5px;")
-        self.window.SaveState.clicked.connect(self.saveChannels)
-        self.window.SaveState.setStyleSheet("background-color: rgb(80, 100, 100);border: none; border-radius: 12px; padding: 5px;")
-        self.window.ChannelsMode.currentIndexChanged.connect(self.onChannelsModeChanged)
-        self.window.ChannelsMode.setStyleSheet("background-color: rgb(80, 100, 100);border: none; border-radius: 12px; padding: 5px;")
         self.window.inverstClick.stateChanged.connect(self.evenFlip)
         self.window.onoff_all.stateChanged.connect(self.toggleAll)
         self.window.onoff_all.setStyleSheet("background-color:rgb(150,150,150)")
@@ -125,7 +118,6 @@ class GUI:
                         widget.stateChanged.connect(
                             partial(self.updateGroupState, i, widget))  # חיבור לפונקציה שתעדכן את המצב
 
-        #self.loadAndApplyStateprocess stopped(1,file_channels)
         self.window.show()
         exit_code = qApp.exec()
         if exit_code == 0:
@@ -165,6 +157,7 @@ class GUI:
         txt_file.close()
         self.setPCMode(self.PC_mode)
         self.setSubMode(self.sub_mode)
+        #self.toggleAll(2)
         self.setAllLastParameters()
 
         #שתי השורות גורמות להדפסה כפולה של המצב הנשלח
@@ -181,9 +174,8 @@ class GUI:
             self.window.OutPut.appendPlainText("Something wrong with mode setting please check connection and try again")
 
     def updateGroupState(self, group_index, widget, state):
-        """Updates the group state and changes all the checkboxes within it"""
-        if state == 2:
-            state = 1
+        """Updates group state and syncs all checkboxes within it."""
+        state = 1 if state == 2 else state
 
         if self.checkboxes[group_index] == state:
             return
@@ -192,18 +184,19 @@ class GUI:
         for checkbox in self.group_checkboxes[group_index]:
             if checkbox.isChecked() != state:
                 checkbox.setChecked(state)
-        print(f"Group {group_index} state: {self.checkboxes[group_index]}")
-        # קריאה לפונקציות setLineType ו- setLineActive על פי המצב
-        line = group_index  # הערוץ שתואם לקבוצה (נניח שהקבוצה מייצגת ערוץ)
 
-        if self.checkboxes[group_index] == 1:  # אם המצב 1, אנחנו מדליקים את הערוץ
-            self.setLineActive(1, line)  # הדלקת הערוץ
-            self.setLineType(line, "SRC")  # הגדרת המצב כ-Source (לפי הצורך שלך)
-        else:  # אם המצב 0, אנחנו מכבים את הערוץ
-            self.setLineActive(0, line)  # כיבוי הערוץ
-            self.setLineType(line, "SNK")  # הגדרת המצב כ-Sink (לפי הצורך שלך)
+        print(f"Group {group_index} state: {state}")
+
+        # Update line settings based on state
+        line = group_index
+        if state:
+            self.setLineActive(1, line)
+            self.setLineType(line, "SRC")
+        else:
+            self.setLineActive(0, line)
+            self.setLineType(line, "SNK")
+
         self.updateChannels(self.checkboxes)
-
     def closeWindow(self,exit_code):
         print("The program has closed")
         self.logger.info("The program has closed")
@@ -213,13 +206,9 @@ class GUI:
         """Sets the line type (Sink/Source) based on the user selection in the interface."""
         button = getattr(self.window, f"Line{line}_type")
 
-        # בדיקה אם currentData(0) מחזיר ערך תקין
         state = button.currentData(0)
         if state is None:
             state = button.currentText()  # fallback ל- currentText()
-
-        #print(f"Line {line} state: {state}")  # הדפסה לבדיקה
-        #self.window.OutPut.appendPlainText(f"Line {line} state: {state}")
 
         if state == 'SNK':  # אם מדובר ב-Sink
             self.lines_SRC[line], self.lines_SNK[line] = 0, 1
@@ -232,7 +221,6 @@ class GUI:
             button.setStyleSheet("")
 
         button.repaint()# refresh the button
-
         self.PCB.set_electrodes(self.lines_status * self.lines_SRC, self.lines_status * self.lines_SNK)
 
         try:
@@ -310,59 +298,46 @@ class GUI:
         self.updateChannels(newList)
 
     def setAllLastParameters(self):
-        """Reads the last saved parameters from a file and updates the UI with the values."""
+        """Reads last saved parameters from file and updates UI."""
         try:
-            lines = self.readFile(file_LastOpening)
-            """
-            
-            if len(lines) == 4:
-                #lines = content  # אם יש בדיוק 4 שורות, נסמן את content כlines
-                print(f"File content updated to: {lines}")
-            else:
-                print("File content is missing or too short")
+            lines = self.readFile(self.file_LastOpening)
+
+            # Validate basic format
+            if any(":" not in line for line in lines[:4]):
+                print(f"Invalid format in lines: {lines[:4]}")
                 return
-            """
-            #print(f"Lines read: {lines}")  # בדיקה ראשונית
 
-            for i, line in enumerate(lines[:4]):
-                if ":" not in line:
-                    print(f"Invalid format in line {i}: {line}")
-                    return
-
+            # Extract values
             port = lines[0].split(":", 1)[1].strip()
-            self.window.editPort.setText(port)
+            param_str = lines[1].split(":", 1)[1].strip()
+            mode = lines[2][7:-2]  # Assuming this is intentional
+            flip_state = lines[3].split(":", 1)[1].strip()
 
-            parameters_str = lines[1].split(":", 1)[1].strip()
+            # Parse parameters list
             try:
-                param_list = ast.literal_eval(parameters_str)  # המרה לרשימה
-                if not isinstance(param_list, list) or len(param_list) < 4:
-                    raise ValueError("Parameters format is incorrect")
+                params = ast.literal_eval(param_str)
+                if not isinstance(params, list) or len(params) < 4:
+                    raise ValueError("Invalid parameters format")
             except Exception as e:
                 print(f"Error parsing parameters: {e}")
                 return
 
-            mode = lines[2].split(":", 1)[1].strip()
-            self.loadAndApplyState(mode, file_channels)
-            flipState = lines[3].split(":", 1)[1].strip()
-
-            # עדכון ה-UI
-            self.window.Period.setText(param_list[0].strip())
-            self.window.DutyCycle.setText(param_list[1].strip())
-            self.window.TotalTime.setText(param_list[2].strip())
-            self.window.TimeUnit.setCurrentText(param_list[3].strip())
-            self.window.ChannelsMode.setCurrentText(mode)
-
-            if flipState == "True":
+            # Update UI
+            self.window.editPort.setText(port)
+            self.window.Period.setText(params[0].strip())
+            self.window.DutyCycle.setText(params[1].strip())
+            self.window.TotalTime.setText(params[2].strip())
+            self.window.TimeUnit.setCurrentText(params[3].strip())
+            self.updateChannels(mode)
+            if flip_state == "True":
                 self.window.inverstClick.setChecked(2)
 
-            # המרת period ל-int עם בדיקה
+            # Set period with validation
             period_text = self.window.Period.text().strip("[]'")
-            print(f"Period text before conversion: {period_text}")
-
             try:
                 self.period = int(period_text)
             except ValueError:
-                print(f"Could not convert period_text '{period_text}' to int")
+                print(f"Could not convert period '{period_text}' to int")
                 return
 
         except Exception as e:
@@ -371,13 +346,13 @@ class GUI:
 
     def saveLastAllParameters(self):
         """Saves parameters, port, and flip state to a text file."""
-        param, mode = self.getParameters()
+        param = self.getParameters()
         port = EnnocureEU.port
         print(f"port: {port}")
         self.window.OutPut.appendPlainText(f"port: {port}")
 
         flipState = True if self.toDoEvenFlip == 1 else False
-        content = f"Port: {port}\nParameters: {param}\nMode: {mode}\nFlipState: {flipState}"
+        content = f"Port: {port}\nParameters: {param}\nMode: {self.onoff}\nFlipState: {flipState}"
 
         with open("LastOpening.txt", "w", encoding="utf-8") as file:
             file.write(content)
@@ -517,7 +492,6 @@ class GUI:
         self.logger.info("--------------------------------------------------------------------------------------")
 
         self.saveLastAllParameters()
-        self.logger.info(self.window.ChannelsMode.currentText())
         self.logger.info(f"SRC: {self.lines_SRC}")
         self.logger.info(f"SNK: {self.lines_SNK}")
         self.logger.info(f"period: {self.period} | dutyCycle: {self.dutyCycle} | totalTime: {self.totalTime}")
@@ -551,7 +525,6 @@ class GUI:
     def readFile(self, fileTXT):
         """
         Reads the content of the specified file and returns all the lines.
-
         """
         try:
             with open(fileTXT, "r") as file:
@@ -571,72 +544,28 @@ class GUI:
         evenFlip = False
         numberForEvenFlip = 1
 
-    def saveChannels(self):
-        """
-        Saves the current channel configuration to the file. Updates the mode's data based on
-        the selected ComboBox values and writes the changes back to the file. If the file does
-        not exist, it creates an empty file.
-
-        Raises:
-            AttributeError: If the ComboBox for a channel is not found.
-        """
-        try:
-            if not os.path.exists(file_channels):
-                with open(file_channels, "w") as file:
-                    pass  # Create empty file if not exists
-
-            with open(file_channels, "r") as file:
-                lines = file.readlines()
-
-            # Get selected mode and update its data
-            self.selected_mode = self.window.ChannelsMode.currentText()
-            selected_mode_number = int(self.selected_mode.replace("Mode ", "").strip())
-            newList = []
-
-            for i in range(self.numberOfChannels):
-                combo = getattr(self.window, f"Line{i}_type", None)
-                if combo is None:
-                    raise AttributeError(f"ComboBox for Line{i}_type not found.")
-                state = "1" if combo.currentIndex() == 1 else "0"
-                newList.append(state)
-
-            mode_data = f"Mode {selected_mode_number}: [{', '.join(newList)}]"
-            lines[selected_mode_number - 1] = mode_data + "\n"
-
-            with open(file_channels, "w") as file:
-                file.writelines(lines)
-
-            #self.setParameters()
-            self.window.OutPut.appendPlainText(f"Mode {selected_mode_number} saved successfully.")
-
-        except Exception as e:
-            print(f"An error occurred: {e}")
-            self.window.OutPut.appendPlainText(f"An error occurred: {e}")
-
     def updateChannels(self, state_values):
         """
-            The function updates the ComboBox elements in the GUI to reflect the correct state
-            (Source or Sink), changes their background colors accordingly, and updates
-            the internal `lines_SRC` and `lines_SNK` lists.
+        Updates the ComboBox elements in the GUI based on input of 0s and 1s only.
+        Input can be a string (e.g., '0, 1, 1') or a list of ints.
         """
-        for i, value in enumerate(state_values):
-            # Update the ComboBox in the GUI
-            combo = getattr(self.window, f"Line{i}_type", None)
-            if combo is not None:
-                combo.setCurrentIndex(1 if int(value) == 1 else 0)  # 1 = Source, 0 = Sink
+        # Clean input if it's a string, keeping only 0s and 1s
+        if isinstance(state_values, str):
+            state_values = [int(v) for v in state_values.split(',') if v.strip() in ['0', '1']]
 
-            # Update the internal data
-            if int(value) == 1:  # Source
-                self.lines_SRC[i], self.lines_SNK[i] = 1, 0
-                combo.setStyleSheet("background-color: #b2f0b2;")  # Light green color
-                # Simulate clicking the checkbox for Source
-            elif int(value) == 0:  # Sink
-                self.lines_SRC[i], self.lines_SNK[i] = 0, 1
-                combo.setStyleSheet("background-color: #b2d0f7;")  # Light blue color
-                # Simulate clicking the checkbox for Sink
-            else:  # Unrecognized value
-                self.lines_SRC[i], self.lines_SNK[i] = 0, 0
-            self.toggleCheckbox(i, int(value))
+        # Process each value
+        for i, value in enumerate(state_values):
+            combo = getattr(self.window, f"Line{i}_type", None)
+            if combo:
+                combo.setCurrentIndex(value)
+                combo.setStyleSheet("background-color: #b2f0b2;" if value else "background-color: #b2d0f7;")
+
+            self.lines_SRC[i] = value
+            self.lines_SNK[i] = not value
+            self.onoff[i] = value
+            self.toggleCheckbox(i, value)
+
+
 
     def toggleCheckbox(self, index, state):
         """
@@ -645,54 +574,6 @@ class GUI:
         checkbox = self.group_checkboxes[index]  # Retrieve the checkbox group
         for cb in checkbox:
             cb.setChecked(state)
-
-    def get_state_in_file(self, mode_number, file):
-        """
-        Retrieves the state values for the given mode number from the specified file.
-        The function reads the file, extracts the relevant state information for the
-        specified mode, and returns it as a list of values.
-
-        """
-        try:
-            lines = self.readFile(file)  # Read file content
-            line = lines[int(mode_number) - 1]  # Get the line for the specified mode number
-            state = line.split(":", 1)[1].strip()  # Extract state information after ":"
-            state_values = state[1:-1].split(",")  # Convert the state string to a list
-            return state_values  # Return the state values as a list
-
-        except FileNotFoundError:
-            self.window.OutPut.appendPlainText("File not found.")  # Handle file not found error
-        except Exception as e:
-            self.window.OutPut.appendPlainText(f"An error occurred: {e}")  # Handle other errors
-
-    def loadAndApplyState(self, mode_number, file):
-        """
-        Loads the state for the given mode number from the specified file
-        and applies it to the channels. If successful, a confirmation message
-        is displayed in the output window and printed in the console.
-
-        """
-        state_values = self.get_state_in_file(mode_number, file)  # Retrieve state values from file
-        if state_values:
-            self.updateChannels(state_values)  # Update channels with the loaded state values
-            self.window.OutPut.appendPlainText(f"Channel Mode {mode_number} loaded successfully.")  # Log success message
-            print(f"Channel Mode {mode_number} loaded successfully.")  # Print success message to console
-            # self.logger.info(f"State Mode {mode_number} loaded successfully.")  # Optional logging
-
-    def onChannelsModeChanged(self):
-        """
-        Handles the change in channel mode selection from the ComboBox.
-        Retrieves the selected mode, extracts the mode number, and calls the
-        relevant functions to load parameters and apply the corresponding state.
-
-        """
-        try:
-            self.selected_mode = self.window.ChannelsMode.currentText()  # Get selected mode from ComboBox
-            mode_number = int(self.selected_mode.split()[1])  # Extract mode number from string (e.g., "Mode 2" -> 2)
-            self.loadAndApplyState(mode_number, file_channels)  # Apply the state for the selected mode
-
-        except (IndexError, ValueError) as e:
-            self.window.OutPut.appendPlainText(f"Error: {str(e)}")  # Log error message
 
     def getParameters(self) -> tuple:
         """
@@ -706,8 +587,8 @@ class GUI:
         getTotalTime = self.window.TotalTime.text()
         getTimeUnit = self.window.TimeUnit.currentText()
         allParameters = [getPeriod, getDutyCycle, getTotalTime, getTimeUnit]
-        self.selected_mode = self.window.ChannelsMode.currentText()
-        return allParameters,self.selected_mode
+        #self.selected_mode = self.window.ChannelsMode.currentText()
+        return allParameters
 
 
     def hello(self):
