@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1468</width>
-    <height>609</height>
+    <height>687</height>
    </rect>
   </property>
   <property name="font">
@@ -34,12 +34,12 @@
    </property>
    <item>
     <property name="text">
-     <string>stand alone-base</string>
+     <string>pc mode</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>stand alone-base_invers</string>
+     <string>non pc mode</string>
     </property>
    </item>
   </widget>
@@ -103,7 +103,7 @@
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="text">
-       <string/>
+       <string>3</string>
       </property>
      </widget>
     </item>
@@ -118,7 +118,7 @@
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="text">
-       <string/>
+       <string>5</string>
       </property>
      </widget>
     </item>
@@ -171,7 +171,7 @@
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="text">
-       <string/>
+       <string>60</string>
       </property>
      </widget>
     </item>
@@ -1309,27 +1309,27 @@
    </property>
    <item>
     <property name="text">
-     <string>Mode 1</string>
+     <string>1</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>Mode 2</string>
+     <string>2</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>Mode 3</string>
+     <string>3</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>Mode 4</string>
+     <string>4</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>Mode 5</string>
+     <string>5</string>
     </property>
    </item>
   </widget>

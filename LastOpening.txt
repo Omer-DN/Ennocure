@@ -1,4 +1,4 @@
-Port: COM3
-Parameters: ['4', '60', '5', 'Min']
-Mode: Mode 4
+Port: 3
+Parameters: ['20', '50', '5', 'Hours']
+Mode: 1
 FlipState: False
