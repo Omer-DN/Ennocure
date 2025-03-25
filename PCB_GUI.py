@@ -43,7 +43,7 @@ class GUI:
     totalTime = 1 * 60 * 60  # in seconds
     totalTimeUnits = [1, 0, 0]  # [hours,min,sec]
     timeFactorArray = [3600, 60, 1]
-    PC_mode = 0
+    PC_mode = 1
     sub_mode = 1
     algoFlag = False
     numberForEvenFlip = 1
@@ -51,6 +51,7 @@ class GUI:
     doFlip = False
     toDoEvenFlip = False
     checkboxes = []
+
     def __init__(self):
 
         """Initialize the program: Open the UI, connect buttons to functions, and load the UI."""
@@ -71,36 +72,44 @@ class GUI:
 
         # Connect buttons and actions to their respective functions
         self.window.ConnectButton.clicked.connect(self.connect)  # Connect button activation
-        self.window.ConnectButton.setStyleSheet("background-color: rgb(173, 0, 0); border: none; border-radius: 12px; padding: 5px;")
+        self.window.ConnectButton.setStyleSheet(
+            "background-color: rgb(173, 0, 0); border: none; border-radius: 12px; padding: 5px;")
         self.window.RunSenario.clicked.connect(self.runAlgo)
-        self.window.RunSenario.setStyleSheet("background-color:rgb(173, 216, 230); border: none; border-radius: 12px; padding: 5px;")
+        self.window.RunSenario.setStyleSheet(
+            "background-color:rgb(173, 216, 230); border: none; border-radius: 12px; padding: 5px;")
         self.window.PC_SubMode.currentIndexChanged.connect(self.setSubMode)
         self.window.PC_Mode.currentIndexChanged.connect(self.setPCMode)
-        #self.window.CurrentLimit.editingFinished.connect(self.setCurrentLimit)
+        # self.window.CurrentLimit.editingFinished.connect(self.setCurrentLimit)
         self.window.TotalTime.editingFinished.connect(self.setTotalTime)
         self.window.DutyCycle.editingFinished.connect(self.setDutyCycle)
         self.window.Period.editingFinished.connect(self.setPeriod)
         self.window.TimeUnit.currentIndexChanged.connect(self.setTimeUnit)
         self.window.StopAlgo.clicked.connect(self.raiseFlag)
-        self.window.StopAlgo.setStyleSheet("background-color:rgb(225,102,102); border: none; border-radius: 12px; padding: 5px;")
+        self.window.StopAlgo.setStyleSheet(
+            "background-color:rgb(225,102,102); border: none; border-radius: 12px; padding: 5px;")
         self.window.inverseButton.clicked.connect(self.inverse)
-        self.window.inverseButton.setStyleSheet("background-color: rgb(80, 100, 100);border: none; border-radius: 12px; padding: 5px;")
+        self.window.inverseButton.setStyleSheet(
+            "background-color: rgb(80, 100, 100);border: none; border-radius: 12px; padding: 5px;")
 
         self.window.showPorts.clicked.connect(self.getPort)
         self.window.showPorts.clicked.connect(self.getPort)
-        self.window.showPorts.setStyleSheet("background-color: rgb(80, 100, 100);border: none; border-radius: 12px; padding: 5px;")
+        self.window.showPorts.setStyleSheet(
+            "background-color: rgb(80, 100, 100);border: none; border-radius: 12px; padding: 5px;")
         self.window.editPort.editingFinished.connect(self.setEditPort)
-        self.window.editPort.setStyleSheet("background-color: rgb(180, 180, 180);border: none; border-radius: 12px; padding: 5px;")
+        self.window.editPort.setStyleSheet(
+            "background-color: rgb(180, 180, 180);border: none; border-radius: 12px; padding: 5px;")
         self.window.SaveState.clicked.connect(self.saveChannels)
-        self.window.SaveState.setStyleSheet("background-color: rgb(80, 100, 100);border: none; border-radius: 12px; padding: 5px;")
+        self.window.SaveState.setStyleSheet(
+            "background-color: rgb(80, 100, 100);border: none; border-radius: 12px; padding: 5px;")
         self.window.ChannelsMode.currentIndexChanged.connect(self.onChannelsModeChanged)
-        self.window.ChannelsMode.setStyleSheet("background-color: rgb(80, 100, 100);border: none; border-radius: 12px; padding: 5px;")
+        self.window.ChannelsMode.setStyleSheet(
+            "background-color: rgb(80, 100, 100);border: none; border-radius: 12px; padding: 5px;")
         self.window.inverstClick.stateChanged.connect(self.evenFlip)
         self.window.onoff_all.stateChanged.connect(self.toggleAll)
         self.window.onoff_all.setStyleSheet("background-color:rgb(150,150,150)")
 
-        self.buttons = {f"Line{line}_onoff": getattr(self.window, f"Line{line}_onoff") for line in range(self.numberOfChannels)}
-
+        self.buttons = {f"Line{line}_onoff": getattr(self.window, f"Line{line}_onoff") for line in
+                        range(self.numberOfChannels)}
 
         self.window.OutPut.appendPlainText("please start by connecting to hardware")
 
@@ -125,34 +134,32 @@ class GUI:
                         widget.stateChanged.connect(
                             partial(self.updateGroupState, i, widget))  # חיבור לפונקציה שתעדכן את המצב
 
-        #self.loadAndApplyStateprocess stopped(1,file_channels)
+        # self.loadAndApplyStateprocess stopped(1,file_channels)
         self.window.show()
+
         exit_code = qApp.exec()
         if exit_code == 0:
             self.closeWindow(exit_code)
 
     def connect(self):
         """Connects the program to the hardware system (PCB) using EnnocureEU."""
-        if self.is_connected:
-            self.window.OutPut.appendPlainText("Already connected.")
-            return
-        self.is_connected = True
-        self.logger.setLevel(logging.DEBUG)
-        ch = logging.StreamHandler()
-        ch.setLevel(logging.DEBUG)
-        logger_path = op.join(os.getcwd(), 'ennocure_eu_logger.txt')
-        fh = logging.FileHandler(logger_path)
-        formatter = logging.Formatter("%(asctime)s : %(levelname)s : %(message)s")
-        ch.setFormatter(formatter)
-        fh.setFormatter(formatter)
-        self.logger.addHandler(ch)
-        self.logger.addHandler(fh)
-        self.PCB = ennocure_controller.EnnocureEU(logger=self.logger)
+        if self.PCB == []:
+            self.logger.setLevel(logging.DEBUG)
+            ch = logging.StreamHandler()
+            ch.setLevel(logging.DEBUG)
+            logger_path = op.join(os.getcwd(), 'ennocure_eu_logger.txt')
+            fh = logging.FileHandler(logger_path)
+            formatter = logging.Formatter("%(asctime)s : %(levelname)s : %(message)s")
+            ch.setFormatter(formatter)
+            fh.setFormatter(formatter)
+            self.logger.addHandler(ch)
+            self.logger.addHandler(fh)
+            self.PCB = ennocure_controller.EnnocureEU(logger=self.logger)
         self.PCB.connect_to_port()
         self.window.OutPut.appendPlainText("Try connecting to hardware")
         txt_file = open("ennocure_eu_logger.txt", "r")
         txt_lines = txt_file.readlines()
-        if 'successfully' in txt_lines[-2]:
+        if self.PCB.ser.is_open:
             self.window.ConnectButton.setStyleSheet("background-color: rgb(0,180,0)")
             self.window.OutPut.appendPlainText(txt_lines[-1][33:-1])
             self.window.OutPut.appendPlainText(txt_lines[-2][33:-2])
@@ -165,20 +172,23 @@ class GUI:
         txt_file.close()
         self.setPCMode(self.PC_mode)
         self.setSubMode(self.sub_mode)
-        self.setAllLastParameters()
 
-        #שתי השורות גורמות להדפסה כפולה של המצב הנשלח
+        # שתי השורות גורמות להדפסה כפולה של המצב הנשלח
 
         txt_file = open("ennocure_eu_logger.txt", "r")
         txt_lines = txt_file.readlines()
         txt_file.close()
-        #if ('successfully' in txt_lines[-1]) & (int(txt_lines[-2][63:65]) == 13):
+        # if ('successfully' in txt_lines[-1]) & (int(txt_lines[-2][63:65]) == 13):
 
-        if ('successfully' in txt_lines[-1]) :
+        if ('successfully' in txt_lines[-1]):
             self.window.OutPut.appendPlainText("PC_mode set to 1 (PC control)")
             self.window.OutPut.appendPlainText("Sub_mode set to 0 (standalone base)")
+            self.setAllLastParameters()
+
+
         else:
-            self.window.OutPut.appendPlainText("Something wrong with mode setting please check connection and try again")
+            self.window.OutPut.appendPlainText(
+                "Something wrong with mode setting please check connection and try again")
 
     def updateGroupState(self, group_index, widget, state):
         """Updates the group state and changes all the checkboxes within it"""
@@ -192,7 +202,7 @@ class GUI:
         for checkbox in self.group_checkboxes[group_index]:
             if checkbox.isChecked() != state:
                 checkbox.setChecked(state)
-        print(f"Group {group_index} state: {self.checkboxes[group_index]}")
+        #print(f"Group {group_index} state: {self.checkboxes[group_index]}")
         # קריאה לפונקציות setLineType ו- setLineActive על פי המצב
         line = group_index  # הערוץ שתואם לקבוצה (נניח שהקבוצה מייצגת ערוץ)
 
@@ -204,13 +214,14 @@ class GUI:
             self.setLineType(line, "SNK")  # הגדרת המצב כ-Sink (לפי הצורך שלך)
         self.updateChannels(self.checkboxes)
 
-    def closeWindow(self,exit_code):
+    def closeWindow(self, exit_code):
         print("The program has closed")
         self.logger.info("The program has closed")
         sys.exit(exit_code)
 
     def setLineType(self, line, state_id):
         """Sets the line type (Sink/Source) based on the user selection in the interface."""
+        print("in setLineType")
         button = getattr(self.window, f"Line{line}_type")
 
         # בדיקה אם currentData(0) מחזיר ערך תקין
@@ -218,20 +229,19 @@ class GUI:
         if state is None:
             state = button.currentText()  # fallback ל- currentText()
 
-        #print(f"Line {line} state: {state}")  # הדפסה לבדיקה
-        #self.window.OutPut.appendPlainText(f"Line {line} state: {state}")
-
         if state == 'SNK':  # אם מדובר ב-Sink
             self.lines_SRC[line], self.lines_SNK[line] = 0, 1
-            button.setStyleSheet("background-color: #b2f0b2;")
+            button.setStyleSheet("background-color: #b2d0f7;")
+
         elif state == 'SRC':  # אם מדובר ב-Source
             self.lines_SRC[line], self.lines_SNK[line] = 1, 0
-            button.setStyleSheet("background-color: #b2d0f7;")
+            button.setStyleSheet("background-color: #b2f0b2;")
+
         else:
             self.lines_SRC[line], self.lines_SNK[line] = 0, 0
             button.setStyleSheet("")
 
-        button.repaint()# refresh the button
+        button.repaint()  # refresh the button
 
         self.PCB.set_electrodes(self.lines_status * self.lines_SRC, self.lines_status * self.lines_SNK)
 
@@ -242,8 +252,8 @@ class GUI:
 
     def setLineActive(self, state, line):
         """Sets a channel to ON or OFF, and updates the state accordingly."""
-        #print(f"setLineActive line {line}")
-        button = getattr(self.window, f"Line{line}_onoff") # button של ON OFF
+        # print(f"setLineActive line {line}")
+        button = getattr(self.window, f"Line{line}_onoff")  # button של ON OFF
         if state:
             self.lines_status[line] = 1
         else:
@@ -251,11 +261,19 @@ class GUI:
 
         if not self.from_toggle_all:
             self.PCB.set_electrodes(self.lines_status * self.lines_SRC, self.lines_status * self.lines_SNK)
-            #self.window.OutPut.appendPlainText(f"Line {line} {'ON' if state else 'OFF'}")
+            # self.window.OutPut.appendPlainText(f"Line {line} {'ON' if state else 'OFF'}")
             try:
                 self.PCB.gen_command_data(True)
             except Exception as error:
                 self.window.OutPut.appendPlainText("Error in gen_commands")
+
+    def toggleCheckbox(self, index, state):
+        """
+        Simulate clicking the checkbox for a specific group based on the state (True for checked, False for unchecked).
+        """
+        checkbox = self.group_checkboxes[index]  # Retrieve the checkbox group
+        for cb in checkbox:
+            cb.setChecked(state)
 
     def toggleAll(self, state):
         """Toggles all lines' states (on/off) based on the given state."""
@@ -269,9 +287,9 @@ class GUI:
         for line in range(self.numberOfChannels):
             button = getattr(self.window, f"Line{line}_onoff")
             button.setChecked(state)
-        #print("when toggleAll is True")
+        # print("when toggleAll is True")
         self.PCB.set_electrodes(self.lines_status * self.lines_SRC, self.lines_status * self.lines_SNK)
-        #self.window.OutPut.appendPlainText(f"Line {line} set to {state}")
+        # self.window.OutPut.appendPlainText(f"Line {line} set to {state}")
 
         try:
             self.PCB.gen_command_data()
@@ -313,16 +331,6 @@ class GUI:
         """Reads the last saved parameters from a file and updates the UI with the values."""
         try:
             lines = self.readFile(file_LastOpening)
-            """
-            
-            if len(lines) == 4:
-                #lines = content  # אם יש בדיוק 4 שורות, נסמן את content כlines
-                print(f"File content updated to: {lines}")
-            else:
-                print("File content is missing or too short")
-                return
-            """
-            #print(f"Lines read: {lines}")  # בדיקה ראשונית
 
             for i, line in enumerate(lines[:4]):
                 if ":" not in line:
@@ -373,17 +381,11 @@ class GUI:
         """Saves parameters, port, and flip state to a text file."""
         param, mode = self.getParameters()
         port = EnnocureEU.port
-        print(f"port: {port}")
-        self.window.OutPut.appendPlainText(f"port: {port}")
-
         flipState = True if self.toDoEvenFlip == 1 else False
-        content = f"Port: {port}\nParameters: {param}\nMode: {mode}\nFlipState: {flipState}"
+        content = f"Port: {port[3:]}\nParameters: {param}\nMode: {mode}\nFlipState: {flipState}"
 
         with open("LastOpening.txt", "w", encoding="utf-8") as file:
             file.write(content)
-
-        print("Parameters saved to LastOpening.txt")
-        self.window.OutPut.appendPlainText("Parameters saved to LastOpening.txt")
 
     def setEditPort(self):
         """Updates the port based on user input, while checking the input validity."""
@@ -436,7 +438,7 @@ class GUI:
         """Sets the time units (hours, minutes, seconds)."""
         self.totalTimeUnits = [0, 0, 0]
         self.totalTimeUnits[input_TimeUnit] = 1
-        #self.window.OutPut.appendPlainText(f'Your new units are: {self.totalTimeUnits}')
+        # self.window.OutPut.appendPlainText(f'Your new units are: {self.totalTimeUnits}')
 
     def setTotalTime(self):
         """Calculates the total time based on the selected time units."""
@@ -522,7 +524,6 @@ class GUI:
         self.logger.info(f"SNK: {self.lines_SNK}")
         self.logger.info(f"period: {self.period} | dutyCycle: {self.dutyCycle} | totalTime: {self.totalTime}")
 
-
         # Reset algorithm and set initial values
         self.resetAlgorithm()
         self.algoFlag = False
@@ -564,7 +565,8 @@ class GUI:
     def raiseFlag(self):
         """Sets a flag to stop the algorithm."""
         current_datetime = datetime.datetime.now()
-        self.window.OutPut.appendPlainText(f"Flag raised - process has been stopped :{current_datetime.strftime('%d/%m/%Y  %H:%M:%S')}")
+        self.window.OutPut.appendPlainText(
+            f"Flag raised - process has been stopped :{current_datetime.strftime('%d/%m/%Y  %H:%M:%S')}")
         self.logger.info("process stopped")
         self.algoFlag = True
         self.StartTimer.stop()
@@ -606,7 +608,7 @@ class GUI:
             with open(file_channels, "w") as file:
                 file.writelines(lines)
 
-            #self.setParameters()
+            # self.setParameters()
             self.window.OutPut.appendPlainText(f"Mode {selected_mode_number} saved successfully.")
 
         except Exception as e:
@@ -628,25 +630,19 @@ class GUI:
             # Update the internal data
             if int(value) == 1:  # Source
                 self.lines_SRC[i], self.lines_SNK[i] = 1, 0
-                combo.setStyleSheet("background-color: #b2f0b2;")  # Light green color
+                combo.setStyleSheet("background-color: #b2d0f7;")  # Light blue color
+
                 # Simulate clicking the checkbox for Source
             elif int(value) == 0:  # Sink
                 self.lines_SRC[i], self.lines_SNK[i] = 0, 1
-                combo.setStyleSheet("background-color: #b2d0f7;")  # Light blue color
+                combo.setStyleSheet("background-color: #b2f0b2;")  # Light green color
+
                 # Simulate clicking the checkbox for Sink
             else:  # Unrecognized value
                 self.lines_SRC[i], self.lines_SNK[i] = 0, 0
             self.toggleCheckbox(i, int(value))
 
-    def toggleCheckbox(self, index, state):
-        """
-        Simulate clicking the checkbox for a specific group based on the state (True for checked, False for unchecked).
-        """
-        checkbox = self.group_checkboxes[index]  # Retrieve the checkbox group
-        for cb in checkbox:
-            cb.setChecked(state)
-
-    def get_state_in_file(self, mode_number, file):
+    def getStateInFile(self, mode_number, file):
         """
         Retrieves the state values for the given mode number from the specified file.
         The function reads the file, extracts the relevant state information for the
@@ -672,10 +668,11 @@ class GUI:
         is displayed in the output window and printed in the console.
 
         """
-        state_values = self.get_state_in_file(mode_number, file)  # Retrieve state values from file
+        state_values = self.getStateInFile(mode_number, file)  # Retrieve state values from file
         if state_values:
             self.updateChannels(state_values)  # Update channels with the loaded state values
-            self.window.OutPut.appendPlainText(f"Channel Mode {mode_number} loaded successfully.")  # Log success message
+            self.window.OutPut.appendPlainText(
+                f"Channel Mode {mode_number} loaded successfully.")  # Log success message
             print(f"Channel Mode {mode_number} loaded successfully.")  # Print success message to console
             # self.logger.info(f"State Mode {mode_number} loaded successfully.")  # Optional logging
 
@@ -707,8 +704,7 @@ class GUI:
         getTimeUnit = self.window.TimeUnit.currentText()
         allParameters = [getPeriod, getDutyCycle, getTotalTime, getTimeUnit]
         self.selected_mode = self.window.ChannelsMode.currentText()
-        return allParameters,self.selected_mode
-
+        return allParameters, self.selected_mode
 
     def hello(self):
         print("hello")
