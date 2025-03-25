@@ -14,7 +14,7 @@ import PCB_GUI
 class EnnocureEU:
     available_ports = []
 
-    port = "COM3"  # fill in right port #com8
+    port = [] # fill in right port #com8
     baud_rate = 9600
     data_bits = 8
     stop_bits = 1
@@ -43,8 +43,6 @@ class EnnocureEU:
 
     def __init__(self, logger):
         self.logger = logger
-        self.port = "COM3"  # יש להחליף לפורט הנכון
-        self.ser = serial.Serial()
 
     def find_available_ports(self) -> list:
         """Finds and returns a sorted list of available ports in the system."""
@@ -65,16 +63,14 @@ class EnnocureEU:
             return False
 
         try:
-            for port in ports:
-                self.ser.port = self.port
-                self.ser.open()  # Open the port
-                status = self.gen_command_data(send_cmd=True)
-                if status:
-                    self.logger.info(f'Successfully connected to port {port}')
-                    self.connected = True
-                    self.pc_mode = 0x1
-                    self.set_msg_attr()
-                    break
+            self.ser.port = self.port
+            self.ser.open()  # Open the port
+            status = self.gen_command_data(send_cmd=True)
+            if status:
+                self.logger.info(f'Successfully connected to port {self.port}')
+                self.connected = True
+                self.pc_mode = 0x1
+                self.set_msg_attr()
         except serial.SerialException as e:
             print(f"SerialException: {e}")
         except FileNotFoundError:
@@ -105,6 +101,7 @@ class EnnocureEU:
         """Sets the PC mode and updates the message attribute."""
         self.pc_mode = pc_mode
         self.set_msg_attr()
+
 
     def select_sub_mode(self, sub_mode: int = None) -> None:
         """Selects a sub-mode, updating the message attribute."""
@@ -206,8 +203,8 @@ class EnnocureEU:
         print(self.data)
         #self.logger.info(f"Echo data sending: {self.data}")
 
-        #self.ser.write(command)
-        if self.require_echo is False:
+        self.ser.write(command)
+        if self.require_echo:
             time.sleep(0.1)
             recv = self.ser.read(len(self.data))
             if len(recv) != n_bytes:
