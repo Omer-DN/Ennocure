@@ -203,9 +203,10 @@ class EnnocureEU:
         print(self.data)
         #self.logger.info(f"Echo data sending: {self.data}")
 
-        self.ser.write(command)
-        if self.require_echo:
+        #self.ser.write(command)
+        if not self.require_echo:
             time.sleep(0.1)
+            print(self.data)
             recv = self.ser.read(len(self.data))
             if len(recv) != n_bytes:
                 return False
