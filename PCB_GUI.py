@@ -38,8 +38,8 @@ class GUI:
     cycles = 1
     cycleCounter = 0
     current_limit = 0
-    dutyCycle = 0  # in percent(%)
-    period = 0  # in seconds
+    dutyCycle = 50  # in percent(%)
+    period = 2  # in seconds
     totalTime = 1 * 60 * 60  # in seconds
     totalTimeUnits = [1, 0, 0]  # [hours,min,sec]
     timeFactorArray = [3600, 60, 1]
@@ -134,7 +134,8 @@ class GUI:
                         widget.stateChanged.connect(
                             partial(self.updateGroupState, i, widget))  # חיבור לפונקציה שתעדכן את המצב
 
-        # self.loadAndApplyStateprocess stopped(1,file_channels)
+        # self.loadAndApplyState
+        # process stopped(1,file_channels)
         self.window.show()
 
         exit_code = qApp.exec()
@@ -155,7 +156,7 @@ class GUI:
             self.logger.addHandler(ch)
             self.logger.addHandler(fh)
             self.PCB = ennocure_controller.EnnocureEU(logger=self.logger)
-        self.PCB.connect_to_port()
+        #self.PCB.connect_to_port()
         self.window.OutPut.appendPlainText("Try connecting to hardware")
         txt_file = open("ennocure_eu_logger.txt", "r")
         txt_lines = txt_file.readlines()
@@ -179,12 +180,11 @@ class GUI:
         txt_lines = txt_file.readlines()
         txt_file.close()
         # if ('successfully' in txt_lines[-1]) & (int(txt_lines[-2][63:65]) == 13):
+        #self.setAllLastParameters()
 
         if ('successfully' in txt_lines[-1]):
             self.window.OutPut.appendPlainText("PC_mode set to 1 (PC control)")
             self.window.OutPut.appendPlainText("Sub_mode set to 0 (standalone base)")
-            self.setAllLastParameters()
-
 
         else:
             self.window.OutPut.appendPlainText(
@@ -202,7 +202,7 @@ class GUI:
         for checkbox in self.group_checkboxes[group_index]:
             if checkbox.isChecked() != state:
                 checkbox.setChecked(state)
-        #print(f"Group {group_index} state: {self.checkboxes[group_index]}")
+        print(f"Group {group_index} state: {self.checkboxes[group_index]}")
         # קריאה לפונקציות setLineType ו- setLineActive על פי המצב
         line = group_index  # הערוץ שתואם לקבוצה (נניח שהקבוצה מייצגת ערוץ)
 
@@ -221,13 +221,15 @@ class GUI:
 
     def setLineType(self, line, state_id):
         """Sets the line type (Sink/Source) based on the user selection in the interface."""
-        print("in setLineType")
         button = getattr(self.window, f"Line{line}_type")
 
         # בדיקה אם currentData(0) מחזיר ערך תקין
         state = button.currentData(0)
         if state is None:
             state = button.currentText()  # fallback ל- currentText()
+
+        # print(f"Line {line} state: {state}")  # הדפסה לבדיקה
+        # self.window.OutPut.appendPlainText(f"Line {line} state: {state}")
 
         if state == 'SNK':  # אם מדובר ב-Sink
             self.lines_SRC[line], self.lines_SNK[line] = 0, 1
@@ -332,9 +334,15 @@ class GUI:
         try:
             lines = self.readFile(file_LastOpening)
 
+            if len(lines) < 4:
+                print("File does not contain enough lines.")
+                self.window.OutPut.appendPlainText("Error: LastOpening.txt is incomplete.")
+                return
+
             for i, line in enumerate(lines[:4]):
                 if ":" not in line:
                     print(f"Invalid format in line {i}: {line}")
+                    self.window.OutPut.appendPlainText(f"Error: Invalid format in LastOpening.txt at line {i}.")
                     return
 
             port = lines[0].split(":", 1)[1].strip()
@@ -347,10 +355,27 @@ class GUI:
                     raise ValueError("Parameters format is incorrect")
             except Exception as e:
                 print(f"Error parsing parameters: {e}")
+                self.window.OutPut.appendPlainText(f"Error parsing parameters: {e}")
                 return
 
             mode = lines[2].split(":", 1)[1].strip()
-            self.loadAndApplyState(mode, file_channels)
+            print(f"mode is: {mode}")
+            print("type of mode is: ", type(mode))
+
+            # המר את mode למספר שלם מראש
+            try:
+                mode_number = int(mode)
+            except ValueError:
+                print(f"Invalid mode value: {mode}")
+                self.window.OutPut.appendPlainText(f"Error: Invalid mode value in LastOpening.txt: {mode}")
+                return
+
+            # קריאה ל-loadAndApplyState עם בדיקת הצלחה
+            if not self.loadAndApplyState(mode_number, file_channels):
+                print("Failed to load channel state.")
+                self.window.OutPut.appendPlainText("Error: Failed to load channel state.")
+                return
+
             flipState = lines[3].split(":", 1)[1].strip()
 
             # עדכון ה-UI
@@ -358,7 +383,7 @@ class GUI:
             self.window.DutyCycle.setText(param_list[1].strip())
             self.window.TotalTime.setText(param_list[2].strip())
             self.window.TimeUnit.setCurrentText(param_list[3].strip())
-            self.window.ChannelsMode.setCurrentText(mode)
+            self.window.ChannelsMode.setCurrentText(f"Mode {mode_number}")  # תיקון: התאמה לפורמט של ComboBox
 
             if flipState == "True":
                 self.window.inverstClick.setChecked(2)
@@ -371,6 +396,7 @@ class GUI:
                 self.period = int(period_text)
             except ValueError:
                 print(f"Could not convert period_text '{period_text}' to int")
+                self.window.OutPut.appendPlainText(f"Error: Could not convert period '{period_text}' to integer.")
                 return
 
         except Exception as e:
@@ -648,49 +674,73 @@ class GUI:
         The function reads the file, extracts the relevant state information for the
         specified mode, and returns it as a list of values.
 
+        Args:
+            mode_number: The mode number to retrieve (should be an integer).
+            file: The file to read from.
+
+        Returns:
+            list: The state values if successful, None otherwise.
         """
         try:
             lines = self.readFile(file)  # Read file content
-            line = lines[int(mode_number) - 1]  # Get the line for the specified mode number
+            mode_index = int(mode_number) - 1  # Convert to 0-based index
+            if not lines:
+                self.window.OutPut.appendPlainText(f"Error: The file {file} is empty.")
+                return None
+            if mode_index < 0 or mode_index >= len(lines):
+                self.window.OutPut.appendPlainText(
+                    f"Error: Mode {mode_number} does not exist in {file}. File has {len(lines)} modes."
+                )
+                return None
+            line = lines[mode_index]  # Get the line for the specified mode number
             state = line.split(":", 1)[1].strip()  # Extract state information after ":"
             state_values = state[1:-1].split(",")  # Convert the state string to a list
             return state_values  # Return the state values as a list
-
         except FileNotFoundError:
-            self.window.OutPut.appendPlainText("File not found.")  # Handle file not found error
+            self.window.OutPut.appendPlainText(f"Error: File {file} not found.")
+            return None
+        except IndexError as e:
+            self.window.OutPut.appendPlainText(f"Error: Invalid format in {file} for Mode {mode_number}: {e}")
+            return None
         except Exception as e:
-            self.window.OutPut.appendPlainText(f"An error occurred: {e}")  # Handle other errors
-
+            self.window.OutPut.appendPlainText(f"An error occurred while reading {file}: {e}")
+            return None
     def loadAndApplyState(self, mode_number, file):
         """
         Loads the state for the given mode number from the specified file
         and applies it to the channels. If successful, a confirmation message
         is displayed in the output window and printed in the console.
 
+        Args:
+            mode_number: The mode number to load (should be an integer).
+            file: The file to read the state from.
+
+        Returns:
+            bool: True if the state was loaded successfully, False otherwise.
         """
         state_values = self.getStateInFile(mode_number, file)  # Retrieve state values from file
         if state_values:
             self.updateChannels(state_values)  # Update channels with the loaded state values
-            self.window.OutPut.appendPlainText(
-                f"Channel Mode {mode_number} loaded successfully.")  # Log success message
-            print(f"Channel Mode {mode_number} loaded successfully.")  # Print success message to console
-            # self.logger.info(f"State Mode {mode_number} loaded successfully.")  # Optional logging
+            self.window.OutPut.appendPlainText(f"Channel Mode {mode_number} loaded successfully.")
+            print(f"Channel Mode {mode_number} loaded successfully.")
+            return True
+        else:
+            self.window.OutPut.appendPlainText(f"Failed to load Channel Mode {mode_number}.")
+            print(f"Failed to load Channel Mode {mode_number}.")
+            return False
 
     def onChannelsModeChanged(self):
         """
         Handles the change in channel mode selection from the ComboBox.
         Retrieves the selected mode, extracts the mode number, and calls the
         relevant functions to load parameters and apply the corresponding state.
-
         """
         try:
             self.selected_mode = self.window.ChannelsMode.currentText()  # Get selected mode from ComboBox
-            mode_number = int(self.selected_mode.split()[1])  # Extract mode number from string (e.g., "Mode 2" -> 2)
+            mode_number = int(self.selected_mode)  # Extract mode number from string (e.g., "Mode 2" -> 2)
             self.loadAndApplyState(mode_number, file_channels)  # Apply the state for the selected mode
-
         except (IndexError, ValueError) as e:
             self.window.OutPut.appendPlainText(f"Error: {str(e)}")  # Log error message
-
     def getParameters(self) -> tuple:
         """
         Retrieves parameter values from the UI.
