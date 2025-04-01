@@ -206,7 +206,7 @@ class EnnocureEU:
         #self.ser.write(command)
         if not self.require_echo:
             time.sleep(0.1)
-            print(self.data)
+            #print(self.data)
             recv = self.ser.read(len(self.data))
             if len(recv) != n_bytes:
                 return False
