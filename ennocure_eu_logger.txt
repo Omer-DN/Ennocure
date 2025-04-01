@@ -32884,3 +32884,1295 @@
 2025-03-25 12:29:25,822 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 96, 1, 0, 154]
 2025-03-25 12:29:25,823 : INFO : Echo check passed successfully.
 2025-03-25 12:29:28,778 : INFO : The program has closed
+2025-03-25 12:42:51,955 : INFO : Echo data received: [85, 170, 5, 0, 0, 0, 0, 0, 0, 1, 0, 5]
+2025-03-25 12:42:51,956 : INFO : Echo check passed successfully.
+2025-03-25 12:42:51,956 : INFO : Successfully connected to port COM3
+2025-03-25 12:42:52,015 : INFO : connected successfully
+2025-03-25 12:42:52,117 : INFO : Echo data received: [85, 170, 13, 0, 0, 0, 0, 0, 0, 1, 0, 13]
+2025-03-25 12:42:52,118 : INFO : Echo check passed successfully.
+2025-03-25 12:42:54,394 : INFO : Echo data received: [85, 170, 29, 1, 0, 0, 0, 0, 0, 1, 0, 30]
+2025-03-25 12:42:54,395 : INFO : Echo check passed successfully.
+2025-03-25 12:42:54,504 : INFO : Echo data received: [85, 170, 29, 1, 0, 0, 0, 0, 0, 1, 0, 30]
+2025-03-25 12:42:54,504 : INFO : Echo check passed successfully.
+2025-03-25 12:42:54,652 : INFO : Echo data received: [85, 170, 29, 3, 0, 0, 0, 0, 0, 1, 0, 32]
+2025-03-25 12:42:54,652 : INFO : Echo check passed successfully.
+2025-03-25 12:42:54,763 : INFO : Echo data received: [85, 170, 29, 3, 0, 0, 0, 0, 0, 1, 0, 32]
+2025-03-25 12:42:54,763 : INFO : Echo check passed successfully.
+2025-03-25 12:42:54,899 : INFO : Echo data received: [85, 170, 29, 7, 0, 0, 0, 0, 0, 1, 0, 36]
+2025-03-25 12:42:54,900 : INFO : Echo check passed successfully.
+2025-03-25 12:42:55,018 : INFO : Echo data received: [85, 170, 29, 7, 0, 0, 0, 0, 0, 1, 0, 36]
+2025-03-25 12:42:55,018 : INFO : Echo check passed successfully.
+2025-03-25 12:42:55,149 : INFO : Echo data received: [85, 170, 29, 15, 0, 0, 0, 0, 0, 1, 0, 44]
+2025-03-25 12:42:55,149 : INFO : Echo check passed successfully.
+2025-03-25 12:42:55,257 : INFO : Echo data received: [85, 170, 29, 15, 0, 0, 0, 0, 0, 1, 0, 44]
+2025-03-25 12:42:55,257 : INFO : Echo check passed successfully.
+2025-03-25 12:42:55,396 : INFO : Echo data received: [85, 170, 29, 31, 0, 0, 0, 0, 0, 1, 0, 60]
+2025-03-25 12:42:55,396 : INFO : Echo check passed successfully.
+2025-03-25 12:42:55,512 : INFO : Echo data received: [85, 170, 29, 31, 0, 0, 0, 0, 0, 1, 0, 60]
+2025-03-25 12:42:55,512 : INFO : Echo check passed successfully.
+2025-03-25 12:42:55,648 : INFO : Echo data received: [85, 170, 29, 63, 0, 0, 0, 0, 0, 1, 0, 92]
+2025-03-25 12:42:55,648 : INFO : Echo check passed successfully.
+2025-03-25 12:42:55,763 : INFO : Echo data received: [85, 170, 29, 63, 0, 0, 0, 0, 0, 1, 0, 92]
+2025-03-25 12:42:55,763 : INFO : Echo check passed successfully.
+2025-03-25 12:42:55,903 : INFO : Echo data received: [85, 170, 29, 127, 0, 0, 0, 0, 0, 1, 0, 156]
+2025-03-25 12:42:55,903 : INFO : Echo check passed successfully.
+2025-03-25 12:42:56,017 : INFO : Echo data received: [85, 170, 29, 127, 0, 0, 0, 0, 0, 1, 0, 156]
+2025-03-25 12:42:56,017 : INFO : Echo check passed successfully.
+2025-03-25 12:42:56,157 : INFO : Echo data received: [85, 170, 29, 255, 0, 0, 0, 0, 0, 1, 0, 28]
+2025-03-25 12:42:56,158 : INFO : Echo check passed successfully.
+2025-03-25 12:42:56,280 : INFO : Echo data received: [85, 170, 29, 255, 0, 0, 0, 0, 0, 1, 0, 28]
+2025-03-25 12:42:56,280 : INFO : Echo check passed successfully.
+2025-03-25 12:42:56,431 : INFO : Echo data received: [85, 170, 29, 255, 1, 0, 0, 0, 0, 1, 0, 29]
+2025-03-25 12:42:56,431 : INFO : Echo check passed successfully.
+2025-03-25 12:42:56,553 : INFO : Echo data received: [85, 170, 29, 255, 1, 0, 0, 0, 0, 1, 0, 29]
+2025-03-25 12:42:56,553 : INFO : Echo check passed successfully.
+2025-03-25 12:42:56,690 : INFO : Echo data received: [85, 170, 29, 255, 3, 0, 0, 0, 0, 1, 0, 31]
+2025-03-25 12:42:56,690 : INFO : Echo check passed successfully.
+2025-03-25 12:42:56,798 : INFO : Echo data received: [85, 170, 29, 255, 3, 0, 0, 0, 0, 1, 0, 31]
+2025-03-25 12:42:56,798 : INFO : Echo check passed successfully.
+2025-03-25 12:42:56,933 : INFO : Echo data received: [85, 170, 29, 255, 7, 0, 0, 0, 0, 1, 0, 35]
+2025-03-25 12:42:56,934 : INFO : Echo check passed successfully.
+2025-03-25 12:42:57,056 : INFO : Echo data received: [85, 170, 29, 255, 7, 0, 0, 0, 0, 1, 0, 35]
+2025-03-25 12:42:57,056 : INFO : Echo check passed successfully.
+2025-03-25 12:42:57,189 : INFO : Echo data received: [85, 170, 29, 255, 15, 0, 0, 0, 0, 1, 0, 43]
+2025-03-25 12:42:57,189 : INFO : Echo check passed successfully.
+2025-03-25 12:42:57,303 : INFO : Echo data received: [85, 170, 29, 255, 15, 0, 0, 0, 0, 1, 0, 43]
+2025-03-25 12:42:57,304 : INFO : Echo check passed successfully.
+2025-03-25 12:42:57,443 : INFO : Echo data received: [85, 170, 29, 255, 31, 0, 0, 0, 0, 1, 0, 59]
+2025-03-25 12:42:57,444 : INFO : Echo check passed successfully.
+2025-03-25 12:42:57,567 : INFO : Echo data received: [85, 170, 29, 255, 31, 0, 0, 0, 0, 1, 0, 59]
+2025-03-25 12:42:57,567 : INFO : Echo check passed successfully.
+2025-03-25 12:42:57,695 : INFO : Echo data received: [85, 170, 29, 255, 63, 0, 0, 0, 0, 1, 0, 91]
+2025-03-25 12:42:57,695 : INFO : Echo check passed successfully.
+2025-03-25 12:42:57,813 : INFO : Echo data received: [85, 170, 29, 255, 63, 0, 0, 0, 0, 1, 0, 91]
+2025-03-25 12:42:57,813 : INFO : Echo check passed successfully.
+2025-03-25 12:42:57,952 : INFO : Echo data received: [85, 170, 29, 255, 127, 0, 0, 0, 0, 1, 0, 155]
+2025-03-25 12:42:57,952 : INFO : Echo check passed successfully.
+2025-03-25 12:42:58,073 : INFO : Echo data received: [85, 170, 29, 255, 127, 0, 0, 0, 0, 1, 0, 155]
+2025-03-25 12:42:58,073 : INFO : Echo check passed successfully.
+2025-03-25 12:42:58,201 : INFO : Echo data received: [85, 170, 29, 255, 255, 0, 0, 0, 0, 1, 0, 27]
+2025-03-25 12:42:58,202 : INFO : Echo check passed successfully.
+2025-03-25 12:42:58,325 : INFO : Echo data received: [85, 170, 29, 255, 255, 0, 0, 0, 0, 1, 0, 27]
+2025-03-25 12:42:58,325 : INFO : Echo check passed successfully.
+2025-03-25 12:42:58,468 : INFO : Echo data received: [85, 170, 29, 255, 255, 1, 0, 0, 0, 1, 0, 28]
+2025-03-25 12:42:58,469 : INFO : Echo check passed successfully.
+2025-03-25 12:42:58,583 : INFO : Echo data received: [85, 170, 29, 255, 255, 1, 0, 0, 0, 1, 0, 28]
+2025-03-25 12:42:58,583 : INFO : Echo check passed successfully.
+2025-03-25 12:42:58,714 : INFO : Echo data received: [85, 170, 29, 255, 255, 3, 0, 0, 0, 1, 0, 30]
+2025-03-25 12:42:58,715 : INFO : Echo check passed successfully.
+2025-03-25 12:42:58,836 : INFO : Echo data received: [85, 170, 29, 255, 255, 3, 0, 0, 0, 1, 0, 30]
+2025-03-25 12:42:58,836 : INFO : Echo check passed successfully.
+2025-03-25 12:42:58,980 : INFO : Echo data received: [85, 170, 29, 255, 255, 7, 0, 0, 0, 1, 0, 34]
+2025-03-25 12:42:58,981 : INFO : Echo check passed successfully.
+2025-03-25 12:42:59,094 : INFO : Echo data received: [85, 170, 29, 255, 255, 7, 0, 0, 0, 1, 0, 34]
+2025-03-25 12:42:59,094 : INFO : Echo check passed successfully.
+2025-03-25 12:42:59,230 : INFO : Echo data received: [85, 170, 29, 255, 255, 15, 0, 0, 0, 1, 0, 42]
+2025-03-25 12:42:59,231 : INFO : Echo check passed successfully.
+2025-03-25 12:42:59,351 : INFO : Echo data received: [85, 170, 29, 255, 255, 15, 0, 0, 0, 1, 0, 42]
+2025-03-25 12:42:59,351 : INFO : Echo check passed successfully.
+2025-03-25 12:42:59,491 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 0, 1, 0, 58]
+2025-03-25 12:42:59,492 : INFO : Echo check passed successfully.
+2025-03-25 12:42:59,614 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 0, 1, 0, 58]
+2025-03-25 12:42:59,614 : INFO : Echo check passed successfully.
+2025-03-25 12:43:03,423 : INFO : Echo data received: [85, 170, 29, 254, 255, 31, 0, 0, 0, 1, 0, 57]
+2025-03-25 12:43:03,424 : INFO : Echo check passed successfully.
+2025-03-25 12:43:04,333 : INFO : Echo data received: [85, 170, 29, 252, 255, 31, 0, 0, 0, 1, 0, 55]
+2025-03-25 12:43:04,334 : INFO : Echo check passed successfully.
+2025-03-25 12:43:04,925 : INFO : Echo data received: [85, 170, 29, 248, 255, 31, 0, 0, 0, 1, 0, 51]
+2025-03-25 12:43:04,925 : INFO : Echo check passed successfully.
+2025-03-25 12:43:05,361 : INFO : Echo data received: [85, 170, 29, 240, 255, 31, 0, 0, 0, 1, 0, 43]
+2025-03-25 12:43:05,362 : INFO : Echo check passed successfully.
+2025-03-25 12:43:06,254 : INFO : Echo data received: [85, 170, 29, 240, 255, 31, 0, 0, 0, 1, 0, 43]
+2025-03-25 12:43:06,255 : INFO : Echo check passed successfully.
+2025-03-25 12:43:06,890 : INFO : Echo data received: [85, 170, 29, 240, 255, 31, 0, 0, 0, 1, 0, 43]
+2025-03-25 12:43:06,890 : INFO : Echo check passed successfully.
+2025-03-25 12:43:07,656 : INFO : Echo data received: [85, 170, 29, 240, 255, 31, 0, 0, 0, 1, 0, 43]
+2025-03-25 12:43:07,656 : INFO : Echo check passed successfully.
+2025-03-25 12:43:08,965 : INFO : Echo data received: [85, 170, 29, 240, 251, 31, 0, 0, 0, 1, 0, 39]
+2025-03-25 12:43:08,966 : INFO : Echo check passed successfully.
+2025-03-25 12:43:09,314 : INFO : Echo data received: [85, 170, 29, 240, 250, 31, 0, 0, 0, 1, 0, 38]
+2025-03-25 12:43:09,314 : INFO : Echo check passed successfully.
+2025-03-25 12:43:09,423 : INFO : Echo data received: [85, 170, 29, 112, 250, 31, 0, 0, 0, 1, 0, 166]
+2025-03-25 12:43:09,424 : INFO : Echo check passed successfully.
+2025-03-25 12:43:09,909 : INFO : Echo data received: [85, 170, 29, 48, 250, 31, 0, 0, 0, 1, 0, 102]
+2025-03-25 12:43:09,910 : INFO : Echo check passed successfully.
+2025-03-25 12:43:10,534 : INFO : Echo data received: [85, 170, 29, 16, 250, 31, 0, 0, 0, 1, 0, 70]
+2025-03-25 12:43:10,535 : INFO : Echo check passed successfully.
+2025-03-25 12:43:11,273 : INFO : Echo data received: [85, 170, 29, 16, 250, 15, 0, 0, 0, 1, 0, 54]
+2025-03-25 12:43:11,274 : INFO : Echo check passed successfully.
+2025-03-25 12:43:11,382 : INFO : Echo data received: [85, 170, 29, 16, 250, 15, 0, 0, 0, 1, 0, 54]
+2025-03-25 12:43:11,383 : INFO : Echo check passed successfully.
+2025-03-25 12:43:12,504 : INFO : Echo data received: [85, 170, 29, 255, 255, 15, 0, 0, 32, 1, 0, 74]
+2025-03-25 12:43:12,504 : INFO : Echo check passed successfully.
+2025-03-25 12:43:12,612 : INFO : Echo data received: [85, 170, 29, 255, 255, 47, 0, 0, 0, 1, 0, 74]
+2025-03-25 12:43:12,613 : INFO : Echo check passed successfully.
+2025-03-25 12:43:13,112 : INFO : Echo data received: [85, 170, 29, 255, 255, 47, 0, 0, 16, 1, 0, 90]
+2025-03-25 12:43:13,112 : INFO : Echo check passed successfully.
+2025-03-25 12:43:13,221 : INFO : Echo data received: [85, 170, 29, 255, 255, 63, 0, 0, 0, 1, 0, 90]
+2025-03-25 12:43:13,221 : INFO : Echo check passed successfully.
+2025-03-25 12:43:14,711 : INFO : The program has closed
+2025-03-25 12:45:13,994 : INFO : Echo data received: [85, 170, 5, 0, 0, 0, 0, 0, 0, 1, 0, 5]
+2025-03-25 12:45:13,996 : INFO : Echo check passed successfully.
+2025-03-25 12:45:13,996 : INFO : Successfully connected to port COM3
+2025-03-25 12:45:14,072 : INFO : connected successfully
+2025-03-25 12:45:14,182 : INFO : Echo data received: [85, 170, 13, 0, 0, 0, 0, 0, 0, 1, 0, 13]
+2025-03-25 12:45:14,182 : INFO : Echo check passed successfully.
+2025-03-25 12:45:14,290 : INFO : Echo data received: [85, 170, 29, 0, 0, 0, 0, 0, 0, 1, 0, 29]
+2025-03-25 12:45:14,291 : INFO : Echo check passed successfully.
+2025-03-25 12:45:14,476 : INFO : Echo data received: [85, 170, 29, 1, 0, 0, 0, 0, 0, 1, 0, 30]
+2025-03-25 12:45:14,477 : INFO : Echo check passed successfully.
+2025-03-25 12:45:14,602 : INFO : Echo data received: [85, 170, 29, 1, 0, 0, 0, 0, 0, 1, 0, 30]
+2025-03-25 12:45:14,602 : INFO : Echo check passed successfully.
+2025-03-25 12:45:14,728 : INFO : Echo data received: [85, 170, 29, 3, 0, 0, 0, 0, 0, 1, 0, 32]
+2025-03-25 12:45:14,729 : INFO : Echo check passed successfully.
+2025-03-25 12:45:14,853 : INFO : Echo data received: [85, 170, 29, 3, 0, 0, 0, 0, 0, 1, 0, 32]
+2025-03-25 12:45:14,854 : INFO : Echo check passed successfully.
+2025-03-25 12:45:15,011 : INFO : Echo data received: [85, 170, 29, 7, 0, 0, 0, 0, 0, 1, 0, 36]
+2025-03-25 12:45:15,011 : INFO : Echo check passed successfully.
+2025-03-25 12:45:15,136 : INFO : Echo data received: [85, 170, 29, 7, 0, 0, 0, 0, 0, 1, 0, 36]
+2025-03-25 12:45:15,136 : INFO : Echo check passed successfully.
+2025-03-25 12:45:15,278 : INFO : Echo data received: [85, 170, 29, 15, 0, 0, 0, 0, 0, 1, 0, 44]
+2025-03-25 12:45:15,278 : INFO : Echo check passed successfully.
+2025-03-25 12:45:15,403 : INFO : Echo data received: [85, 170, 29, 15, 0, 0, 0, 0, 0, 1, 0, 44]
+2025-03-25 12:45:15,404 : INFO : Echo check passed successfully.
+2025-03-25 12:45:15,560 : INFO : Echo data received: [85, 170, 29, 31, 0, 0, 0, 0, 0, 1, 0, 60]
+2025-03-25 12:45:15,560 : INFO : Echo check passed successfully.
+2025-03-25 12:45:15,684 : INFO : Echo data received: [85, 170, 29, 31, 0, 0, 0, 0, 0, 1, 0, 60]
+2025-03-25 12:45:15,684 : INFO : Echo check passed successfully.
+2025-03-25 12:45:15,810 : INFO : Echo data received: [85, 170, 29, 63, 0, 0, 0, 0, 0, 1, 0, 92]
+2025-03-25 12:45:15,811 : INFO : Echo check passed successfully.
+2025-03-25 12:45:15,951 : INFO : Echo data received: [85, 170, 29, 63, 0, 0, 0, 0, 0, 1, 0, 92]
+2025-03-25 12:45:15,952 : INFO : Echo check passed successfully.
+2025-03-25 12:45:16,093 : INFO : Echo data received: [85, 170, 29, 127, 0, 0, 0, 0, 0, 1, 0, 156]
+2025-03-25 12:45:16,094 : INFO : Echo check passed successfully.
+2025-03-25 12:45:16,219 : INFO : Echo data received: [85, 170, 29, 127, 0, 0, 0, 0, 0, 1, 0, 156]
+2025-03-25 12:45:16,219 : INFO : Echo check passed successfully.
+2025-03-25 12:45:16,360 : INFO : Echo data received: [85, 170, 29, 255, 0, 0, 0, 0, 0, 1, 0, 28]
+2025-03-25 12:45:16,361 : INFO : Echo check passed successfully.
+2025-03-25 12:45:16,486 : INFO : Echo data received: [85, 170, 29, 255, 0, 0, 0, 0, 0, 1, 0, 28]
+2025-03-25 12:45:16,486 : INFO : Echo check passed successfully.
+2025-03-25 12:45:16,626 : INFO : Echo data received: [85, 170, 29, 255, 1, 0, 0, 0, 0, 1, 0, 29]
+2025-03-25 12:45:16,627 : INFO : Echo check passed successfully.
+2025-03-25 12:45:16,750 : INFO : Echo data received: [85, 170, 29, 255, 1, 0, 0, 0, 0, 1, 0, 29]
+2025-03-25 12:45:16,751 : INFO : Echo check passed successfully.
+2025-03-25 12:45:16,906 : INFO : Echo data received: [85, 170, 29, 255, 3, 0, 0, 0, 0, 1, 0, 31]
+2025-03-25 12:45:16,907 : INFO : Echo check passed successfully.
+2025-03-25 12:45:17,046 : INFO : Echo data received: [85, 170, 29, 255, 3, 0, 0, 0, 0, 1, 0, 31]
+2025-03-25 12:45:17,046 : INFO : Echo check passed successfully.
+2025-03-25 12:45:17,171 : INFO : Echo data received: [85, 170, 29, 255, 7, 0, 0, 0, 0, 1, 0, 35]
+2025-03-25 12:45:17,171 : INFO : Echo check passed successfully.
+2025-03-25 12:45:17,297 : INFO : Echo data received: [85, 170, 29, 255, 7, 0, 0, 0, 0, 1, 0, 35]
+2025-03-25 12:45:17,297 : INFO : Echo check passed successfully.
+2025-03-25 12:45:17,437 : INFO : Echo data received: [85, 170, 29, 255, 15, 0, 0, 0, 0, 1, 0, 43]
+2025-03-25 12:45:17,437 : INFO : Echo check passed successfully.
+2025-03-25 12:45:17,561 : INFO : Echo data received: [85, 170, 29, 255, 15, 0, 0, 0, 0, 1, 0, 43]
+2025-03-25 12:45:17,561 : INFO : Echo check passed successfully.
+2025-03-25 12:45:17,702 : INFO : Echo data received: [85, 170, 29, 255, 31, 0, 0, 0, 0, 1, 0, 59]
+2025-03-25 12:45:17,703 : INFO : Echo check passed successfully.
+2025-03-25 12:45:17,829 : INFO : Echo data received: [85, 170, 29, 255, 31, 0, 0, 0, 0, 1, 0, 59]
+2025-03-25 12:45:17,829 : INFO : Echo check passed successfully.
+2025-03-25 12:45:17,969 : INFO : Echo data received: [85, 170, 29, 255, 63, 0, 0, 0, 0, 1, 0, 91]
+2025-03-25 12:45:17,969 : INFO : Echo check passed successfully.
+2025-03-25 12:45:18,095 : INFO : Echo data received: [85, 170, 29, 255, 63, 0, 0, 0, 0, 1, 0, 91]
+2025-03-25 12:45:18,095 : INFO : Echo check passed successfully.
+2025-03-25 12:45:18,237 : INFO : Echo data received: [85, 170, 29, 255, 127, 0, 0, 0, 0, 1, 0, 155]
+2025-03-25 12:45:18,237 : INFO : Echo check passed successfully.
+2025-03-25 12:45:18,377 : INFO : Echo data received: [85, 170, 29, 255, 127, 0, 0, 0, 0, 1, 0, 155]
+2025-03-25 12:45:18,377 : INFO : Echo check passed successfully.
+2025-03-25 12:45:18,501 : INFO : Echo data received: [85, 170, 29, 255, 255, 0, 0, 0, 0, 1, 0, 27]
+2025-03-25 12:45:18,501 : INFO : Echo check passed successfully.
+2025-03-25 12:45:18,627 : INFO : Echo data received: [85, 170, 29, 255, 255, 0, 0, 0, 0, 1, 0, 27]
+2025-03-25 12:45:18,627 : INFO : Echo check passed successfully.
+2025-03-25 12:45:18,784 : INFO : Echo data received: [85, 170, 29, 255, 255, 1, 0, 0, 0, 1, 0, 28]
+2025-03-25 12:45:18,784 : INFO : Echo check passed successfully.
+2025-03-25 12:45:18,910 : INFO : Echo data received: [85, 170, 29, 255, 255, 1, 0, 0, 0, 1, 0, 28]
+2025-03-25 12:45:18,910 : INFO : Echo check passed successfully.
+2025-03-25 12:45:19,035 : INFO : Echo data received: [85, 170, 29, 255, 255, 3, 0, 0, 0, 1, 0, 30]
+2025-03-25 12:45:19,035 : INFO : Echo check passed successfully.
+2025-03-25 12:45:19,161 : INFO : Echo data received: [85, 170, 29, 255, 255, 3, 0, 0, 0, 1, 0, 30]
+2025-03-25 12:45:19,162 : INFO : Echo check passed successfully.
+2025-03-25 12:45:19,320 : INFO : Echo data received: [85, 170, 29, 255, 255, 7, 0, 0, 0, 1, 0, 34]
+2025-03-25 12:45:19,320 : INFO : Echo check passed successfully.
+2025-03-25 12:45:19,446 : INFO : Echo data received: [85, 170, 29, 255, 255, 7, 0, 0, 0, 1, 0, 34]
+2025-03-25 12:45:19,446 : INFO : Echo check passed successfully.
+2025-03-25 12:45:19,571 : INFO : Echo data received: [85, 170, 29, 255, 255, 15, 0, 0, 0, 1, 0, 42]
+2025-03-25 12:45:19,572 : INFO : Echo check passed successfully.
+2025-03-25 12:45:19,712 : INFO : Echo data received: [85, 170, 29, 255, 255, 15, 0, 0, 0, 1, 0, 42]
+2025-03-25 12:45:19,712 : INFO : Echo check passed successfully.
+2025-03-25 12:45:19,852 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 0, 1, 0, 58]
+2025-03-25 12:45:19,853 : INFO : Echo check passed successfully.
+2025-03-25 12:45:19,978 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 0, 1, 0, 58]
+2025-03-25 12:45:19,978 : INFO : Echo check passed successfully.
+2025-03-25 12:45:25,596 : INFO : Echo data received: [85, 170, 29, 251, 255, 31, 0, 0, 0, 1, 0, 54]
+2025-03-25 12:45:25,596 : INFO : Echo check passed successfully.
+2025-03-25 12:45:25,980 : INFO : Echo data received: [85, 170, 29, 249, 255, 31, 0, 0, 0, 1, 0, 52]
+2025-03-25 12:45:25,980 : INFO : Echo check passed successfully.
+2025-03-25 12:45:26,352 : INFO : Echo data received: [85, 170, 29, 248, 255, 31, 0, 0, 0, 1, 0, 51]
+2025-03-25 12:45:26,353 : INFO : Echo check passed successfully.
+2025-03-25 12:45:30,033 : INFO : Echo data received: [85, 170, 29, 248, 255, 31, 0, 0, 0, 1, 0, 51]
+2025-03-25 12:45:30,033 : INFO : Echo check passed successfully.
+2025-03-25 12:45:32,811 : INFO : The program has closed
+2025-03-25 12:45:39,204 : INFO : Echo data received: [85, 170, 5, 0, 0, 0, 0, 0, 0, 1, 0, 5]
+2025-03-25 12:45:39,205 : INFO : Echo check passed successfully.
+2025-03-25 12:45:39,205 : INFO : Successfully connected to port COM3
+2025-03-25 12:45:39,268 : INFO : connected successfully
+2025-03-25 12:45:39,369 : INFO : Echo data received: [85, 170, 13, 0, 0, 0, 0, 0, 0, 1, 0, 13]
+2025-03-25 12:45:39,369 : INFO : Echo check passed successfully.
+2025-03-25 12:45:39,472 : INFO : Echo data received: [85, 170, 29, 0, 0, 0, 0, 0, 0, 1, 0, 29]
+2025-03-25 12:45:39,472 : INFO : Echo check passed successfully.
+2025-03-25 12:45:39,618 : INFO : Echo data received: [85, 170, 29, 1, 0, 0, 0, 0, 0, 1, 0, 30]
+2025-03-25 12:45:39,618 : INFO : Echo check passed successfully.
+2025-03-25 12:45:39,733 : INFO : Echo data received: [85, 170, 29, 1, 0, 0, 0, 0, 0, 1, 0, 30]
+2025-03-25 12:45:39,733 : INFO : Echo check passed successfully.
+2025-03-25 12:45:39,861 : INFO : Echo data received: [85, 170, 29, 3, 0, 0, 0, 0, 0, 1, 0, 32]
+2025-03-25 12:45:39,861 : INFO : Echo check passed successfully.
+2025-03-25 12:45:39,976 : INFO : Echo data received: [85, 170, 29, 3, 0, 0, 0, 0, 0, 1, 0, 32]
+2025-03-25 12:45:39,976 : INFO : Echo check passed successfully.
+2025-03-25 12:45:40,123 : INFO : Echo data received: [85, 170, 29, 7, 0, 0, 0, 0, 0, 1, 0, 36]
+2025-03-25 12:45:40,123 : INFO : Echo check passed successfully.
+2025-03-25 12:45:40,235 : INFO : Echo data received: [85, 170, 29, 7, 0, 0, 0, 0, 0, 1, 0, 36]
+2025-03-25 12:45:40,235 : INFO : Echo check passed successfully.
+2025-03-25 12:45:40,372 : INFO : Echo data received: [85, 170, 29, 15, 0, 0, 0, 0, 0, 1, 0, 44]
+2025-03-25 12:45:40,373 : INFO : Echo check passed successfully.
+2025-03-25 12:45:40,497 : INFO : Echo data received: [85, 170, 29, 15, 0, 0, 0, 0, 0, 1, 0, 44]
+2025-03-25 12:45:40,498 : INFO : Echo check passed successfully.
+2025-03-25 12:45:40,636 : INFO : Echo data received: [85, 170, 29, 31, 0, 0, 0, 0, 0, 1, 0, 60]
+2025-03-25 12:45:40,636 : INFO : Echo check passed successfully.
+2025-03-25 12:45:40,748 : INFO : Echo data received: [85, 170, 29, 31, 0, 0, 0, 0, 0, 1, 0, 60]
+2025-03-25 12:45:40,749 : INFO : Echo check passed successfully.
+2025-03-25 12:45:40,881 : INFO : Echo data received: [85, 170, 29, 63, 0, 0, 0, 0, 0, 1, 0, 92]
+2025-03-25 12:45:40,882 : INFO : Echo check passed successfully.
+2025-03-25 12:45:41,005 : INFO : Echo data received: [85, 170, 29, 63, 0, 0, 0, 0, 0, 1, 0, 92]
+2025-03-25 12:45:41,005 : INFO : Echo check passed successfully.
+2025-03-25 12:45:41,142 : INFO : Echo data received: [85, 170, 29, 127, 0, 0, 0, 0, 0, 1, 0, 156]
+2025-03-25 12:45:41,143 : INFO : Echo check passed successfully.
+2025-03-25 12:45:41,256 : INFO : Echo data received: [85, 170, 29, 127, 0, 0, 0, 0, 0, 1, 0, 156]
+2025-03-25 12:45:41,256 : INFO : Echo check passed successfully.
+2025-03-25 12:45:41,395 : INFO : Echo data received: [85, 170, 29, 255, 0, 0, 0, 0, 0, 1, 0, 28]
+2025-03-25 12:45:41,395 : INFO : Echo check passed successfully.
+2025-03-25 12:45:41,512 : INFO : Echo data received: [85, 170, 29, 255, 0, 0, 0, 0, 0, 1, 0, 28]
+2025-03-25 12:45:41,512 : INFO : Echo check passed successfully.
+2025-03-25 12:45:41,652 : INFO : Echo data received: [85, 170, 29, 255, 1, 0, 0, 0, 0, 1, 0, 29]
+2025-03-25 12:45:41,652 : INFO : Echo check passed successfully.
+2025-03-25 12:45:41,764 : INFO : Echo data received: [85, 170, 29, 255, 1, 0, 0, 0, 0, 1, 0, 29]
+2025-03-25 12:45:41,764 : INFO : Echo check passed successfully.
+2025-03-25 12:45:41,905 : INFO : Echo data received: [85, 170, 29, 255, 3, 0, 0, 0, 0, 1, 0, 31]
+2025-03-25 12:45:41,905 : INFO : Echo check passed successfully.
+2025-03-25 12:45:42,021 : INFO : Echo data received: [85, 170, 29, 255, 3, 0, 0, 0, 0, 1, 0, 31]
+2025-03-25 12:45:42,021 : INFO : Echo check passed successfully.
+2025-03-25 12:45:42,162 : INFO : Echo data received: [85, 170, 29, 255, 7, 0, 0, 0, 0, 1, 0, 35]
+2025-03-25 12:45:42,162 : INFO : Echo check passed successfully.
+2025-03-25 12:45:42,279 : INFO : Echo data received: [85, 170, 29, 255, 7, 0, 0, 0, 0, 1, 0, 35]
+2025-03-25 12:45:42,280 : INFO : Echo check passed successfully.
+2025-03-25 12:45:42,417 : INFO : Echo data received: [85, 170, 29, 255, 15, 0, 0, 0, 0, 1, 0, 43]
+2025-03-25 12:45:42,417 : INFO : Echo check passed successfully.
+2025-03-25 12:45:42,530 : INFO : Echo data received: [85, 170, 29, 255, 15, 0, 0, 0, 0, 1, 0, 43]
+2025-03-25 12:45:42,530 : INFO : Echo check passed successfully.
+2025-03-25 12:45:42,675 : INFO : Echo data received: [85, 170, 29, 255, 31, 0, 0, 0, 0, 1, 0, 59]
+2025-03-25 12:45:42,676 : INFO : Echo check passed successfully.
+2025-03-25 12:45:42,800 : INFO : Echo data received: [85, 170, 29, 255, 31, 0, 0, 0, 0, 1, 0, 59]
+2025-03-25 12:45:42,800 : INFO : Echo check passed successfully.
+2025-03-25 12:45:42,932 : INFO : Echo data received: [85, 170, 29, 255, 63, 0, 0, 0, 0, 1, 0, 91]
+2025-03-25 12:45:42,933 : INFO : Echo check passed successfully.
+2025-03-25 12:45:43,053 : INFO : Echo data received: [85, 170, 29, 255, 63, 0, 0, 0, 0, 1, 0, 91]
+2025-03-25 12:45:43,053 : INFO : Echo check passed successfully.
+2025-03-25 12:45:43,186 : INFO : Echo data received: [85, 170, 29, 255, 127, 0, 0, 0, 0, 1, 0, 155]
+2025-03-25 12:45:43,186 : INFO : Echo check passed successfully.
+2025-03-25 12:45:43,299 : INFO : Echo data received: [85, 170, 29, 255, 127, 0, 0, 0, 0, 1, 0, 155]
+2025-03-25 12:45:43,299 : INFO : Echo check passed successfully.
+2025-03-25 12:45:43,436 : INFO : Echo data received: [85, 170, 29, 255, 255, 0, 0, 0, 0, 1, 0, 27]
+2025-03-25 12:45:43,437 : INFO : Echo check passed successfully.
+2025-03-25 12:45:43,561 : INFO : Echo data received: [85, 170, 29, 255, 255, 0, 0, 0, 0, 1, 0, 27]
+2025-03-25 12:45:43,561 : INFO : Echo check passed successfully.
+2025-03-25 12:45:43,703 : INFO : Echo data received: [85, 170, 29, 255, 255, 1, 0, 0, 0, 1, 0, 28]
+2025-03-25 12:45:43,703 : INFO : Echo check passed successfully.
+2025-03-25 12:45:43,817 : INFO : Echo data received: [85, 170, 29, 255, 255, 1, 0, 0, 0, 1, 0, 28]
+2025-03-25 12:45:43,817 : INFO : Echo check passed successfully.
+2025-03-25 12:45:43,952 : INFO : Echo data received: [85, 170, 29, 255, 255, 3, 0, 0, 0, 1, 0, 30]
+2025-03-25 12:45:43,953 : INFO : Echo check passed successfully.
+2025-03-25 12:45:44,076 : INFO : Echo data received: [85, 170, 29, 255, 255, 3, 0, 0, 0, 1, 0, 30]
+2025-03-25 12:45:44,076 : INFO : Echo check passed successfully.
+2025-03-25 12:45:44,207 : INFO : Echo data received: [85, 170, 29, 255, 255, 7, 0, 0, 0, 1, 0, 34]
+2025-03-25 12:45:44,207 : INFO : Echo check passed successfully.
+2025-03-25 12:45:44,318 : INFO : Echo data received: [85, 170, 29, 255, 255, 7, 0, 0, 0, 1, 0, 34]
+2025-03-25 12:45:44,318 : INFO : Echo check passed successfully.
+2025-03-25 12:45:44,459 : INFO : Echo data received: [85, 170, 29, 255, 255, 15, 0, 0, 0, 1, 0, 42]
+2025-03-25 12:45:44,459 : INFO : Echo check passed successfully.
+2025-03-25 12:45:44,569 : INFO : Echo data received: [85, 170, 29, 255, 255, 15, 0, 0, 0, 1, 0, 42]
+2025-03-25 12:45:44,569 : INFO : Echo check passed successfully.
+2025-03-25 12:45:44,704 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 0, 1, 0, 58]
+2025-03-25 12:45:44,704 : INFO : Echo check passed successfully.
+2025-03-25 12:45:44,818 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 0, 1, 0, 58]
+2025-03-25 12:45:44,818 : INFO : Echo check passed successfully.
+2025-03-25 12:46:12,297 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 96, 1, 0, 154]
+2025-03-25 12:46:12,297 : INFO : Echo check passed successfully.
+2025-03-25 12:46:14,792 : INFO : Echo data received: [85, 170, 29, 255, 247, 31, 0, 0, 96, 1, 0, 146]
+2025-03-25 12:46:14,793 : INFO : Echo check passed successfully.
+2025-03-25 12:46:14,905 : INFO : Echo data received: [85, 170, 29, 255, 247, 31, 0, 0, 96, 1, 0, 146]
+2025-03-25 12:46:14,906 : INFO : Echo check passed successfully.
+2025-03-25 12:46:17,117 : INFO : Echo data received: [85, 170, 29, 254, 247, 31, 0, 0, 96, 1, 0, 145]
+2025-03-25 12:46:17,117 : INFO : Echo check passed successfully.
+2025-03-25 12:46:18,191 : INFO : Echo data received: [85, 170, 29, 252, 247, 31, 0, 0, 96, 1, 0, 143]
+2025-03-25 12:46:18,191 : INFO : Echo check passed successfully.
+2025-03-25 12:46:18,819 : INFO : Echo data received: [85, 170, 29, 248, 247, 31, 0, 0, 96, 1, 0, 139]
+2025-03-25 12:46:18,820 : INFO : Echo check passed successfully.
+2025-03-25 12:46:19,170 : INFO : Echo data received: [85, 170, 29, 240, 247, 31, 0, 0, 96, 1, 0, 131]
+2025-03-25 12:46:19,170 : INFO : Echo check passed successfully.
+2025-03-25 12:46:25,112 : INFO : Echo data received: [85, 170, 29, 240, 247, 31, 0, 8, 96, 1, 0, 139]
+2025-03-25 12:46:25,113 : INFO : Echo check passed successfully.
+2025-03-25 12:46:25,222 : INFO : Echo data received: [85, 170, 29, 240, 255, 31, 0, 0, 96, 1, 0, 139]
+2025-03-25 12:46:25,222 : INFO : Echo check passed successfully.
+2025-03-25 12:46:28,605 : INFO : The program has closed
+2025-03-25 12:47:07,269 : INFO : Echo data received: [85, 170, 5, 0, 0, 0, 0, 0, 0, 1, 0, 5]
+2025-03-25 12:47:07,269 : INFO : Echo check passed successfully.
+2025-03-25 12:47:07,269 : INFO : Successfully connected to port COM3
+2025-03-25 12:47:07,302 : INFO : connected successfully
+2025-03-25 12:47:07,404 : INFO : Echo data received: [85, 170, 13, 0, 0, 0, 0, 0, 0, 1, 0, 13]
+2025-03-25 12:47:07,404 : INFO : Echo check passed successfully.
+2025-03-25 12:47:07,505 : INFO : Echo data received: [85, 170, 29, 0, 0, 0, 0, 0, 0, 1, 0, 29]
+2025-03-25 12:47:07,505 : INFO : Echo check passed successfully.
+2025-03-25 12:47:07,656 : INFO : Echo data received: [85, 170, 29, 1, 0, 0, 0, 0, 0, 1, 0, 30]
+2025-03-25 12:47:07,656 : INFO : Echo check passed successfully.
+2025-03-25 12:47:07,773 : INFO : Echo data received: [85, 170, 29, 1, 0, 0, 0, 0, 0, 1, 0, 30]
+2025-03-25 12:47:07,773 : INFO : Echo check passed successfully.
+2025-03-25 12:47:07,902 : INFO : Echo data received: [85, 170, 29, 3, 0, 0, 0, 0, 0, 1, 0, 32]
+2025-03-25 12:47:07,903 : INFO : Echo check passed successfully.
+2025-03-25 12:47:08,023 : INFO : Echo data received: [85, 170, 29, 3, 0, 0, 0, 0, 0, 1, 0, 32]
+2025-03-25 12:47:08,023 : INFO : Echo check passed successfully.
+2025-03-25 12:47:08,175 : INFO : Echo data received: [85, 170, 29, 7, 0, 0, 0, 0, 0, 1, 0, 36]
+2025-03-25 12:47:08,175 : INFO : Echo check passed successfully.
+2025-03-25 12:47:08,282 : INFO : Echo data received: [85, 170, 29, 7, 0, 0, 0, 0, 0, 1, 0, 36]
+2025-03-25 12:47:08,283 : INFO : Echo check passed successfully.
+2025-03-25 12:47:08,412 : INFO : Echo data received: [85, 170, 29, 15, 0, 0, 0, 0, 0, 1, 0, 44]
+2025-03-25 12:47:08,412 : INFO : Echo check passed successfully.
+2025-03-25 12:47:08,535 : INFO : Echo data received: [85, 170, 29, 15, 0, 0, 0, 0, 0, 1, 0, 44]
+2025-03-25 12:47:08,535 : INFO : Echo check passed successfully.
+2025-03-25 12:47:08,668 : INFO : Echo data received: [85, 170, 29, 31, 0, 0, 0, 0, 0, 1, 0, 60]
+2025-03-25 12:47:08,668 : INFO : Echo check passed successfully.
+2025-03-25 12:47:08,775 : INFO : Echo data received: [85, 170, 29, 31, 0, 0, 0, 0, 0, 1, 0, 60]
+2025-03-25 12:47:08,776 : INFO : Echo check passed successfully.
+2025-03-25 12:47:08,920 : INFO : Echo data received: [85, 170, 29, 63, 0, 0, 0, 0, 0, 1, 0, 92]
+2025-03-25 12:47:08,920 : INFO : Echo check passed successfully.
+2025-03-25 12:47:09,043 : INFO : Echo data received: [85, 170, 29, 63, 0, 0, 0, 0, 0, 1, 0, 92]
+2025-03-25 12:47:09,044 : INFO : Echo check passed successfully.
+2025-03-25 12:47:09,173 : INFO : Echo data received: [85, 170, 29, 127, 0, 0, 0, 0, 0, 1, 0, 156]
+2025-03-25 12:47:09,174 : INFO : Echo check passed successfully.
+2025-03-25 12:47:09,294 : INFO : Echo data received: [85, 170, 29, 127, 0, 0, 0, 0, 0, 1, 0, 156]
+2025-03-25 12:47:09,295 : INFO : Echo check passed successfully.
+2025-03-25 12:47:09,446 : INFO : Echo data received: [85, 170, 29, 255, 0, 0, 0, 0, 0, 1, 0, 28]
+2025-03-25 12:47:09,447 : INFO : Echo check passed successfully.
+2025-03-25 12:47:09,573 : INFO : Echo data received: [85, 170, 29, 255, 0, 0, 0, 0, 0, 1, 0, 28]
+2025-03-25 12:47:09,573 : INFO : Echo check passed successfully.
+2025-03-25 12:47:09,716 : INFO : Echo data received: [85, 170, 29, 255, 1, 0, 0, 0, 0, 1, 0, 29]
+2025-03-25 12:47:09,717 : INFO : Echo check passed successfully.
+2025-03-25 12:47:09,839 : INFO : Echo data received: [85, 170, 29, 255, 1, 0, 0, 0, 0, 1, 0, 29]
+2025-03-25 12:47:09,839 : INFO : Echo check passed successfully.
+2025-03-25 12:47:09,978 : INFO : Echo data received: [85, 170, 29, 255, 3, 0, 0, 0, 0, 1, 0, 31]
+2025-03-25 12:47:09,979 : INFO : Echo check passed successfully.
+2025-03-25 12:47:10,102 : INFO : Echo data received: [85, 170, 29, 255, 3, 0, 0, 0, 0, 1, 0, 31]
+2025-03-25 12:47:10,102 : INFO : Echo check passed successfully.
+2025-03-25 12:47:10,235 : INFO : Echo data received: [85, 170, 29, 255, 7, 0, 0, 0, 0, 1, 0, 35]
+2025-03-25 12:47:10,236 : INFO : Echo check passed successfully.
+2025-03-25 12:47:10,366 : INFO : Echo data received: [85, 170, 29, 255, 7, 0, 0, 0, 0, 1, 0, 35]
+2025-03-25 12:47:10,366 : INFO : Echo check passed successfully.
+2025-03-25 12:47:10,498 : INFO : Echo data received: [85, 170, 29, 255, 15, 0, 0, 0, 0, 1, 0, 43]
+2025-03-25 12:47:10,498 : INFO : Echo check passed successfully.
+2025-03-25 12:47:10,606 : INFO : Echo data received: [85, 170, 29, 255, 15, 0, 0, 0, 0, 1, 0, 43]
+2025-03-25 12:47:10,606 : INFO : Echo check passed successfully.
+2025-03-25 12:47:10,752 : INFO : Echo data received: [85, 170, 29, 255, 31, 0, 0, 0, 0, 1, 0, 59]
+2025-03-25 12:47:10,752 : INFO : Echo check passed successfully.
+2025-03-25 12:47:10,872 : INFO : Echo data received: [85, 170, 29, 255, 31, 0, 0, 0, 0, 1, 0, 59]
+2025-03-25 12:47:10,872 : INFO : Echo check passed successfully.
+2025-03-25 12:47:11,002 : INFO : Echo data received: [85, 170, 29, 255, 63, 0, 0, 0, 0, 1, 0, 91]
+2025-03-25 12:47:11,003 : INFO : Echo check passed successfully.
+2025-03-25 12:47:11,122 : INFO : Echo data received: [85, 170, 29, 255, 63, 0, 0, 0, 0, 1, 0, 91]
+2025-03-25 12:47:11,122 : INFO : Echo check passed successfully.
+2025-03-25 12:47:11,261 : INFO : Echo data received: [85, 170, 29, 255, 127, 0, 0, 0, 0, 1, 0, 155]
+2025-03-25 12:47:11,262 : INFO : Echo check passed successfully.
+2025-03-25 12:47:11,387 : INFO : Echo data received: [85, 170, 29, 255, 127, 0, 0, 0, 0, 1, 0, 155]
+2025-03-25 12:47:11,387 : INFO : Echo check passed successfully.
+2025-03-25 12:47:11,529 : INFO : Echo data received: [85, 170, 29, 255, 255, 0, 0, 0, 0, 1, 0, 27]
+2025-03-25 12:47:11,529 : INFO : Echo check passed successfully.
+2025-03-25 12:47:11,636 : INFO : Echo data received: [85, 170, 29, 255, 255, 0, 0, 0, 0, 1, 0, 27]
+2025-03-25 12:47:11,636 : INFO : Echo check passed successfully.
+2025-03-25 12:47:11,774 : INFO : Echo data received: [85, 170, 29, 255, 255, 1, 0, 0, 0, 1, 0, 28]
+2025-03-25 12:47:11,775 : INFO : Echo check passed successfully.
+2025-03-25 12:47:11,901 : INFO : Echo data received: [85, 170, 29, 255, 255, 1, 0, 0, 0, 1, 0, 28]
+2025-03-25 12:47:11,901 : INFO : Echo check passed successfully.
+2025-03-25 12:47:12,032 : INFO : Echo data received: [85, 170, 29, 255, 255, 3, 0, 0, 0, 1, 0, 30]
+2025-03-25 12:47:12,032 : INFO : Echo check passed successfully.
+2025-03-25 12:47:12,145 : INFO : Echo data received: [85, 170, 29, 255, 255, 3, 0, 0, 0, 1, 0, 30]
+2025-03-25 12:47:12,145 : INFO : Echo check passed successfully.
+2025-03-25 12:47:12,288 : INFO : Echo data received: [85, 170, 29, 255, 255, 7, 0, 0, 0, 1, 0, 34]
+2025-03-25 12:47:12,288 : INFO : Echo check passed successfully.
+2025-03-25 12:47:12,399 : INFO : Echo data received: [85, 170, 29, 255, 255, 7, 0, 0, 0, 1, 0, 34]
+2025-03-25 12:47:12,400 : INFO : Echo check passed successfully.
+2025-03-25 12:47:12,548 : INFO : Echo data received: [85, 170, 29, 255, 255, 15, 0, 0, 0, 1, 0, 42]
+2025-03-25 12:47:12,549 : INFO : Echo check passed successfully.
+2025-03-25 12:47:12,671 : INFO : Echo data received: [85, 170, 29, 255, 255, 15, 0, 0, 0, 1, 0, 42]
+2025-03-25 12:47:12,671 : INFO : Echo check passed successfully.
+2025-03-25 12:47:12,805 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 0, 1, 0, 58]
+2025-03-25 12:47:12,805 : INFO : Echo check passed successfully.
+2025-03-25 12:47:12,921 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 0, 1, 0, 58]
+2025-03-25 12:47:12,922 : INFO : Echo check passed successfully.
+2025-03-25 12:47:15,624 : INFO : Echo data received: [85, 170, 29, 254, 255, 31, 0, 0, 0, 1, 0, 57]
+2025-03-25 12:47:15,625 : INFO : Echo check passed successfully.
+2025-03-25 12:47:16,221 : INFO : Echo data received: [85, 170, 29, 252, 255, 31, 0, 0, 0, 1, 0, 55]
+2025-03-25 12:47:16,222 : INFO : Echo check passed successfully.
+2025-03-25 12:47:16,555 : INFO : Echo data received: [85, 170, 29, 244, 255, 31, 0, 0, 0, 1, 0, 47]
+2025-03-25 12:47:16,556 : INFO : Echo check passed successfully.
+2025-03-25 12:47:16,889 : INFO : Echo data received: [85, 170, 29, 212, 255, 31, 0, 0, 0, 1, 0, 15]
+2025-03-25 12:47:16,890 : INFO : Echo check passed successfully.
+2025-03-25 12:47:17,315 : INFO : Echo data received: [85, 170, 29, 208, 255, 31, 0, 0, 0, 1, 0, 11]
+2025-03-25 12:47:17,316 : INFO : Echo check passed successfully.
+2025-03-25 12:47:17,706 : INFO : Echo data received: [85, 170, 29, 192, 255, 31, 0, 0, 0, 1, 0, 251]
+2025-03-25 12:47:17,706 : INFO : Echo check passed successfully.
+2025-03-25 12:47:18,724 : INFO : The program has closed
+2025-03-25 12:48:37,155 : INFO : Echo data received: [85, 170, 5, 0, 0, 0, 0, 0, 0, 1, 0, 5]
+2025-03-25 12:48:37,156 : INFO : Echo check passed successfully.
+2025-03-25 12:48:37,157 : INFO : Successfully connected to port COM3
+2025-03-25 12:48:37,214 : INFO : connected successfully
+2025-03-25 12:48:37,316 : INFO : Echo data received: [85, 170, 13, 0, 0, 0, 0, 0, 0, 1, 0, 13]
+2025-03-25 12:48:37,316 : INFO : Echo check passed successfully.
+2025-03-25 12:48:39,574 : INFO : Echo data received: [85, 170, 29, 1, 0, 0, 0, 0, 0, 1, 0, 30]
+2025-03-25 12:48:39,575 : INFO : Echo check passed successfully.
+2025-03-25 12:48:39,687 : INFO : Echo data received: [85, 170, 29, 0, 0, 0, 1, 0, 0, 1, 0, 30]
+2025-03-25 12:48:39,688 : INFO : Echo check passed successfully.
+2025-03-25 12:48:39,839 : INFO : Echo data received: [85, 170, 29, 3, 0, 0, 0, 0, 0, 1, 0, 32]
+2025-03-25 12:48:39,840 : INFO : Echo check passed successfully.
+2025-03-25 12:48:39,962 : INFO : Echo data received: [85, 170, 29, 1, 0, 0, 2, 0, 0, 1, 0, 32]
+2025-03-25 12:48:39,962 : INFO : Echo check passed successfully.
+2025-03-25 12:48:40,093 : INFO : Echo data received: [85, 170, 29, 7, 0, 0, 0, 0, 0, 1, 0, 36]
+2025-03-25 12:48:40,094 : INFO : Echo check passed successfully.
+2025-03-25 12:48:40,213 : INFO : Echo data received: [85, 170, 29, 3, 0, 0, 4, 0, 0, 1, 0, 36]
+2025-03-25 12:48:40,213 : INFO : Echo check passed successfully.
+2025-03-25 12:48:40,346 : INFO : Echo data received: [85, 170, 29, 15, 0, 0, 0, 0, 0, 1, 0, 44]
+2025-03-25 12:48:40,347 : INFO : Echo check passed successfully.
+2025-03-25 12:48:40,465 : INFO : Echo data received: [85, 170, 29, 7, 0, 0, 8, 0, 0, 1, 0, 44]
+2025-03-25 12:48:40,466 : INFO : Echo check passed successfully.
+2025-03-25 12:48:40,601 : INFO : Echo data received: [85, 170, 29, 31, 0, 0, 0, 0, 0, 1, 0, 60]
+2025-03-25 12:48:40,601 : INFO : Echo check passed successfully.
+2025-03-25 12:48:40,722 : INFO : Echo data received: [85, 170, 29, 15, 0, 0, 16, 0, 0, 1, 0, 60]
+2025-03-25 12:48:40,722 : INFO : Echo check passed successfully.
+2025-03-25 12:48:40,861 : INFO : Echo data received: [85, 170, 29, 63, 0, 0, 0, 0, 0, 1, 0, 92]
+2025-03-25 12:48:40,861 : INFO : Echo check passed successfully.
+2025-03-25 12:48:40,968 : INFO : Echo data received: [85, 170, 29, 31, 0, 0, 32, 0, 0, 1, 0, 92]
+2025-03-25 12:48:40,968 : INFO : Echo check passed successfully.
+2025-03-25 12:48:41,112 : INFO : Echo data received: [85, 170, 29, 127, 0, 0, 0, 0, 0, 1, 0, 156]
+2025-03-25 12:48:41,112 : INFO : Echo check passed successfully.
+2025-03-25 12:48:41,233 : INFO : Echo data received: [85, 170, 29, 63, 0, 0, 64, 0, 0, 1, 0, 156]
+2025-03-25 12:48:41,233 : INFO : Echo check passed successfully.
+2025-03-25 12:48:41,378 : INFO : Echo data received: [85, 170, 29, 255, 0, 0, 0, 0, 0, 1, 0, 28]
+2025-03-25 12:48:41,379 : INFO : Echo check passed successfully.
+2025-03-25 12:48:41,496 : INFO : Echo data received: [85, 170, 29, 127, 0, 0, 128, 0, 0, 1, 0, 28]
+2025-03-25 12:48:41,496 : INFO : Echo check passed successfully.
+2025-03-25 12:48:41,629 : INFO : Echo data received: [85, 170, 29, 255, 1, 0, 0, 0, 0, 1, 0, 29]
+2025-03-25 12:48:41,629 : INFO : Echo check passed successfully.
+2025-03-25 12:48:41,735 : INFO : Echo data received: [85, 170, 29, 255, 0, 0, 0, 1, 0, 1, 0, 29]
+2025-03-25 12:48:41,735 : INFO : Echo check passed successfully.
+2025-03-25 12:48:41,885 : INFO : Echo data received: [85, 170, 29, 255, 3, 0, 0, 0, 0, 1, 0, 31]
+2025-03-25 12:48:41,885 : INFO : Echo check passed successfully.
+2025-03-25 12:48:42,000 : INFO : Echo data received: [85, 170, 29, 255, 1, 0, 0, 2, 0, 1, 0, 31]
+2025-03-25 12:48:42,000 : INFO : Echo check passed successfully.
+2025-03-25 12:48:42,141 : INFO : Echo data received: [85, 170, 29, 255, 7, 0, 0, 0, 0, 1, 0, 35]
+2025-03-25 12:48:42,141 : INFO : Echo check passed successfully.
+2025-03-25 12:48:42,260 : INFO : Echo data received: [85, 170, 29, 255, 3, 0, 0, 4, 0, 1, 0, 35]
+2025-03-25 12:48:42,260 : INFO : Echo check passed successfully.
+2025-03-25 12:48:42,397 : INFO : Echo data received: [85, 170, 29, 255, 15, 0, 0, 0, 0, 1, 0, 43]
+2025-03-25 12:48:42,397 : INFO : Echo check passed successfully.
+2025-03-25 12:48:44,648 : INFO : Echo data received: [85, 170, 29, 255, 31, 0, 0, 0, 0, 1, 0, 59]
+2025-03-25 12:48:44,649 : INFO : Echo check passed successfully.
+2025-03-25 12:48:44,768 : INFO : Echo data received: [85, 170, 29, 255, 15, 0, 0, 16, 0, 1, 0, 59]
+2025-03-25 12:48:44,768 : INFO : Echo check passed successfully.
+2025-03-25 12:48:44,923 : INFO : Echo data received: [85, 170, 29, 255, 63, 0, 0, 0, 0, 1, 0, 91]
+2025-03-25 12:48:44,923 : INFO : Echo check passed successfully.
+2025-03-25 12:48:45,032 : INFO : Echo data received: [85, 170, 29, 255, 31, 0, 0, 32, 0, 1, 0, 91]
+2025-03-25 12:48:45,032 : INFO : Echo check passed successfully.
+2025-03-25 12:48:45,161 : INFO : Echo data received: [85, 170, 29, 255, 127, 0, 0, 0, 0, 1, 0, 155]
+2025-03-25 12:48:45,161 : INFO : Echo check passed successfully.
+2025-03-25 12:48:45,281 : INFO : Echo data received: [85, 170, 29, 255, 63, 0, 0, 64, 0, 1, 0, 155]
+2025-03-25 12:48:45,281 : INFO : Echo check passed successfully.
+2025-03-25 12:48:45,426 : INFO : Echo data received: [85, 170, 29, 255, 255, 0, 0, 0, 0, 1, 0, 27]
+2025-03-25 12:48:45,426 : INFO : Echo check passed successfully.
+2025-03-25 12:48:45,543 : INFO : Echo data received: [85, 170, 29, 255, 127, 0, 0, 128, 0, 1, 0, 27]
+2025-03-25 12:48:45,543 : INFO : Echo check passed successfully.
+2025-03-25 12:48:45,685 : INFO : Echo data received: [85, 170, 29, 255, 255, 1, 0, 0, 0, 1, 0, 28]
+2025-03-25 12:48:45,685 : INFO : Echo check passed successfully.
+2025-03-25 12:48:45,803 : INFO : Echo data received: [85, 170, 29, 255, 255, 0, 0, 0, 1, 1, 0, 28]
+2025-03-25 12:48:45,804 : INFO : Echo check passed successfully.
+2025-03-25 12:48:45,934 : INFO : Echo data received: [85, 170, 29, 255, 255, 3, 0, 0, 0, 1, 0, 30]
+2025-03-25 12:48:45,934 : INFO : Echo check passed successfully.
+2025-03-25 12:48:46,048 : INFO : Echo data received: [85, 170, 29, 255, 255, 1, 0, 0, 2, 1, 0, 30]
+2025-03-25 12:48:46,048 : INFO : Echo check passed successfully.
+2025-03-25 12:48:46,193 : INFO : Echo data received: [85, 170, 29, 255, 255, 7, 0, 0, 0, 1, 0, 34]
+2025-03-25 12:48:46,193 : INFO : Echo check passed successfully.
+2025-03-25 12:48:46,309 : INFO : Echo data received: [85, 170, 29, 255, 255, 3, 0, 0, 4, 1, 0, 34]
+2025-03-25 12:48:46,309 : INFO : Echo check passed successfully.
+2025-03-25 12:48:46,449 : INFO : Echo data received: [85, 170, 29, 255, 255, 15, 0, 0, 0, 1, 0, 42]
+2025-03-25 12:48:46,449 : INFO : Echo check passed successfully.
+2025-03-25 12:48:46,556 : INFO : Echo data received: [85, 170, 29, 255, 255, 7, 0, 0, 8, 1, 0, 42]
+2025-03-25 12:48:46,556 : INFO : Echo check passed successfully.
+2025-03-25 12:48:46,698 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 0, 1, 0, 58]
+2025-03-25 12:48:46,698 : INFO : Echo check passed successfully.
+2025-03-25 12:48:46,811 : INFO : Echo data received: [85, 170, 29, 255, 255, 15, 0, 0, 16, 1, 0, 58]
+2025-03-25 12:48:46,812 : INFO : Echo check passed successfully.
+2025-03-25 12:48:48,817 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 0, 1, 0, 58]
+2025-03-25 12:48:48,818 : INFO : Echo check passed successfully.
+2025-03-25 12:48:49,483 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 0, 1, 0, 58]
+2025-03-25 12:48:49,484 : INFO : Echo check passed successfully.
+2025-03-25 12:48:50,260 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 0, 1, 0, 58]
+2025-03-25 12:48:50,261 : INFO : Echo check passed successfully.
+2025-03-25 12:48:50,605 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 0, 1, 0, 58]
+2025-03-25 12:48:50,606 : INFO : Echo check passed successfully.
+2025-03-25 12:48:51,167 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 0, 1, 0, 58]
+2025-03-25 12:48:51,168 : INFO : Echo check passed successfully.
+2025-03-25 12:49:03,496 : INFO : The program has closed
+2025-03-25 12:49:21,868 : INFO : Echo data received: [85, 170, 5, 0, 0, 0, 0, 0, 0, 1, 0, 5]
+2025-03-25 12:49:21,871 : INFO : Echo check passed successfully.
+2025-03-25 12:49:21,873 : INFO : Successfully connected to port COM3
+2025-03-25 12:49:21,935 : INFO : connected successfully
+2025-03-25 12:49:22,036 : INFO : Echo data received: [85, 170, 13, 0, 0, 0, 0, 0, 0, 1, 0, 13]
+2025-03-25 12:49:22,037 : INFO : Echo check passed successfully.
+2025-03-25 12:49:24,298 : INFO : Echo data received: [85, 170, 29, 1, 0, 0, 0, 0, 0, 1, 0, 30]
+2025-03-25 12:49:24,299 : INFO : Echo check passed successfully.
+2025-03-25 12:49:29,795 : INFO : Echo data received: [85, 170, 29, 0, 0, 0, 1, 0, 0, 1, 0, 30]
+2025-03-25 12:49:29,796 : INFO : Echo check passed successfully.
+2025-03-25 12:49:29,948 : INFO : Echo data received: [85, 170, 29, 3, 0, 0, 0, 0, 0, 1, 0, 32]
+2025-03-25 12:49:29,949 : INFO : Echo check passed successfully.
+2025-03-25 12:49:30,674 : INFO : Echo data received: [85, 170, 29, 1, 0, 0, 2, 0, 0, 1, 0, 32]
+2025-03-25 12:49:30,676 : INFO : Echo check passed successfully.
+2025-03-25 12:49:30,833 : INFO : Echo data received: [85, 170, 29, 7, 0, 0, 0, 0, 0, 1, 0, 36]
+2025-03-25 12:49:30,835 : INFO : Echo check passed successfully.
+2025-03-25 12:49:31,529 : INFO : Echo data received: [85, 170, 29, 3, 0, 0, 4, 0, 0, 1, 0, 36]
+2025-03-25 12:49:31,529 : INFO : Echo check passed successfully.
+2025-03-25 12:49:31,654 : INFO : Echo data received: [85, 170, 29, 15, 0, 0, 0, 0, 0, 1, 0, 44]
+2025-03-25 12:49:31,655 : INFO : Echo check passed successfully.
+2025-03-25 12:49:32,242 : INFO : Echo data received: [85, 170, 29, 7, 0, 0, 8, 0, 0, 1, 0, 44]
+2025-03-25 12:49:32,242 : INFO : Echo check passed successfully.
+2025-03-25 12:49:32,370 : INFO : Echo data received: [85, 170, 29, 31, 0, 0, 0, 0, 0, 1, 0, 60]
+2025-03-25 12:49:32,370 : INFO : Echo check passed successfully.
+2025-03-25 12:49:32,920 : INFO : Echo data received: [85, 170, 29, 15, 0, 0, 16, 0, 0, 1, 0, 60]
+2025-03-25 12:49:32,922 : INFO : Echo check passed successfully.
+2025-03-25 12:49:33,073 : INFO : Echo data received: [85, 170, 29, 63, 0, 0, 0, 0, 0, 1, 0, 92]
+2025-03-25 12:49:33,073 : INFO : Echo check passed successfully.
+2025-03-25 12:49:33,491 : INFO : Echo data received: [85, 170, 29, 31, 0, 0, 32, 0, 0, 1, 0, 92]
+2025-03-25 12:49:33,493 : INFO : Echo check passed successfully.
+2025-03-25 12:49:33,654 : INFO : Echo data received: [85, 170, 29, 127, 0, 0, 0, 0, 0, 1, 0, 156]
+2025-03-25 12:49:33,655 : INFO : Echo check passed successfully.
+2025-03-25 12:49:34,113 : INFO : Echo data received: [85, 170, 29, 63, 0, 0, 64, 0, 0, 1, 0, 156]
+2025-03-25 12:49:34,113 : INFO : Echo check passed successfully.
+2025-03-25 12:49:34,256 : INFO : Echo data received: [85, 170, 29, 255, 0, 0, 0, 0, 0, 1, 0, 28]
+2025-03-25 12:49:34,256 : INFO : Echo check passed successfully.
+2025-03-25 12:49:34,727 : INFO : Echo data received: [85, 170, 29, 127, 0, 0, 128, 0, 0, 1, 0, 28]
+2025-03-25 12:49:34,727 : INFO : Echo check passed successfully.
+2025-03-25 12:49:34,849 : INFO : Echo data received: [85, 170, 29, 255, 1, 0, 0, 0, 0, 1, 0, 29]
+2025-03-25 12:49:34,850 : INFO : Echo check passed successfully.
+2025-03-25 12:49:35,313 : INFO : Echo data received: [85, 170, 29, 255, 0, 0, 0, 1, 0, 1, 0, 29]
+2025-03-25 12:49:35,313 : INFO : Echo check passed successfully.
+2025-03-25 12:49:35,439 : INFO : Echo data received: [85, 170, 29, 255, 3, 0, 0, 0, 0, 1, 0, 31]
+2025-03-25 12:49:35,441 : INFO : Echo check passed successfully.
+2025-03-25 12:49:35,966 : INFO : Echo data received: [85, 170, 29, 255, 1, 0, 0, 2, 0, 1, 0, 31]
+2025-03-25 12:49:35,966 : INFO : Echo check passed successfully.
+2025-03-25 12:49:36,091 : INFO : Echo data received: [85, 170, 29, 255, 7, 0, 0, 0, 0, 1, 0, 35]
+2025-03-25 12:49:36,092 : INFO : Echo check passed successfully.
+2025-03-25 12:49:36,544 : INFO : Echo data received: [85, 170, 29, 255, 3, 0, 0, 4, 0, 1, 0, 35]
+2025-03-25 12:49:36,546 : INFO : Echo check passed successfully.
+2025-03-25 12:49:36,712 : INFO : Echo data received: [85, 170, 29, 255, 15, 0, 0, 0, 0, 1, 0, 43]
+2025-03-25 12:49:36,713 : INFO : Echo check passed successfully.
+2025-03-25 12:49:37,161 : INFO : Echo data received: [85, 170, 29, 255, 7, 0, 0, 8, 0, 1, 0, 43]
+2025-03-25 12:49:37,161 : INFO : Echo check passed successfully.
+2025-03-25 12:49:37,295 : INFO : Echo data received: [85, 170, 29, 255, 31, 0, 0, 0, 0, 1, 0, 59]
+2025-03-25 12:49:37,295 : INFO : Echo check passed successfully.
+2025-03-25 12:49:37,915 : INFO : Echo data received: [85, 170, 29, 255, 15, 0, 0, 16, 0, 1, 0, 59]
+2025-03-25 12:49:37,916 : INFO : Echo check passed successfully.
+2025-03-25 12:49:38,080 : INFO : Echo data received: [85, 170, 29, 255, 63, 0, 0, 0, 0, 1, 0, 91]
+2025-03-25 12:49:38,081 : INFO : Echo check passed successfully.
+2025-03-25 12:49:38,835 : INFO : Echo data received: [85, 170, 29, 255, 31, 0, 0, 32, 0, 1, 0, 91]
+2025-03-25 12:49:38,836 : INFO : Echo check passed successfully.
+2025-03-25 12:49:38,983 : INFO : Echo data received: [85, 170, 29, 255, 127, 0, 0, 0, 0, 1, 0, 155]
+2025-03-25 12:49:38,984 : INFO : Echo check passed successfully.
+2025-03-25 12:49:39,486 : INFO : Echo data received: [85, 170, 29, 255, 63, 0, 0, 64, 0, 1, 0, 155]
+2025-03-25 12:49:39,488 : INFO : Echo check passed successfully.
+2025-03-25 12:49:39,648 : INFO : Echo data received: [85, 170, 29, 255, 255, 0, 0, 0, 0, 1, 0, 27]
+2025-03-25 12:49:39,649 : INFO : Echo check passed successfully.
+2025-03-25 12:49:40,170 : INFO : Echo data received: [85, 170, 29, 255, 127, 0, 0, 128, 0, 1, 0, 27]
+2025-03-25 12:49:40,172 : INFO : Echo check passed successfully.
+2025-03-25 12:49:40,323 : INFO : Echo data received: [85, 170, 29, 255, 255, 1, 0, 0, 0, 1, 0, 28]
+2025-03-25 12:49:40,324 : INFO : Echo check passed successfully.
+2025-03-25 12:49:40,815 : INFO : Echo data received: [85, 170, 29, 255, 255, 0, 0, 0, 1, 1, 0, 28]
+2025-03-25 12:49:40,816 : INFO : Echo check passed successfully.
+2025-03-25 12:49:40,953 : INFO : Echo data received: [85, 170, 29, 255, 255, 3, 0, 0, 0, 1, 0, 30]
+2025-03-25 12:49:40,954 : INFO : Echo check passed successfully.
+2025-03-25 12:49:41,417 : INFO : Echo data received: [85, 170, 29, 255, 255, 1, 0, 0, 2, 1, 0, 30]
+2025-03-25 12:49:41,418 : INFO : Echo check passed successfully.
+2025-03-25 12:49:41,572 : INFO : Echo data received: [85, 170, 29, 255, 255, 7, 0, 0, 0, 1, 0, 34]
+2025-03-25 12:49:41,573 : INFO : Echo check passed successfully.
+2025-03-25 12:49:42,114 : INFO : Echo data received: [85, 170, 29, 255, 255, 3, 0, 0, 4, 1, 0, 34]
+2025-03-25 12:49:42,114 : INFO : Echo check passed successfully.
+2025-03-25 12:49:42,236 : INFO : Echo data received: [85, 170, 29, 255, 255, 15, 0, 0, 0, 1, 0, 42]
+2025-03-25 12:49:42,237 : INFO : Echo check passed successfully.
+2025-03-25 12:49:42,692 : INFO : Echo data received: [85, 170, 29, 255, 255, 7, 0, 0, 8, 1, 0, 42]
+2025-03-25 12:49:42,693 : INFO : Echo check passed successfully.
+2025-03-25 12:49:42,844 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 0, 1, 0, 58]
+2025-03-25 12:49:42,844 : INFO : Echo check passed successfully.
+2025-03-25 12:49:43,351 : INFO : Echo data received: [85, 170, 29, 255, 255, 15, 0, 0, 16, 1, 0, 58]
+2025-03-25 12:49:43,351 : INFO : Echo check passed successfully.
+2025-03-25 12:50:02,006 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 0, 1, 0, 58]
+2025-03-25 12:50:02,006 : INFO : Echo check passed successfully.
+2025-03-25 12:50:57,204 : INFO : Echo data received: [85, 170, 29, 254, 255, 31, 1, 0, 0, 1, 0, 58]
+2025-03-25 12:50:57,204 : INFO : Echo check passed successfully.
+2025-03-25 12:52:26,594 : INFO : Echo data received: [85, 170, 5, 0, 0, 0, 0, 0, 0, 1, 0, 5]
+2025-03-25 12:52:26,595 : INFO : Echo check passed successfully.
+2025-03-25 12:52:26,595 : INFO : Successfully connected to port COM3
+2025-03-25 12:52:26,658 : INFO : connected successfully
+2025-03-25 12:52:26,766 : INFO : Echo data received: [85, 170, 13, 0, 0, 0, 0, 0, 0, 1, 0, 13]
+2025-03-25 12:52:26,766 : INFO : Echo check passed successfully.
+2025-03-25 12:52:29,033 : INFO : Echo data received: [85, 170, 29, 1, 0, 0, 0, 0, 0, 1, 0, 30]
+2025-03-25 12:52:29,033 : INFO : Echo check passed successfully.
+2025-03-25 12:52:29,157 : INFO : Echo data received: [85, 170, 29, 0, 0, 0, 1, 0, 0, 1, 0, 30]
+2025-03-25 12:52:29,157 : INFO : Echo check passed successfully.
+2025-03-25 12:52:29,297 : INFO : Echo data received: [85, 170, 29, 3, 0, 0, 0, 0, 0, 1, 0, 32]
+2025-03-25 12:52:29,298 : INFO : Echo check passed successfully.
+2025-03-25 12:52:29,421 : INFO : Echo data received: [85, 170, 29, 1, 0, 0, 2, 0, 0, 1, 0, 32]
+2025-03-25 12:52:29,421 : INFO : Echo check passed successfully.
+2025-03-25 12:52:29,576 : INFO : Echo data received: [85, 170, 29, 7, 0, 0, 0, 0, 0, 1, 0, 36]
+2025-03-25 12:52:29,577 : INFO : Echo check passed successfully.
+2025-03-25 12:52:29,699 : INFO : Echo data received: [85, 170, 29, 3, 0, 0, 4, 0, 0, 1, 0, 36]
+2025-03-25 12:52:29,699 : INFO : Echo check passed successfully.
+2025-03-25 12:52:29,825 : INFO : Echo data received: [85, 170, 29, 15, 0, 0, 0, 0, 0, 1, 0, 44]
+2025-03-25 12:52:29,825 : INFO : Echo check passed successfully.
+2025-03-25 12:52:29,964 : INFO : Echo data received: [85, 170, 29, 7, 0, 0, 8, 0, 0, 1, 0, 44]
+2025-03-25 12:52:29,964 : INFO : Echo check passed successfully.
+2025-03-25 12:52:30,105 : INFO : Echo data received: [85, 170, 29, 31, 0, 0, 0, 0, 0, 1, 0, 60]
+2025-03-25 12:52:30,105 : INFO : Echo check passed successfully.
+2025-03-25 12:52:30,230 : INFO : Echo data received: [85, 170, 29, 15, 0, 0, 16, 0, 0, 1, 0, 60]
+2025-03-25 12:52:30,230 : INFO : Echo check passed successfully.
+2025-03-25 12:52:30,369 : INFO : Echo data received: [85, 170, 29, 63, 0, 0, 0, 0, 0, 1, 0, 92]
+2025-03-25 12:52:30,370 : INFO : Echo check passed successfully.
+2025-03-25 12:52:30,493 : INFO : Echo data received: [85, 170, 29, 31, 0, 0, 32, 0, 0, 1, 0, 92]
+2025-03-25 12:52:30,493 : INFO : Echo check passed successfully.
+2025-03-25 12:52:30,634 : INFO : Echo data received: [85, 170, 29, 127, 0, 0, 0, 0, 0, 1, 0, 156]
+2025-03-25 12:52:30,634 : INFO : Echo check passed successfully.
+2025-03-25 12:52:30,759 : INFO : Echo data received: [85, 170, 29, 63, 0, 0, 64, 0, 0, 1, 0, 156]
+2025-03-25 12:52:30,759 : INFO : Echo check passed successfully.
+2025-03-25 12:52:30,899 : INFO : Echo data received: [85, 170, 29, 255, 0, 0, 0, 0, 0, 1, 0, 28]
+2025-03-25 12:52:30,900 : INFO : Echo check passed successfully.
+2025-03-25 12:52:31,034 : INFO : Echo data received: [85, 170, 29, 127, 0, 0, 128, 0, 0, 1, 0, 28]
+2025-03-25 12:52:31,035 : INFO : Echo check passed successfully.
+2025-03-25 12:52:31,175 : INFO : Echo data received: [85, 170, 29, 255, 1, 0, 0, 0, 0, 1, 0, 29]
+2025-03-25 12:52:31,175 : INFO : Echo check passed successfully.
+2025-03-25 12:52:31,300 : INFO : Echo data received: [85, 170, 29, 255, 0, 0, 0, 1, 0, 1, 0, 29]
+2025-03-25 12:52:31,301 : INFO : Echo check passed successfully.
+2025-03-25 12:52:31,440 : INFO : Echo data received: [85, 170, 29, 255, 3, 0, 0, 0, 0, 1, 0, 31]
+2025-03-25 12:52:31,441 : INFO : Echo check passed successfully.
+2025-03-25 12:52:31,566 : INFO : Echo data received: [85, 170, 29, 255, 1, 0, 0, 2, 0, 1, 0, 31]
+2025-03-25 12:52:31,567 : INFO : Echo check passed successfully.
+2025-03-25 12:52:31,707 : INFO : Echo data received: [85, 170, 29, 255, 7, 0, 0, 0, 0, 1, 0, 35]
+2025-03-25 12:52:31,707 : INFO : Echo check passed successfully.
+2025-03-25 12:52:31,832 : INFO : Echo data received: [85, 170, 29, 255, 3, 0, 0, 4, 0, 1, 0, 35]
+2025-03-25 12:52:31,832 : INFO : Echo check passed successfully.
+2025-03-25 12:52:31,971 : INFO : Echo data received: [85, 170, 29, 255, 15, 0, 0, 0, 0, 1, 0, 43]
+2025-03-25 12:52:31,972 : INFO : Echo check passed successfully.
+2025-03-25 12:52:32,111 : INFO : Echo data received: [85, 170, 29, 255, 7, 0, 0, 8, 0, 1, 0, 43]
+2025-03-25 12:52:32,111 : INFO : Echo check passed successfully.
+2025-03-25 12:52:32,250 : INFO : Echo data received: [85, 170, 29, 255, 31, 0, 0, 0, 0, 1, 0, 59]
+2025-03-25 12:52:32,251 : INFO : Echo check passed successfully.
+2025-03-25 12:52:32,374 : INFO : Echo data received: [85, 170, 29, 255, 15, 0, 0, 16, 0, 1, 0, 59]
+2025-03-25 12:52:32,374 : INFO : Echo check passed successfully.
+2025-03-25 12:52:32,517 : INFO : Echo data received: [85, 170, 29, 255, 63, 0, 0, 0, 0, 1, 0, 91]
+2025-03-25 12:52:32,517 : INFO : Echo check passed successfully.
+2025-03-25 12:52:32,634 : INFO : Echo data received: [85, 170, 29, 255, 31, 0, 0, 32, 0, 1, 0, 91]
+2025-03-25 12:52:32,635 : INFO : Echo check passed successfully.
+2025-03-25 12:52:32,776 : INFO : Echo data received: [85, 170, 29, 255, 127, 0, 0, 0, 0, 1, 0, 155]
+2025-03-25 12:52:32,777 : INFO : Echo check passed successfully.
+2025-03-25 12:52:32,901 : INFO : Echo data received: [85, 170, 29, 255, 63, 0, 0, 64, 0, 1, 0, 155]
+2025-03-25 12:52:32,902 : INFO : Echo check passed successfully.
+2025-03-25 12:52:33,040 : INFO : Echo data received: [85, 170, 29, 255, 255, 0, 0, 0, 0, 1, 0, 27]
+2025-03-25 12:52:33,041 : INFO : Echo check passed successfully.
+2025-03-25 12:52:33,180 : INFO : Echo data received: [85, 170, 29, 255, 127, 0, 0, 128, 0, 1, 0, 27]
+2025-03-25 12:52:33,180 : INFO : Echo check passed successfully.
+2025-03-25 12:52:33,320 : INFO : Echo data received: [85, 170, 29, 255, 255, 1, 0, 0, 0, 1, 0, 28]
+2025-03-25 12:52:33,320 : INFO : Echo check passed successfully.
+2025-03-25 12:52:33,444 : INFO : Echo data received: [85, 170, 29, 255, 255, 0, 0, 0, 1, 1, 0, 28]
+2025-03-25 12:52:33,444 : INFO : Echo check passed successfully.
+2025-03-25 12:52:33,601 : INFO : Echo data received: [85, 170, 29, 255, 255, 3, 0, 0, 0, 1, 0, 30]
+2025-03-25 12:52:33,602 : INFO : Echo check passed successfully.
+2025-03-25 12:52:33,723 : INFO : Echo data received: [85, 170, 29, 255, 255, 1, 0, 0, 2, 1, 0, 30]
+2025-03-25 12:52:33,723 : INFO : Echo check passed successfully.
+2025-03-25 12:52:33,847 : INFO : Echo data received: [85, 170, 29, 255, 255, 7, 0, 0, 0, 1, 0, 34]
+2025-03-25 12:52:33,847 : INFO : Echo check passed successfully.
+2025-03-25 12:52:33,972 : INFO : Echo data received: [85, 170, 29, 255, 255, 3, 0, 0, 4, 1, 0, 34]
+2025-03-25 12:52:33,972 : INFO : Echo check passed successfully.
+2025-03-25 12:52:34,113 : INFO : Echo data received: [85, 170, 29, 255, 255, 15, 0, 0, 0, 1, 0, 42]
+2025-03-25 12:52:34,113 : INFO : Echo check passed successfully.
+2025-03-25 12:52:34,222 : INFO : Echo data received: [85, 170, 29, 255, 255, 7, 0, 0, 8, 1, 0, 42]
+2025-03-25 12:52:34,222 : INFO : Echo check passed successfully.
+2025-03-25 12:52:34,363 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 0, 1, 0, 58]
+2025-03-25 12:52:34,364 : INFO : Echo check passed successfully.
+2025-03-25 12:52:34,489 : INFO : Echo data received: [85, 170, 29, 255, 255, 15, 0, 0, 16, 1, 0, 58]
+2025-03-25 12:52:34,489 : INFO : Echo check passed successfully.
+2025-03-25 12:52:43,144 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 96, 1, 0, 154]
+2025-03-25 12:52:43,144 : INFO : Echo check passed successfully.
+2025-03-25 12:52:45,671 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 96, 1, 0, 154]
+2025-03-25 12:52:45,671 : INFO : Echo check passed successfully.
+2025-03-25 12:52:47,236 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 96, 1, 0, 154]
+2025-03-25 12:52:47,236 : INFO : Echo check passed successfully.
+2025-03-25 12:52:48,393 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 96, 1, 0, 154]
+2025-03-25 12:52:48,394 : INFO : Echo check passed successfully.
+2025-03-25 12:53:54,144 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 96, 1, 0, 154]
+2025-03-25 12:53:54,145 : INFO : Echo check passed successfully.
+2025-03-25 12:53:54,250 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 96, 1, 0, 154]
+2025-03-25 12:53:54,250 : INFO : Echo check passed successfully.
+2025-03-25 12:53:55,047 : INFO : Echo data received: [85, 170, 29, 255, 255, 63, 0, 0, 64, 1, 0, 154]
+2025-03-25 12:53:55,047 : INFO : Echo check passed successfully.
+2025-03-25 12:53:58,061 : INFO : Echo data received: [85, 170, 29, 0, 0, 0, 0, 0, 0, 1, 0, 29]
+2025-03-25 12:53:58,062 : INFO : Echo check passed successfully.
+2025-03-25 12:53:58,449 : INFO : Echo data received: [85, 170, 29, 255, 255, 127, 0, 0, 0, 1, 0, 154]
+2025-03-25 12:53:58,449 : INFO : Echo check passed successfully.
+2025-03-25 12:54:09,676 : INFO : Echo data received: [85, 170, 29, 255, 255, 127, 0, 0, 0, 1, 0, 154]
+2025-03-25 12:54:09,676 : INFO : Echo check passed successfully.
+2025-03-25 12:54:13,017 : INFO : Echo data received: [85, 170, 29, 0, 0, 0, 0, 0, 0, 1, 0, 29]
+2025-03-25 12:54:13,017 : INFO : Echo check passed successfully.
+2025-03-25 12:54:13,560 : INFO : Echo data received: [85, 170, 29, 255, 255, 127, 0, 0, 0, 1, 0, 154]
+2025-03-25 12:54:13,560 : INFO : Echo check passed successfully.
+2025-03-25 12:54:47,185 : INFO : Echo data received: [85, 170, 29, 254, 255, 127, 0, 0, 0, 1, 0, 153]
+2025-03-25 12:54:47,186 : INFO : Echo check passed successfully.
+2025-03-25 12:54:47,291 : INFO : Echo data received: [85, 170, 29, 254, 255, 127, 0, 0, 0, 1, 0, 153]
+2025-03-25 12:54:47,291 : INFO : Echo check passed successfully.
+2025-03-25 12:54:49,113 : INFO : Echo data received: [85, 170, 29, 254, 255, 127, 1, 0, 0, 1, 0, 154]
+2025-03-25 12:54:49,113 : INFO : Echo check passed successfully.
+2025-03-25 12:54:49,217 : INFO : Echo data received: [85, 170, 29, 255, 255, 127, 0, 0, 0, 1, 0, 154]
+2025-03-25 12:54:49,218 : INFO : Echo check passed successfully.
+2025-03-25 12:54:50,248 : INFO : Echo data received: [85, 170, 29, 254, 255, 127, 0, 0, 0, 1, 0, 153]
+2025-03-25 12:54:50,248 : INFO : Echo check passed successfully.
+2025-03-25 12:54:50,354 : INFO : Echo data received: [85, 170, 29, 254, 255, 127, 0, 0, 0, 1, 0, 153]
+2025-03-25 12:54:50,355 : INFO : Echo check passed successfully.
+2025-03-25 12:54:57,954 : INFO : Echo data received: [85, 170, 29, 0, 0, 0, 0, 0, 0, 1, 0, 29]
+2025-03-25 12:54:57,954 : INFO : Echo check passed successfully.
+2025-03-25 12:54:58,931 : INFO : Echo data received: [85, 170, 29, 254, 255, 127, 1, 0, 0, 1, 0, 154]
+2025-03-25 12:54:58,932 : INFO : Echo check passed successfully.
+2025-03-25 12:59:27,940 : INFO : Echo data received: [85, 170, 29, 254, 255, 127, 0, 0, 0, 1, 0, 153]
+2025-03-25 12:59:27,941 : INFO : Echo check passed successfully.
+2025-03-25 12:59:32,167 : INFO : Echo data received: [85, 170, 29, 254, 255, 127, 1, 0, 0, 1, 0, 154]
+2025-03-25 12:59:32,168 : INFO : Echo check passed successfully.
+2025-03-25 12:59:37,703 : INFO : Echo data received: [85, 170, 29, 254, 255, 127, 1, 0, 0, 1, 0, 154]
+2025-03-25 12:59:37,704 : INFO : Echo check passed successfully.
+2025-03-25 12:59:40,480 : INFO : Echo data received: [85, 170, 29, 254, 255, 127, 0, 0, 0, 1, 0, 153]
+2025-03-25 12:59:40,480 : INFO : Echo check passed successfully.
+2025-03-25 12:59:40,856 : INFO : Echo data received: [85, 170, 29, 254, 255, 127, 1, 0, 0, 1, 0, 154]
+2025-03-25 12:59:40,857 : INFO : Echo check passed successfully.
+2025-03-25 12:59:52,590 : INFO : Echo data received: [85, 170, 29, 254, 255, 127, 1, 0, 0, 1, 0, 154]
+2025-03-25 12:59:52,590 : INFO : Echo check passed successfully.
+2025-03-25 12:59:54,065 : INFO : Echo data received: [85, 170, 29, 252, 255, 127, 1, 0, 0, 1, 0, 152]
+2025-03-25 12:59:54,065 : INFO : Echo check passed successfully.
+2025-03-25 12:59:54,537 : INFO : Echo data received: [85, 170, 29, 254, 255, 127, 1, 0, 0, 1, 0, 154]
+2025-03-25 12:59:54,537 : INFO : Echo check passed successfully.
+2025-03-25 13:00:07,808 : INFO : Echo data received: [85, 170, 29, 252, 255, 127, 1, 0, 0, 1, 0, 152]
+2025-03-25 13:00:07,808 : INFO : Echo check passed successfully.
+2025-03-25 13:00:11,008 : INFO : Echo data received: [85, 170, 29, 252, 255, 127, 0, 0, 0, 1, 0, 151]
+2025-03-25 13:00:11,008 : INFO : Echo check passed successfully.
+2025-03-25 13:00:14,299 : INFO : Echo data received: [85, 170, 29, 254, 255, 127, 0, 0, 0, 1, 0, 153]
+2025-03-25 13:00:14,299 : INFO : Echo check passed successfully.
+2025-03-25 13:00:23,681 : INFO : Echo data received: [85, 170, 29, 0, 0, 0, 0, 0, 0, 1, 0, 29]
+2025-03-25 13:00:23,682 : INFO : Echo check passed successfully.
+2025-03-25 13:00:25,272 : INFO : Echo data received: [85, 170, 29, 0, 0, 0, 1, 0, 0, 1, 0, 30]
+2025-03-25 13:00:25,272 : INFO : Echo check passed successfully.
+2025-03-25 13:00:46,959 : INFO : connected successfully
+2025-03-25 13:00:47,076 : INFO : Echo data received: [85, 170, 29, 0, 0, 0, 1, 0, 0, 1, 0, 30]
+2025-03-25 13:00:47,077 : INFO : Echo check passed successfully.
+2025-03-25 13:00:47,185 : INFO : Echo data received: [85, 170, 29, 0, 0, 0, 1, 0, 0, 1, 0, 30]
+2025-03-25 13:00:47,185 : INFO : Echo check passed successfully.
+2025-03-25 13:00:47,339 : INFO : Echo data received: [85, 170, 29, 1, 0, 0, 0, 0, 0, 1, 0, 30]
+2025-03-25 13:00:47,340 : INFO : Echo check passed successfully.
+2025-03-25 13:00:47,460 : INFO : Echo data received: [85, 170, 29, 0, 0, 0, 1, 0, 0, 1, 0, 30]
+2025-03-25 13:00:47,460 : INFO : Echo check passed successfully.
+2025-03-25 13:00:47,616 : INFO : Echo data received: [85, 170, 29, 1, 0, 0, 0, 0, 0, 1, 0, 30]
+2025-03-25 13:00:47,617 : INFO : Echo check passed successfully.
+2025-03-25 13:00:47,740 : INFO : Echo data received: [85, 170, 29, 1, 0, 0, 0, 0, 0, 1, 0, 30]
+2025-03-25 13:00:47,740 : INFO : Echo check passed successfully.
+2025-03-25 13:00:47,878 : INFO : Echo data received: [85, 170, 29, 1, 0, 0, 0, 0, 0, 1, 0, 30]
+2025-03-25 13:00:47,879 : INFO : Echo check passed successfully.
+2025-03-25 13:00:51,301 : INFO : The program has closed
+2025-03-25 13:01:17,016 : INFO : Echo data received: [85, 170, 13, 0, 0, 0, 0, 0, 0, 1, 0, 13]
+2025-03-25 13:01:17,016 : INFO : Echo check passed successfully.
+2025-03-25 13:01:17,017 : INFO : Successfully connected to port COM3
+2025-03-25 13:01:17,070 : INFO : connected successfully
+2025-03-25 13:01:17,172 : INFO : Echo data received: [85, 170, 13, 0, 0, 0, 0, 0, 0, 1, 0, 13]
+2025-03-25 13:01:17,172 : INFO : Echo check passed successfully.
+2025-03-25 13:01:19,463 : INFO : Echo data received: [85, 170, 29, 1, 0, 0, 0, 0, 0, 1, 0, 30]
+2025-03-25 13:01:19,464 : INFO : Echo check passed successfully.
+2025-03-25 13:01:19,587 : INFO : Echo data received: [85, 170, 29, 0, 0, 0, 1, 0, 0, 1, 0, 30]
+2025-03-25 13:01:19,588 : INFO : Echo check passed successfully.
+2025-03-25 13:01:19,728 : INFO : Echo data received: [85, 170, 29, 3, 0, 0, 0, 0, 0, 1, 0, 32]
+2025-03-25 13:01:19,729 : INFO : Echo check passed successfully.
+2025-03-25 13:01:19,851 : INFO : Echo data received: [85, 170, 29, 1, 0, 0, 2, 0, 0, 1, 0, 32]
+2025-03-25 13:01:19,851 : INFO : Echo check passed successfully.
+2025-03-25 13:01:19,989 : INFO : Echo data received: [85, 170, 29, 7, 0, 0, 0, 0, 0, 1, 0, 36]
+2025-03-25 13:01:19,990 : INFO : Echo check passed successfully.
+2025-03-25 13:01:20,115 : INFO : Echo data received: [85, 170, 29, 3, 0, 0, 4, 0, 0, 1, 0, 36]
+2025-03-25 13:01:20,115 : INFO : Echo check passed successfully.
+2025-03-25 13:01:20,255 : INFO : Echo data received: [85, 170, 29, 15, 0, 0, 0, 0, 0, 1, 0, 44]
+2025-03-25 13:01:20,255 : INFO : Echo check passed successfully.
+2025-03-25 13:01:20,379 : INFO : Echo data received: [85, 170, 29, 7, 0, 0, 8, 0, 0, 1, 0, 44]
+2025-03-25 13:01:20,379 : INFO : Echo check passed successfully.
+2025-03-25 13:01:20,519 : INFO : Echo data received: [85, 170, 29, 31, 0, 0, 0, 0, 0, 1, 0, 60]
+2025-03-25 13:01:20,519 : INFO : Echo check passed successfully.
+2025-03-25 13:01:20,642 : INFO : Echo data received: [85, 170, 29, 15, 0, 0, 16, 0, 0, 1, 0, 60]
+2025-03-25 13:01:20,643 : INFO : Echo check passed successfully.
+2025-03-25 13:01:20,783 : INFO : Echo data received: [85, 170, 29, 63, 0, 0, 0, 0, 0, 1, 0, 92]
+2025-03-25 13:01:20,784 : INFO : Echo check passed successfully.
+2025-03-25 13:01:20,910 : INFO : Echo data received: [85, 170, 29, 31, 0, 0, 32, 0, 0, 1, 0, 92]
+2025-03-25 13:01:20,910 : INFO : Echo check passed successfully.
+2025-03-25 13:01:21,066 : INFO : Echo data received: [85, 170, 29, 127, 0, 0, 0, 0, 0, 1, 0, 156]
+2025-03-25 13:01:21,067 : INFO : Echo check passed successfully.
+2025-03-25 13:01:21,193 : INFO : Echo data received: [85, 170, 29, 63, 0, 0, 64, 0, 0, 1, 0, 156]
+2025-03-25 13:01:21,193 : INFO : Echo check passed successfully.
+2025-03-25 13:01:21,320 : INFO : Echo data received: [85, 170, 29, 255, 0, 0, 0, 0, 0, 1, 0, 28]
+2025-03-25 13:01:21,321 : INFO : Echo check passed successfully.
+2025-03-25 13:01:21,441 : INFO : Echo data received: [85, 170, 29, 127, 0, 0, 128, 0, 0, 1, 0, 28]
+2025-03-25 13:01:21,442 : INFO : Echo check passed successfully.
+2025-03-25 13:01:21,582 : INFO : Echo data received: [85, 170, 29, 255, 1, 0, 0, 0, 0, 1, 0, 29]
+2025-03-25 13:01:21,582 : INFO : Echo check passed successfully.
+2025-03-25 13:01:21,722 : INFO : Echo data received: [85, 170, 29, 255, 0, 0, 0, 1, 0, 1, 0, 29]
+2025-03-25 13:01:21,722 : INFO : Echo check passed successfully.
+2025-03-25 13:01:21,845 : INFO : Echo data received: [85, 170, 29, 255, 3, 0, 0, 0, 0, 1, 0, 31]
+2025-03-25 13:01:21,846 : INFO : Echo check passed successfully.
+2025-03-25 13:01:21,969 : INFO : Echo data received: [85, 170, 29, 255, 1, 0, 0, 2, 0, 1, 0, 31]
+2025-03-25 13:01:21,970 : INFO : Echo check passed successfully.
+2025-03-25 13:01:22,143 : INFO : Echo data received: [85, 170, 29, 255, 7, 0, 0, 0, 0, 1, 0, 35]
+2025-03-25 13:01:22,143 : INFO : Echo check passed successfully.
+2025-03-25 13:01:22,282 : INFO : Echo data received: [85, 170, 29, 255, 3, 0, 0, 4, 0, 1, 0, 35]
+2025-03-25 13:01:22,282 : INFO : Echo check passed successfully.
+2025-03-25 13:01:22,407 : INFO : Echo data received: [85, 170, 29, 255, 15, 0, 0, 0, 0, 1, 0, 43]
+2025-03-25 13:01:22,408 : INFO : Echo check passed successfully.
+2025-03-25 13:01:22,531 : INFO : Echo data received: [85, 170, 29, 255, 7, 0, 0, 8, 0, 1, 0, 43]
+2025-03-25 13:01:22,532 : INFO : Echo check passed successfully.
+2025-03-25 13:01:22,687 : INFO : Echo data received: [85, 170, 29, 255, 31, 0, 0, 0, 0, 1, 0, 59]
+2025-03-25 13:01:22,688 : INFO : Echo check passed successfully.
+2025-03-25 13:01:22,827 : INFO : Echo data received: [85, 170, 29, 255, 15, 0, 0, 16, 0, 1, 0, 59]
+2025-03-25 13:01:22,827 : INFO : Echo check passed successfully.
+2025-03-25 13:01:22,951 : INFO : Echo data received: [85, 170, 29, 255, 63, 0, 0, 0, 0, 1, 0, 91]
+2025-03-25 13:01:22,951 : INFO : Echo check passed successfully.
+2025-03-25 13:01:23,075 : INFO : Echo data received: [85, 170, 29, 255, 31, 0, 0, 32, 0, 1, 0, 91]
+2025-03-25 13:01:23,077 : INFO : Echo check passed successfully.
+2025-03-25 13:01:23,249 : INFO : Echo data received: [85, 170, 29, 255, 127, 0, 0, 0, 0, 1, 0, 155]
+2025-03-25 13:01:23,249 : INFO : Echo check passed successfully.
+2025-03-25 13:01:23,374 : INFO : Echo data received: [85, 170, 29, 255, 63, 0, 0, 64, 0, 1, 0, 155]
+2025-03-25 13:01:23,374 : INFO : Echo check passed successfully.
+2025-03-25 13:01:23,498 : INFO : Echo data received: [85, 170, 29, 255, 255, 0, 0, 0, 0, 1, 0, 27]
+2025-03-25 13:01:23,499 : INFO : Echo check passed successfully.
+2025-03-25 13:01:23,623 : INFO : Echo data received: [85, 170, 29, 255, 127, 0, 0, 128, 0, 1, 0, 27]
+2025-03-25 13:01:23,624 : INFO : Echo check passed successfully.
+2025-03-25 13:01:23,763 : INFO : Echo data received: [85, 170, 29, 255, 255, 1, 0, 0, 0, 1, 0, 28]
+2025-03-25 13:01:23,764 : INFO : Echo check passed successfully.
+2025-03-25 13:01:23,889 : INFO : Echo data received: [85, 170, 29, 255, 255, 0, 0, 0, 1, 1, 0, 28]
+2025-03-25 13:01:23,890 : INFO : Echo check passed successfully.
+2025-03-25 13:01:24,031 : INFO : Echo data received: [85, 170, 29, 255, 255, 3, 0, 0, 0, 1, 0, 30]
+2025-03-25 13:01:24,031 : INFO : Echo check passed successfully.
+2025-03-25 13:01:24,154 : INFO : Echo data received: [85, 170, 29, 255, 255, 1, 0, 0, 2, 1, 0, 30]
+2025-03-25 13:01:24,154 : INFO : Echo check passed successfully.
+2025-03-25 13:01:24,295 : INFO : Echo data received: [85, 170, 29, 255, 255, 7, 0, 0, 0, 1, 0, 34]
+2025-03-25 13:01:24,295 : INFO : Echo check passed successfully.
+2025-03-25 13:01:24,418 : INFO : Echo data received: [85, 170, 29, 255, 255, 3, 0, 0, 4, 1, 0, 34]
+2025-03-25 13:01:24,419 : INFO : Echo check passed successfully.
+2025-03-25 13:01:24,560 : INFO : Echo data received: [85, 170, 29, 255, 255, 15, 0, 0, 0, 1, 0, 42]
+2025-03-25 13:01:24,561 : INFO : Echo check passed successfully.
+2025-03-25 13:01:24,699 : INFO : Echo data received: [85, 170, 29, 255, 255, 7, 0, 0, 8, 1, 0, 42]
+2025-03-25 13:01:24,699 : INFO : Echo check passed successfully.
+2025-03-25 13:01:24,839 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 0, 1, 0, 58]
+2025-03-25 13:01:24,839 : INFO : Echo check passed successfully.
+2025-03-25 13:01:24,947 : INFO : Echo data received: [85, 170, 29, 255, 255, 15, 0, 0, 16, 1, 0, 58]
+2025-03-25 13:01:24,947 : INFO : Echo check passed successfully.
+2025-03-25 13:01:45,950 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 0, 1, 0, 58]
+2025-03-25 13:01:45,952 : INFO : Echo check passed successfully.
+2025-03-25 13:01:51,115 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 0, 1, 0, 58]
+2025-03-25 13:01:51,115 : INFO : Echo check passed successfully.
+2025-03-25 13:01:51,808 : INFO : Echo data received: [85, 170, 29, 254, 255, 31, 0, 0, 0, 1, 0, 57]
+2025-03-25 13:01:51,808 : INFO : Echo check passed successfully.
+2025-03-25 13:01:52,409 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 0, 1, 0, 58]
+2025-03-25 13:01:52,409 : INFO : Echo check passed successfully.
+2025-03-25 13:01:55,104 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 0, 1, 0, 58]
+2025-03-25 13:01:55,104 : INFO : Echo check passed successfully.
+2025-03-25 13:02:44,373 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 0, 1, 0, 58]
+2025-03-25 13:02:44,374 : INFO : Echo check passed successfully.
+2025-03-25 13:02:47,512 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 0, 1, 0, 58]
+2025-03-25 13:02:47,513 : INFO : Echo check passed successfully.
+2025-03-25 13:02:51,461 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 0, 1, 0, 58]
+2025-03-25 13:02:51,462 : INFO : Echo check passed successfully.
+2025-03-25 13:02:52,336 : INFO : Echo data received: [85, 170, 29, 253, 255, 31, 0, 0, 0, 1, 0, 56]
+2025-03-25 13:02:52,336 : INFO : Echo check passed successfully.
+2025-03-25 13:02:52,785 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 0, 1, 0, 58]
+2025-03-25 13:02:52,785 : INFO : Echo check passed successfully.
+2025-03-25 13:03:44,449 : INFO : Echo data received: [85, 170, 29, 247, 255, 31, 8, 0, 0, 1, 0, 58]
+2025-03-25 13:03:44,449 : INFO : Echo check passed successfully.
+2025-03-25 13:03:45,779 : INFO : Echo data received: [85, 170, 29, 247, 255, 31, 8, 0, 0, 1, 0, 58]
+2025-03-25 13:03:45,779 : INFO : Echo check passed successfully.
+2025-03-25 13:03:46,797 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 0, 1, 0, 58]
+2025-03-25 13:03:46,797 : INFO : Echo check passed successfully.
+2025-03-25 13:03:48,654 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 0, 1, 0, 58]
+2025-03-25 13:03:48,655 : INFO : Echo check passed successfully.
+2025-03-25 13:03:49,929 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 96, 1, 0, 154]
+2025-03-25 13:03:49,929 : INFO : Echo check passed successfully.
+2025-03-25 13:03:50,273 : INFO : Echo data received: [85, 170, 29, 0, 0, 0, 0, 0, 0, 1, 0, 29]
+2025-03-25 13:03:50,273 : INFO : Echo check passed successfully.
+2025-03-25 13:03:51,680 : INFO : Echo data received: [85, 170, 29, 255, 255, 31, 0, 0, 96, 1, 0, 154]
+2025-03-25 13:03:51,680 : INFO : Echo check passed successfully.
+2025-03-25 13:04:15,545 : INFO : Echo data received: [85, 170, 29, 253, 255, 31, 2, 0, 96, 1, 0, 154]
+2025-03-25 13:04:15,546 : INFO : Echo check passed successfully.
+2025-03-25 13:04:17,000 : INFO : Echo data received: [85, 170, 29, 245, 255, 31, 10, 0, 96, 1, 0, 154]
+2025-03-25 13:04:17,001 : INFO : Echo check passed successfully.
+2025-03-25 13:04:18,997 : INFO : Echo data received: [85, 170, 29, 229, 255, 31, 26, 0, 96, 1, 0, 154]
+2025-03-25 13:04:18,997 : INFO : Echo check passed successfully.
+2025-03-25 13:04:20,493 : INFO : Echo data received: [85, 170, 29, 229, 254, 31, 26, 1, 96, 1, 0, 154]
+2025-03-25 13:04:20,494 : INFO : Echo check passed successfully.
+2025-03-25 13:04:22,324 : INFO : Echo data received: [85, 170, 29, 229, 254, 31, 26, 1, 96, 1, 0, 154]
+2025-03-25 13:04:22,325 : INFO : Echo check passed successfully.
+2025-03-25 13:04:23,478 : INFO : Echo data received: [85, 170, 29, 229, 254, 31, 26, 1, 96, 1, 0, 154]
+2025-03-25 13:04:23,479 : INFO : Echo check passed successfully.
+2025-03-25 13:06:42,956 : INFO : Echo data received: [85, 170, 29, 229, 254, 95, 26, 1, 32, 1, 0, 154]
+2025-03-25 13:06:42,956 : INFO : Echo check passed successfully.
+2025-03-25 13:06:43,851 : INFO : Echo data received: [85, 170, 29, 229, 254, 127, 26, 1, 0, 1, 0, 154]
+2025-03-25 13:06:43,851 : INFO : Echo check passed successfully.
+2025-03-25 13:06:44,696 : INFO : Echo data received: [85, 170, 29, 229, 254, 127, 26, 1, 0, 1, 0, 154]
+2025-03-25 13:06:44,697 : INFO : Echo check passed successfully.
+2025-03-25 13:06:45,539 : INFO : Echo data received: [85, 170, 29, 229, 254, 127, 26, 1, 0, 1, 0, 154]
+2025-03-25 13:06:45,539 : INFO : Echo check passed successfully.
+2025-03-25 13:06:46,540 : INFO : Echo data received: [85, 170, 29, 229, 254, 127, 26, 1, 0, 1, 0, 154]
+2025-03-25 13:06:46,541 : INFO : Echo check passed successfully.
+2025-03-25 13:06:49,837 : INFO : Echo data received: [85, 170, 29, 229, 254, 127, 26, 1, 0, 1, 0, 154]
+2025-03-25 13:06:49,837 : INFO : Echo check passed successfully.
+2025-03-25 13:06:51,113 : INFO : Echo data received: [85, 170, 29, 229, 254, 125, 26, 1, 0, 1, 0, 152]
+2025-03-25 13:06:51,113 : INFO : Echo check passed successfully.
+2025-03-25 13:06:51,473 : INFO : Echo data received: [85, 170, 29, 229, 254, 121, 26, 1, 0, 1, 0, 148]
+2025-03-25 13:06:51,473 : INFO : Echo check passed successfully.
+2025-03-25 13:06:51,976 : INFO : Echo data received: [85, 170, 29, 229, 254, 123, 26, 1, 0, 1, 0, 150]
+2025-03-25 13:06:51,976 : INFO : Echo check passed successfully.
+2025-03-25 13:06:52,353 : INFO : Echo data received: [85, 170, 29, 229, 254, 127, 26, 1, 0, 1, 0, 154]
+2025-03-25 13:06:52,354 : INFO : Echo check passed successfully.
+2025-03-25 13:06:52,888 : INFO : Echo data received: [85, 170, 29, 229, 254, 119, 26, 1, 0, 1, 0, 146]
+2025-03-25 13:06:52,888 : INFO : Echo check passed successfully.
+2025-03-25 13:06:53,400 : INFO : Echo data received: [85, 170, 29, 229, 254, 103, 26, 1, 0, 1, 0, 130]
+2025-03-25 13:06:53,401 : INFO : Echo check passed successfully.
+2025-03-25 13:06:53,752 : INFO : Echo data received: [85, 170, 29, 229, 254, 111, 26, 1, 0, 1, 0, 138]
+2025-03-25 13:06:53,752 : INFO : Echo check passed successfully.
+2025-03-25 13:06:54,152 : INFO : Echo data received: [85, 170, 29, 229, 254, 127, 26, 1, 0, 1, 0, 154]
+2025-03-25 13:06:54,152 : INFO : Echo check passed successfully.
+2025-03-25 13:06:54,612 : INFO : Echo data received: [85, 170, 29, 229, 254, 95, 26, 1, 0, 1, 0, 122]
+2025-03-25 13:06:54,612 : INFO : Echo check passed successfully.
+2025-03-25 13:06:55,072 : INFO : Echo data received: [85, 170, 29, 229, 254, 31, 26, 1, 0, 1, 0, 58]
+2025-03-25 13:06:55,072 : INFO : Echo check passed successfully.
+2025-03-25 13:06:55,601 : INFO : Echo data received: [85, 170, 29, 229, 254, 95, 26, 1, 0, 1, 0, 122]
+2025-03-25 13:06:55,601 : INFO : Echo check passed successfully.
+2025-03-25 13:06:56,017 : INFO : Echo data received: [85, 170, 29, 229, 254, 127, 26, 1, 0, 1, 0, 154]
+2025-03-25 13:06:56,017 : INFO : Echo check passed successfully.
+2025-03-25 13:07:29,563 : INFO : Echo data received: [85, 170, 29, 231, 254, 127, 24, 1, 0, 1, 0, 154]
+2025-03-25 13:07:29,563 : INFO : Echo check passed successfully.
+2025-03-25 13:07:30,389 : INFO : Echo data received: [85, 170, 29, 231, 254, 127, 24, 1, 0, 1, 0, 154]
+2025-03-25 13:07:30,390 : INFO : Echo check passed successfully.
+2025-03-25 13:07:34,116 : INFO : Echo data received: [85, 170, 29, 231, 254, 127, 24, 1, 0, 1, 0, 154]
+2025-03-25 13:07:34,117 : INFO : Echo check passed successfully.
+2025-03-25 13:07:35,525 : INFO : Echo data received: [85, 170, 29, 231, 254, 127, 24, 1, 0, 1, 0, 154]
+2025-03-25 13:07:35,525 : INFO : Echo check passed successfully.
+2025-03-25 13:07:36,758 : INFO : Echo data received: [85, 170, 29, 231, 254, 127, 24, 1, 0, 1, 0, 154]
+2025-03-25 13:07:36,758 : INFO : Echo check passed successfully.
+2025-03-25 13:07:37,753 : INFO : Echo data received: [85, 170, 29, 231, 254, 127, 24, 1, 0, 1, 0, 154]
+2025-03-25 13:07:37,754 : INFO : Echo check passed successfully.
+2025-03-25 13:07:40,182 : INFO : Echo data received: [85, 170, 29, 230, 254, 127, 25, 1, 0, 1, 0, 154]
+2025-03-25 13:07:40,182 : INFO : Echo check passed successfully.
+2025-03-25 13:07:41,333 : INFO : Echo data received: [85, 170, 29, 228, 254, 127, 27, 1, 0, 1, 0, 154]
+2025-03-25 13:07:41,333 : INFO : Echo check passed successfully.
+2025-03-25 13:09:15,935 : INFO : Echo data received: [85, 170, 29, 236, 254, 127, 19, 1, 0, 1, 0, 154]
+2025-03-25 13:09:15,936 : INFO : Echo check passed successfully.
+2025-03-25 13:09:17,222 : INFO : Echo data received: [85, 170, 29, 252, 254, 127, 3, 1, 0, 1, 0, 154]
+2025-03-25 13:09:17,222 : INFO : Echo check passed successfully.
+2025-03-25 13:09:18,130 : INFO : Echo data received: [85, 170, 29, 252, 254, 127, 3, 1, 0, 1, 0, 154]
+2025-03-25 13:09:18,130 : INFO : Echo check passed successfully.
+2025-03-25 13:09:19,064 : INFO : Echo data received: [85, 170, 29, 252, 254, 127, 3, 1, 0, 1, 0, 154]
+2025-03-25 13:09:19,065 : INFO : Echo check passed successfully.
+2025-03-25 13:09:20,658 : INFO : Echo data received: [85, 170, 29, 252, 254, 127, 3, 1, 0, 1, 0, 154]
+2025-03-25 13:09:20,658 : INFO : Echo check passed successfully.
+2025-03-25 13:09:21,626 : INFO : Echo data received: [85, 170, 29, 252, 255, 127, 3, 0, 0, 1, 0, 154]
+2025-03-25 13:09:21,627 : INFO : Echo check passed successfully.
+2025-03-25 13:09:22,563 : INFO : Echo data received: [85, 170, 29, 252, 255, 127, 3, 0, 0, 1, 0, 154]
+2025-03-25 13:09:22,563 : INFO : Echo check passed successfully.
+2025-03-25 13:09:24,903 : INFO : Echo data received: [85, 170, 29, 252, 255, 127, 3, 0, 0, 1, 0, 154]
+2025-03-25 13:09:24,904 : INFO : Echo check passed successfully.
+2025-03-25 13:09:26,580 : INFO : Echo data received: [85, 170, 29, 252, 255, 127, 3, 0, 0, 1, 0, 154]
+2025-03-25 13:09:26,580 : INFO : Echo check passed successfully.
+2025-03-25 13:09:27,669 : INFO : Echo data received: [85, 170, 29, 252, 255, 127, 3, 0, 0, 1, 0, 154]
+2025-03-25 13:09:27,670 : INFO : Echo check passed successfully.
+2025-03-25 13:09:54,393 : INFO : Echo data received: [85, 170, 29, 0, 0, 0, 0, 0, 0, 1, 0, 29]
+2025-03-25 13:09:54,394 : INFO : Echo check passed successfully.
+2025-03-25 13:09:55,268 : INFO : Echo data received: [85, 170, 29, 252, 255, 127, 3, 0, 0, 1, 0, 154]
+2025-03-25 13:09:55,268 : INFO : Echo check passed successfully.
+2025-03-25 13:10:52,664 : INFO : Echo data received: [85, 170, 29, 252, 255, 127, 2, 0, 0, 1, 0, 153]
+2025-03-25 13:10:52,664 : INFO : Echo check passed successfully.
+2025-03-25 13:10:55,953 : INFO : Echo data received: [85, 170, 29, 252, 255, 127, 3, 0, 0, 1, 0, 154]
+2025-03-25 13:10:55,953 : INFO : Echo check passed successfully.
+2025-03-25 13:10:57,263 : INFO : Echo data received: [85, 170, 29, 252, 255, 127, 3, 0, 0, 1, 0, 154]
+2025-03-25 13:10:57,263 : INFO : Echo check passed successfully.
+2025-03-25 13:11:00,626 : INFO : Echo data received: [85, 170, 29, 254, 255, 127, 1, 0, 0, 1, 0, 154]
+2025-03-25 13:11:00,627 : INFO : Echo check passed successfully.
+2025-03-25 13:11:01,435 : INFO : Echo data received: [85, 170, 29, 255, 255, 127, 0, 0, 0, 1, 0, 154]
+2025-03-25 13:11:01,436 : INFO : Echo check passed successfully.
+2025-03-25 13:11:02,696 : INFO : Echo data received: [85, 170, 29, 254, 255, 127, 0, 0, 0, 1, 0, 153]
+2025-03-25 13:11:02,696 : INFO : Echo check passed successfully.
+2025-03-25 13:11:03,097 : INFO : Echo data received: [85, 170, 29, 252, 255, 127, 0, 0, 0, 1, 0, 151]
+2025-03-25 13:11:03,097 : INFO : Echo check passed successfully.
+2025-03-25 13:11:03,489 : INFO : Echo data received: [85, 170, 29, 253, 255, 127, 0, 0, 0, 1, 0, 152]
+2025-03-25 13:11:03,489 : INFO : Echo check passed successfully.
+2025-03-25 13:11:04,039 : INFO : Echo data received: [85, 170, 29, 255, 255, 127, 0, 0, 0, 1, 0, 154]
+2025-03-25 13:11:04,039 : INFO : Echo check passed successfully.
+2025-03-25 13:11:08,499 : INFO : Echo data received: [85, 170, 29, 254, 255, 127, 1, 0, 0, 1, 0, 154]
+2025-03-25 13:11:08,499 : INFO : Echo check passed successfully.
+2025-03-25 13:11:15,713 : INFO : Echo data received: [85, 170, 29, 255, 255, 127, 0, 0, 0, 1, 0, 154]
+2025-03-25 13:11:15,714 : INFO : Echo check passed successfully.
+2025-03-25 13:11:18,279 : INFO : Echo data received: [85, 170, 29, 253, 255, 127, 2, 0, 0, 1, 0, 154]
+2025-03-25 13:11:18,280 : INFO : Echo check passed successfully.
+2025-03-25 13:11:26,570 : INFO : Echo data received: [85, 170, 29, 255, 255, 127, 0, 0, 0, 1, 0, 154]
+2025-03-25 13:11:26,571 : INFO : Echo check passed successfully.
+2025-03-25 13:12:10,106 : INFO : Echo data received: [85, 170, 29, 253, 255, 127, 2, 0, 0, 1, 0, 154]
+2025-03-25 13:12:10,106 : INFO : Echo check passed successfully.
+2025-03-25 13:12:14,127 : INFO : Echo data received: [85, 170, 29, 252, 255, 127, 3, 0, 0, 1, 0, 154]
+2025-03-25 13:12:14,127 : INFO : Echo check passed successfully.
+2025-03-25 13:33:51,168 : INFO : Echo data received: [85, 170, 29, 253, 255, 127, 2, 0, 0, 1, 0, 154]
+2025-03-25 13:33:51,169 : INFO : Echo check passed successfully.
+2025-03-25 13:33:52,217 : INFO : Echo data received: [85, 170, 29, 252, 255, 127, 2, 0, 0, 1, 0, 153]
+2025-03-25 13:33:52,217 : INFO : Echo check passed successfully.
+2025-03-25 13:33:52,729 : INFO : Echo data received: [85, 170, 29, 253, 255, 127, 2, 0, 0, 1, 0, 154]
+2025-03-25 13:33:52,729 : INFO : Echo check passed successfully.
+2025-03-25 13:34:56,615 : INFO : Echo data received: [85, 170, 29, 252, 255, 127, 3, 0, 0, 1, 0, 154]
+2025-03-25 13:34:56,615 : INFO : Echo check passed successfully.
+2025-03-25 13:39:10,585 : INFO : Echo data received: [85, 170, 29, 254, 255, 127, 1, 0, 0, 1, 0, 154]
+2025-03-25 13:39:10,586 : INFO : Echo check passed successfully.
+2025-03-25 13:39:24,320 : INFO : Echo data received: [85, 170, 29, 254, 239, 127, 1, 16, 0, 1, 0, 154]
+2025-03-25 13:39:24,320 : INFO : Echo check passed successfully.
+2025-03-25 13:39:25,913 : INFO : Echo data received: [85, 170, 29, 254, 231, 127, 1, 24, 0, 1, 0, 154]
+2025-03-25 13:39:25,913 : INFO : Echo check passed successfully.
+2025-03-25 13:39:30,062 : INFO : Echo data received: [85, 170, 29, 254, 247, 127, 1, 8, 0, 1, 0, 154]
+2025-03-25 13:39:30,062 : INFO : Echo check passed successfully.
+2025-03-25 13:39:37,517 : INFO : Echo data received: [85, 170, 29, 252, 247, 127, 1, 8, 0, 1, 0, 152]
+2025-03-25 13:39:37,517 : INFO : Echo check passed successfully.
+2025-03-25 13:39:37,626 : INFO : Echo data received: [85, 170, 29, 252, 247, 127, 1, 8, 0, 1, 0, 152]
+2025-03-25 13:39:37,627 : INFO : Echo check passed successfully.
+2025-03-25 13:39:38,241 : INFO : Echo data received: [85, 170, 29, 245, 255, 31, 0, 0, 96, 1, 0, 144]
+2025-03-25 13:39:38,241 : INFO : Echo check passed successfully.
+2025-03-25 13:39:40,517 : INFO : Echo data received: [85, 170, 29, 213, 255, 31, 0, 0, 96, 1, 0, 112]
+2025-03-25 13:39:40,517 : INFO : Echo check passed successfully.
+2025-03-25 13:39:42,795 : INFO : Echo data received: [85, 170, 29, 85, 255, 31, 0, 0, 96, 1, 0, 240]
+2025-03-25 13:39:42,796 : INFO : Echo check passed successfully.
+2025-03-25 13:39:42,905 : INFO : Echo data received: [85, 170, 29, 85, 255, 31, 0, 0, 96, 1, 0, 240]
+2025-03-25 13:39:42,905 : INFO : Echo check passed successfully.
+2025-03-25 13:39:44,241 : INFO : Echo data received: [85, 170, 29, 85, 253, 31, 0, 0, 96, 1, 0, 238]
+2025-03-25 13:39:44,241 : INFO : Echo check passed successfully.
+2025-03-25 13:39:44,345 : INFO : Echo data received: [85, 170, 29, 85, 253, 31, 0, 0, 96, 1, 0, 238]
+2025-03-25 13:39:44,346 : INFO : Echo check passed successfully.
+2025-03-25 13:39:44,945 : INFO : Echo data received: [85, 170, 29, 85, 245, 31, 0, 0, 96, 1, 0, 230]
+2025-03-25 13:39:44,945 : INFO : Echo check passed successfully.
+2025-03-25 13:39:47,204 : INFO : Echo data received: [85, 170, 29, 85, 213, 31, 0, 0, 96, 1, 0, 198]
+2025-03-25 13:39:47,204 : INFO : Echo check passed successfully.
+2025-03-25 13:39:47,309 : INFO : Echo data received: [85, 170, 29, 85, 213, 31, 0, 0, 96, 1, 0, 198]
+2025-03-25 13:39:47,310 : INFO : Echo check passed successfully.
+2025-03-25 13:39:47,479 : INFO : Echo data received: [85, 170, 29, 85, 85, 31, 0, 0, 96, 1, 0, 70]
+2025-03-25 13:39:47,479 : INFO : Echo check passed successfully.
+2025-03-25 13:39:47,589 : INFO : Echo data received: [85, 170, 29, 85, 85, 31, 0, 0, 96, 1, 0, 70]
+2025-03-25 13:39:47,590 : INFO : Echo check passed successfully.
+2025-03-25 13:39:48,273 : INFO : Echo data received: [85, 170, 29, 85, 85, 29, 0, 0, 96, 1, 0, 68]
+2025-03-25 13:39:48,273 : INFO : Echo check passed successfully.
+2025-03-25 13:39:48,377 : INFO : Echo data received: [85, 170, 29, 85, 85, 29, 0, 0, 96, 1, 0, 68]
+2025-03-25 13:39:48,378 : INFO : Echo check passed successfully.
+2025-03-25 13:39:48,936 : INFO : Echo data received: [85, 170, 29, 85, 85, 21, 0, 0, 96, 1, 0, 60]
+2025-03-25 13:39:48,936 : INFO : Echo check passed successfully.
+2025-03-25 13:39:53,753 : INFO : Echo data received: [85, 170, 29, 85, 85, 21, 0, 0, 96, 1, 0, 60]
+2025-03-25 13:39:53,754 : INFO : Echo check passed successfully.
+2025-03-25 13:39:53,860 : INFO : Echo data received: [85, 170, 29, 85, 85, 85, 0, 0, 32, 1, 0, 60]
+2025-03-25 13:39:53,861 : INFO : Echo check passed successfully.
+2025-03-25 13:40:09,393 : INFO : Echo data received: [85, 170, 29, 0, 0, 0, 0, 0, 0, 1, 0, 29]
+2025-03-25 13:40:09,393 : INFO : Echo check passed successfully.
+2025-03-25 13:40:10,416 : INFO : Echo data received: [85, 170, 29, 85, 85, 85, 170, 170, 42, 1, 0, 154]
+2025-03-25 13:40:10,417 : INFO : Echo check passed successfully.
+2025-03-25 13:44:54,617 : INFO : Echo data received: [85, 170, 29, 85, 85, 21, 170, 170, 42, 1, 0, 90]
+2025-03-25 13:44:54,618 : INFO : Echo check passed successfully.
+2025-03-25 13:44:56,882 : INFO : Echo data received: [85, 170, 29, 85, 85, 21, 170, 170, 106, 1, 0, 154]
+2025-03-25 13:44:56,883 : INFO : Echo check passed successfully.
+2025-03-25 13:44:56,988 : INFO : Echo data received: [85, 170, 29, 85, 85, 85, 170, 170, 42, 1, 0, 154]
+2025-03-25 13:44:56,989 : INFO : Echo check passed successfully.
+2025-03-25 13:45:00,480 : INFO : Echo data received: [85, 170, 29, 85, 85, 21, 170, 170, 42, 1, 0, 90]
+2025-03-25 13:45:00,481 : INFO : Echo check passed successfully.
+2025-03-25 13:45:04,345 : INFO : Echo data received: [85, 170, 29, 85, 85, 21, 170, 170, 106, 1, 0, 154]
+2025-03-25 13:45:04,345 : INFO : Echo check passed successfully.
+2025-03-25 13:45:04,449 : INFO : Echo data received: [85, 170, 29, 85, 85, 85, 170, 170, 42, 1, 0, 154]
+2025-03-25 13:45:04,450 : INFO : Echo check passed successfully.
+2025-03-25 13:45:20,736 : INFO : Echo data received: [85, 170, 29, 85, 85, 21, 170, 170, 42, 1, 0, 90]
+2025-03-25 13:45:20,736 : INFO : Echo check passed successfully.
+2025-03-25 13:45:29,793 : INFO : Echo data received: [85, 170, 29, 84, 85, 21, 170, 170, 42, 1, 0, 89]
+2025-03-25 13:45:29,793 : INFO : Echo check passed successfully.
+2025-03-25 13:45:44,674 : INFO : Echo data received: [85, 170, 29, 0, 0, 0, 0, 0, 0, 1, 0, 29]
+2025-03-25 13:45:44,674 : INFO : Echo check passed successfully.
+2025-03-25 13:45:45,273 : INFO : Echo data received: [85, 170, 29, 84, 85, 21, 171, 170, 106, 1, 0, 154]
+2025-03-25 13:45:45,273 : INFO : Echo check passed successfully.
+2025-03-25 13:45:48,601 : INFO : Echo data received: [85, 170, 29, 84, 85, 21, 171, 170, 106, 1, 0, 154]
+2025-03-25 13:45:48,601 : INFO : Echo check passed successfully.
+2025-03-25 13:45:48,706 : INFO : Echo data received: [85, 170, 29, 85, 85, 21, 170, 170, 106, 1, 0, 154]
+2025-03-25 13:45:48,707 : INFO : Echo check passed successfully.
+2025-03-25 13:45:52,289 : INFO : Echo data received: [85, 170, 29, 0, 0, 0, 0, 0, 0, 1, 0, 29]
+2025-03-25 13:45:52,290 : INFO : Echo check passed successfully.
+2025-03-25 13:45:53,009 : INFO : Echo data received: [85, 170, 29, 85, 85, 21, 170, 170, 106, 1, 0, 154]
+2025-03-25 13:45:53,009 : INFO : Echo check passed successfully.
+2025-03-25 13:45:58,761 : INFO : Echo data received: [85, 170, 29, 84, 85, 21, 170, 170, 106, 1, 0, 153]
+2025-03-25 13:45:58,761 : INFO : Echo check passed successfully.
+2025-03-25 13:45:58,868 : INFO : Echo data received: [85, 170, 29, 84, 85, 21, 170, 170, 106, 1, 0, 153]
+2025-03-25 13:45:58,875 : INFO : Echo check passed successfully.
+2025-03-25 13:46:03,609 : INFO : Echo data received: [85, 170, 29, 0, 0, 0, 0, 0, 0, 1, 0, 29]
+2025-03-25 13:46:03,609 : INFO : Echo check passed successfully.
+2025-03-25 13:46:04,201 : INFO : Echo data received: [85, 170, 29, 84, 85, 21, 171, 170, 106, 1, 0, 154]
+2025-03-25 13:46:04,201 : INFO : Echo check passed successfully.
+2025-03-25 13:46:51,377 : INFO : Echo data received: [85, 170, 29, 84, 85, 21, 171, 170, 106, 1, 0, 154]
+2025-03-25 13:46:51,377 : INFO : Echo check passed successfully.
+2025-03-25 13:47:22,818 : INFO : Echo data received: [85, 170, 29, 0, 0, 0, 0, 0, 0, 1, 0, 29]
+2025-03-25 13:47:22,818 : INFO : Echo check passed successfully.
+2025-03-25 13:47:23,313 : INFO : Echo data received: [85, 170, 29, 84, 85, 85, 171, 170, 42, 1, 0, 154]
+2025-03-25 13:47:23,313 : INFO : Echo check passed successfully.
+2025-03-25 13:47:35,010 : INFO : Echo data received: [85, 170, 29, 84, 85, 85, 171, 170, 42, 1, 0, 154]
+2025-03-25 13:47:35,010 : INFO : Echo check passed successfully.
+2025-03-25 13:47:35,117 : INFO : Echo data received: [85, 170, 29, 85, 85, 85, 170, 170, 42, 1, 0, 154]
+2025-03-25 13:47:35,118 : INFO : Echo check passed successfully.
+2025-03-25 13:47:47,537 : INFO : Echo data received: [85, 170, 29, 84, 85, 85, 170, 170, 42, 1, 0, 153]
+2025-03-25 13:47:47,537 : INFO : Echo check passed successfully.
+2025-03-25 13:47:47,642 : INFO : Echo data received: [85, 170, 29, 84, 85, 85, 170, 170, 42, 1, 0, 153]
+2025-03-25 13:47:47,642 : INFO : Echo check passed successfully.
+2025-03-25 13:53:32,952 : INFO : The program has closed
+2025-03-27 11:13:05,085 : INFO : The program has closed
+2025-03-27 11:17:45,003 : INFO : The program has closed
+2025-03-27 11:21:23,101 : INFO : The program has closed
+2025-03-27 11:28:01,473 : INFO : The program has closed
+2025-03-27 11:35:50,592 : INFO : The program has closed
+2025-03-27 11:35:57,719 : INFO : The program has closed
+2025-03-27 11:37:16,062 : INFO : --------------------------------------------------------------------------------------
+2025-03-27 11:37:16,063 : INFO : 5
+2025-03-27 11:37:16,064 : INFO : SRC: [0. 0. 0. 1. 0. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+2025-03-27 11:37:16,064 : INFO : SNK: [1. 1. 1. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+2025-03-27 11:37:16,064 : INFO : period: 2 | dutyCycle: 50 | totalTime: 3600
+2025-03-27 11:37:18,074 : INFO : Turn on 1 time from 9000
+2025-03-27 11:37:20,071 : INFO : Turn on 2 time from 9000
+2025-03-27 11:37:22,066 : INFO : Turn on 3 time from 9000
+2025-03-27 11:37:24,067 : INFO : Turn on 4 time from 9000
+2025-03-27 11:37:26,072 : INFO : Turn on 5 time from 9000
+2025-03-27 11:37:26,261 : INFO : process stopped
+2025-03-27 11:37:29,517 : INFO : --------------------------------------------------------------------------------------
+2025-03-27 11:37:29,518 : INFO : 5
+2025-03-27 11:37:29,519 : INFO : SRC: [0. 0. 0. 1. 0. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+2025-03-27 11:37:29,519 : INFO : SNK: [1. 1. 1. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+2025-03-27 11:37:29,519 : INFO : period: 3 | dutyCycle: 50 | totalTime: 18000
+2025-03-27 11:37:32,531 : INFO : Turn on 1 time from 6000
+2025-03-27 11:37:35,519 : INFO : Turn on 2 time from 6000
+2025-03-27 11:37:36,461 : INFO : process stopped
+2025-03-27 11:37:40,647 : INFO : The program has closed
+2025-03-27 12:04:19,787 : INFO : The program has closed
+2025-03-27 12:24:19,072 : INFO : The program has closed
+2025-03-27 12:25:57,000 : INFO : The program has closed
+2025-03-27 12:27:00,781 : INFO : --------------------------------------------------------------------------------------
+2025-03-27 12:27:00,782 : INFO : 4
+2025-03-27 12:27:00,798 : INFO : SRC: [0. 1. 0. 1. 1. 0. 1. 0. 1. 0. 1. 0. 0. 1. 1. 1. 1. 0. 0. 0. 1. 1. 0.]
+2025-03-27 12:27:00,798 : INFO : SNK: [1. 0. 1. 0. 0. 1. 0. 1. 0. 1. 0. 1. 1. 0. 0. 0. 0. 1. 1. 1. 0. 0. 1.]
+2025-03-27 12:27:00,798 : INFO : period: 3 | dutyCycle: 50 | totalTime: 3600
+2025-03-27 12:27:03,809 : INFO : Turn on 1 time from 6000
+2025-03-27 12:27:06,802 : INFO : Turn on 2 time from 6000
+2025-03-27 12:27:09,803 : INFO : Turn on 3 time from 6000
+2025-03-27 12:27:12,808 : INFO : Turn on 4 time from 6000
+2025-03-27 12:27:15,803 : INFO : Turn on 5 time from 6000
+2025-03-27 12:27:17,116 : INFO : process stopped
+2025-03-27 12:27:20,197 : INFO : process stopped
+2025-03-27 12:27:21,641 : INFO : The program has closed
+2025-03-27 12:27:29,913 : INFO : The program has closed
+2025-03-27 12:50:58,632 : INFO : The program has closed
+2025-03-27 12:52:04,091 : INFO : The program has closed
+2025-03-27 13:00:51,178 : INFO : The program has closed
+2025-03-27 13:25:30,807 : INFO : The program has closed
+2025-03-27 13:28:57,781 : INFO : The program has closed
+2025-03-27 13:32:05,768 : INFO : The program has closed
+2025-03-27 13:36:50,813 : INFO : The program has closed
+2025-03-27 13:37:32,390 : INFO : The program has closed
+2025-03-27 13:38:57,304 : INFO : The program has closed
+2025-03-27 13:49:16,108 : INFO : The program has closed
+2025-03-27 13:58:52,752 : INFO : The program has closed
+2025-03-27 14:00:03,992 : INFO : The program has closed
+2025-03-27 14:03:26,985 : INFO : The program has closed
+2025-03-27 19:09:32,811 : INFO : --------------------------------------------------------------------------------------
+2025-03-27 19:09:32,812 : INFO : 3
+2025-03-27 19:09:32,836 : INFO : SRC: [0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 1. 0.]
+2025-03-27 19:09:32,837 : INFO : SNK: [1. 0. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 0. 0. 1.]
+2025-03-27 19:09:32,837 : INFO : period: 3 | dutyCycle: 50 | totalTime: 3600
+2025-03-27 19:09:35,847 : INFO : Turn on 1 time from 6000
+2025-03-27 19:09:38,853 : INFO : Turn on 2 time from 6000
+2025-03-27 19:09:39,683 : INFO : process stopped
+2025-03-27 19:09:42,099 : INFO : --------------------------------------------------------------------------------------
+2025-03-27 19:09:42,100 : INFO : 3
+2025-03-27 19:09:42,101 : INFO : SRC: [0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 1. 0.]
+2025-03-27 19:09:42,101 : INFO : SNK: [1. 0. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 0. 0. 1.]
+2025-03-27 19:09:42,101 : INFO : period: 5 | dutyCycle: 50 | totalTime: 18000
+2025-03-27 19:09:47,101 : INFO : Turn on 1 time from 3600
+2025-03-27 19:09:52,099 : INFO : Turn on 2 time from 3600
+2025-03-27 19:09:54,252 : INFO : process stopped
+2025-03-27 19:09:56,717 : INFO : The program has closed
+2025-03-27 19:12:25,755 : INFO : --------------------------------------------------------------------------------------
+2025-03-27 19:12:25,757 : INFO : 1
+2025-03-27 19:12:25,757 : INFO : SRC: [0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 1. 0.]
+2025-03-27 19:12:25,758 : INFO : SNK: [1. 0. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 0. 0. 1.]
+2025-03-27 19:12:25,758 : INFO : period: 4 | dutyCycle: 50 | totalTime: 3600
+2025-03-27 19:12:28,962 : INFO : process stopped
+2025-03-27 19:12:36,795 : INFO : --------------------------------------------------------------------------------------
+2025-03-27 19:12:36,796 : INFO : 1
+2025-03-27 19:12:36,796 : INFO : SRC: [0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 1. 0.]
+2025-03-27 19:12:36,797 : INFO : SNK: [1. 0. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 0. 0. 1.]
+2025-03-27 19:12:36,797 : INFO : period: 4 | dutyCycle: 0.6 | totalTime: 18000
+2025-03-27 19:12:37,963 : INFO : process stopped
+2025-03-27 19:12:45,819 : INFO : --------------------------------------------------------------------------------------
+2025-03-27 19:12:45,820 : INFO : 1
+2025-03-27 19:12:45,820 : INFO : SRC: [0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 1. 0.]
+2025-03-27 19:12:45,821 : INFO : SNK: [1. 0. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 0. 0. 1.]
+2025-03-27 19:12:45,821 : INFO : period: 5 | dutyCycle: 0.6 | totalTime: 300
+2025-03-27 19:12:50,820 : INFO : Turn on 1 time from 60
+2025-03-27 19:12:53,822 : INFO : Turn off 1 time from 60
+2025-03-27 19:12:55,818 : INFO : Turn on 2 time from 60
+2025-03-27 19:12:58,824 : INFO : Turn off 2 time from 60
+2025-03-27 19:13:00,821 : INFO : Turn on 3 time from 60
+2025-03-27 19:13:03,816 : INFO : Turn off 3 time from 60
+2025-03-27 19:13:05,828 : INFO : Turn on 4 time from 60
+2025-03-27 19:13:08,818 : INFO : Turn off 4 time from 60
+2025-03-27 19:13:10,820 : INFO : Turn on 5 time from 60
+2025-03-27 19:13:13,817 : INFO : Turn off 5 time from 60
+2025-03-27 19:13:15,820 : INFO : Turn on 6 time from 60
+2025-03-27 19:13:18,816 : INFO : Turn off 6 time from 60
+2025-03-27 19:13:20,820 : INFO : Turn on 7 time from 60
+2025-03-27 19:13:23,825 : INFO : Turn off 7 time from 60
+2025-03-27 19:13:25,821 : INFO : Turn on 8 time from 60
+2025-03-27 19:13:28,822 : INFO : Turn off 8 time from 60
+2025-03-27 19:13:30,819 : INFO : Turn on 9 time from 60
+2025-03-27 19:13:33,816 : INFO : Turn off 9 time from 60
+2025-03-27 19:13:35,825 : INFO : Turn on 10 time from 60
+2025-03-27 19:13:38,832 : INFO : Turn off 10 time from 60
+2025-03-27 19:13:40,824 : INFO : Turn on 11 time from 60
+2025-03-27 19:13:43,824 : INFO : Turn off 11 time from 60
+2025-03-27 19:13:45,816 : INFO : Turn on 12 time from 60
+2025-03-27 19:13:48,817 : INFO : Turn off 12 time from 60
+2025-03-27 19:13:50,829 : INFO : Turn on 13 time from 60
+2025-03-27 19:13:53,824 : INFO : Turn off 13 time from 60
+2025-03-27 19:13:55,818 : INFO : Turn on 14 time from 60
+2025-03-27 19:13:58,829 : INFO : Turn off 14 time from 60
+2025-03-27 19:14:00,815 : INFO : Turn on 15 time from 60
+2025-03-27 19:14:03,823 : INFO : Turn off 15 time from 60
+2025-03-27 19:14:05,817 : INFO : Turn on 16 time from 60
+2025-03-27 19:14:08,819 : INFO : Turn off 16 time from 60
+2025-03-27 19:14:10,818 : INFO : Turn on 17 time from 60
+2025-03-27 19:14:11,898 : INFO : process stopped
+2025-03-27 19:14:13,822 : INFO : Turn off 17 time from 60
+2025-03-27 19:14:13,824 : INFO : Process was stopped at the 17 time from 60
+2025-03-27 19:17:08,728 : INFO : The program has closed
+2025-03-27 19:20:00,703 : INFO : The program has closed
+2025-03-27 19:26:01,666 : INFO : The program has closed
+2025-03-27 19:43:28,332 : INFO : The program has closed
+2025-03-27 19:46:42,057 : INFO : The program has closed
+2025-03-27 20:04:34,613 : INFO : The program has closed
+2025-03-27 20:23:38,591 : INFO : The program has closed
+2025-03-27 20:24:36,608 : INFO : The program has closed
