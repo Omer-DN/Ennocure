@@ -1,4 +1,4 @@
-Port: 3
-Parameters: ['20', '50', '5', 'Hours']
+Port: []
+Parameters: ['5', '60', '5', 'Min']
 Mode: 1
 FlipState: False
