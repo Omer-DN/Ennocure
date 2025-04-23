@@ -305,10 +305,9 @@ class GUI:
             self.toDoEvenFlip = 0
             print("flip OFF")
             self.window.OutPut.appendPlainText("flip OFF")
-    """
+   
     def inverse(self):
-        "
-        Inverts the states of SRC and SNK lines directly (without GUI access),then updates the PCB accordingly."
+        "Inverts the states of SRC and SNK lines directly (without GUI access),then updates the PCB accordingly."
         
         for i in range(self.numberOfChannels):
             self.lines_SRC[i] = int(not self.lines_SRC[i])
@@ -333,7 +332,7 @@ class GUI:
 
         self.updateChannels(newList)
 
-
+    """
     def setAllLastParameters(self):
         """Reads the last saved parameters from a file and updates the UI with the values."""
         try:
