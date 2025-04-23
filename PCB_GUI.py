@@ -17,6 +17,7 @@ from PySide6.QtCore import QTimer
 import numpy
 from functools import partial
 import datetime
+import time
 
 file_channels = "fileChannels.txt"
 file_LastOpening = "LastOpening.txt"
@@ -92,7 +93,6 @@ class GUI:
             "background-color: rgb(80, 100, 100);border: none; border-radius: 12px; padding: 5px;")
 
         self.window.showPorts.clicked.connect(self.getPort)
-        self.window.showPorts.clicked.connect(self.getPort)
         self.window.showPorts.setStyleSheet(
             "background-color: rgb(80, 100, 100);border: none; border-radius: 12px; padding: 5px;")
         self.window.editPort.editingFinished.connect(self.setEditPort)
@@ -132,9 +132,8 @@ class GUI:
                     if isinstance(widget, QCheckBox):
                         self.group_checkboxes[i].append(widget)  # שמירת ה-checkboxים של הקבוצה
                         widget.stateChanged.connect(
-                            partial(self.updateGroupState, i, widget))  # חיבור לפונקציה שתעדכן את המצב
+                            partial(self.updateGroupState, i))  # חיבור לפונקציה שתעדכן את המצב
 
-        # self.loadAndApplyStateprocess stopped(1,file_channels)
         self.window.show()
 
         exit_code = qApp.exec()
@@ -162,18 +161,16 @@ class GUI:
         if self.PCB.ser.is_open:
             self.window.ConnectButton.setStyleSheet("background-color: rgb(0,180,0)")
             self.window.OutPut.appendPlainText(txt_lines[-1][33:-1])
-            self.window.OutPut.appendPlainText(txt_lines[-2][33:-2])
+            #self.window.OutPut.appendPlainText(txt_lines[-2][33:-2])
             self.PCB.logger.info("connected successfully")
             print("connected successfully")
-            self.window.OutPut.appendPlainText("connected successfully")
+            #self.window.OutPut.appendPlainText("connected successfully")
         else:
             self.window.OutPut.appendPlainText("Something wrong with connection")
 
         txt_file.close()
         self.setPCMode(self.PC_mode)
         self.setSubMode(self.sub_mode)
-
-        # שתי השורות גורמות להדפסה כפולה של המצב הנשלח
 
         txt_file = open("ennocure_eu_logger.txt", "r")
         txt_lines = txt_file.readlines()
@@ -184,13 +181,25 @@ class GUI:
             self.window.OutPut.appendPlainText("PC_mode set to 1 (PC control)")
             self.window.OutPut.appendPlainText("Sub_mode set to 0 (standalone base)")
             self.setAllLastParameters()
+            self.toggleAll(True)
 
 
         else:
             self.window.OutPut.appendPlainText(
                 "Something wrong with mode setting please check connection and try again")
 
-    def updateGroupState(self, group_index, widget, state):
+    def closeWindow(self, exit_code):
+        print("The program has closed")
+        self.logger.info("The program has closed")
+        sys.exit(exit_code)
+
+    def mangelines(self,srcLine, snkLine ,shapeOfUsing):
+        self.lines_SRC = srcLine
+        self.lines_SNK = snkLine
+        if shapeOfUsing == "patch":
+            pass\
+
+    def updateGroupState(self, group_index, state):
         """Updates the group state and changes all the checkboxes within it"""
         if state == 2:
             state = 1
@@ -202,7 +211,6 @@ class GUI:
         for checkbox in self.group_checkboxes[group_index]:
             if checkbox.isChecked() != state:
                 checkbox.setChecked(state)
-        #print(f"Group {group_index} state: {self.checkboxes[group_index]}")
         # קריאה לפונקציות setLineType ו- setLineActive על פי המצב
         line = group_index  # הערוץ שתואם לקבוצה (נניח שהקבוצה מייצגת ערוץ)
 
@@ -214,14 +222,8 @@ class GUI:
             self.setLineType(line, "SNK")  # הגדרת המצב כ-Sink (לפי הצורך שלך)
         self.updateChannels(self.checkboxes)
 
-    def closeWindow(self, exit_code):
-        print("The program has closed")
-        self.logger.info("The program has closed")
-        sys.exit(exit_code)
-
     def setLineType(self, line, state_id):
         """Sets the line type (Sink/Source) based on the user selection in the interface."""
-        print("in setLineType")
         button = getattr(self.window, f"Line{line}_type")
 
         # בדיקה אם currentData(0) מחזיר ערך תקין
@@ -248,24 +250,20 @@ class GUI:
         try:
             self.PCB.gen_command_data()
         except Exception as error:
-            self.window.OutPut.appendPlainText("Error in gen_commands")
+            self.window.OutPut.appendPlainText("Error in gen_commands11111")
 
     def setLineActive(self, state, line):
         """Sets a channel to ON or OFF, and updates the state accordingly."""
         # print(f"setLineActive line {line}")
         button = getattr(self.window, f"Line{line}_onoff")  # button של ON OFF
-        if state:
-            self.lines_status[line] = 1
-        else:
-            self.lines_status[line] = 0
+        self.lines_status[line] = 1 if state else 0
 
         if not self.from_toggle_all:
             self.PCB.set_electrodes(self.lines_status * self.lines_SRC, self.lines_status * self.lines_SNK)
-            # self.window.OutPut.appendPlainText(f"Line {line} {'ON' if state else 'OFF'}")
             try:
                 self.PCB.gen_command_data(True)
             except Exception as error:
-                self.window.OutPut.appendPlainText("Error in gen_commands")
+                self.window.OutPut.appendPlainText("Error in gen_commands22222")
 
     def toggleCheckbox(self, index, state):
         """
@@ -287,20 +285,14 @@ class GUI:
         for line in range(self.numberOfChannels):
             button = getattr(self.window, f"Line{line}_onoff")
             button.setChecked(state)
-        # print("when toggleAll is True")
         self.PCB.set_electrodes(self.lines_status * self.lines_SRC, self.lines_status * self.lines_SNK)
-        # self.window.OutPut.appendPlainText(f"Line {line} set to {state}")
 
         try:
             self.PCB.gen_command_data()
         except Exception as error:
-            self.window.OutPut.appendPlainText("Error in gen_commands")
+            self.window.OutPut.appendPlainText("Error in gen_commands33333")
         self.from_toggle_all = False  # מחזיר את הדגל למצב רגיל
 
-        # try:
-        #     self.PCB.gen_command_data(True)
-        # except Exception as error:
-        #     self.window.OutPut.appendPlainText("Error in gen_commands")
 
     def evenFlip(self, state):
         """Sets the even flip state. Activates if state is 2, deactivates otherwise."""
@@ -313,10 +305,24 @@ class GUI:
             self.toDoEvenFlip = 0
             print("flip OFF")
             self.window.OutPut.appendPlainText("flip OFF")
+    """
+    def inverse(self):
+        "
+        Inverts the states of SRC and SNK lines directly (without GUI access),then updates the PCB accordingly."
+        
+        for i in range(self.numberOfChannels):
+            self.lines_SRC[i] = int(not self.lines_SRC[i])
+            self.lines_SNK[i] = int(not self.lines_SNK[i])
+
+        self.PCB.set_electrodes(self.lines_status * self.lines_SRC, self.lines_status * self.lines_SNK)
+        self.PCB.gen_command_data(True)
+
+    """
 
     def inverse(self):
-        """Changes the state of the channels based on ComboBox selections and updates the channels afterward."""
+        'Changes the state of the channels based on ComboBox selections and updates the channels afterward.'
         newList = []
+
         for i in range(self.numberOfChannels):
             combo = getattr(self.window, f"Line{i}_type", None)  # Access the appropriate ComboBox
             if combo is None:
@@ -326,6 +332,7 @@ class GUI:
             newList.append(state)
 
         self.updateChannels(newList)
+
 
     def setAllLastParameters(self):
         """Reads the last saved parameters from a file and updates the UI with the values."""
@@ -351,13 +358,12 @@ class GUI:
 
             mode = lines[2].split(":", 1)[1].strip()
             self.loadAndApplyState(mode, file_channels)
+            self.window.OutPut.appendPlainText(
+                f"Channel Mode {mode} loaded successfully.")  # Log success message
+            print(f"Channel Mode {mode} loaded successfully.")  # Print success message to console
             flipState = lines[3].split(":", 1)[1].strip()
 
             # עדכון ה-UI
-            self.window.Period.setText(param_list[0].strip())
-            self.window.DutyCycle.setText(param_list[1].strip())
-            self.window.TotalTime.setText(param_list[2].strip())
-            self.window.TimeUnit.setCurrentText(param_list[3].strip())
             self.window.ChannelsMode.setCurrentText(mode)
 
             if flipState == "True":
@@ -365,7 +371,6 @@ class GUI:
 
             # המרת period ל-int עם בדיקה
             period_text = self.window.Period.text().strip("[]'")
-            print(f"Period text before conversion: {period_text}")
 
             try:
                 self.period = int(period_text)
@@ -499,7 +504,6 @@ class GUI:
         if self.cycleCounter == self.cycles:
             self.window.OutPut.appendPlainText('Process finished')
 
-        self.PCB.set_electrodes(self.lines_status * self.lines_SRC, self.lines_status * self.lines_SNK)
         self.PCB.gen_command_data(True)
 
         # Stop process if the algorithm flag is set
@@ -526,6 +530,8 @@ class GUI:
 
         # Reset algorithm and set initial values
         self.resetAlgorithm()
+        self.period = int(self.window.Period.text())
+        self.dutyCycle = int(self.window.DutyCycle.text())/100
         self.algoFlag = False
         self.cycleCounter = 0
         self.setTotalTime()
@@ -534,6 +540,7 @@ class GUI:
 
         # Start the timer
         self.StartTimer.timeout.connect(self.turnOnEF)
+        self.turnOnEF()
         self.StartTimer.start(self.period * 1000)
 
     def resetAlgorithm(self):
@@ -541,9 +548,9 @@ class GUI:
         Resets all algorithm-related variables and stops the timer.
         """
         # Reset variables
-        self.offTime = 0
-        self.cycles = 0
-        self.totalTime = 0
+        #self.offTime = 0
+        #self.cycles = 0
+        #self.totalTime = 0
 
         # Stop and disconnect the timer
         self.StartTimer.stop()
@@ -641,6 +648,7 @@ class GUI:
             else:  # Unrecognized value
                 self.lines_SRC[i], self.lines_SNK[i] = 0, 0
             self.toggleCheckbox(i, int(value))
+            #self.PCB.set_electrodes(self.lines_status * self.lines_SRC, self.lines_status * self.lines_SNK)
 
     def getStateInFile(self, mode_number, file):
         """
@@ -671,10 +679,6 @@ class GUI:
         state_values = self.getStateInFile(mode_number, file)  # Retrieve state values from file
         if state_values:
             self.updateChannels(state_values)  # Update channels with the loaded state values
-            self.window.OutPut.appendPlainText(
-                f"Channel Mode {mode_number} loaded successfully.")  # Log success message
-            print(f"Channel Mode {mode_number} loaded successfully.")  # Print success message to console
-            # self.logger.info(f"State Mode {mode_number} loaded successfully.")  # Optional logging
 
     def onChannelsModeChanged(self):
         """
@@ -685,11 +689,11 @@ class GUI:
         """
         try:
             self.selected_mode = self.window.ChannelsMode.currentText()  # Get selected mode from ComboBox
-            mode_number = int(self.selected_mode.split()[1])  # Extract mode number from string (e.g., "Mode 2" -> 2)
+            mode_number = int(self.selected_mode)  # Extract mode number from string (e.g., "Mode 2" -> 2)
             self.loadAndApplyState(mode_number, file_channels)  # Apply the state for the selected mode
-
         except (IndexError, ValueError) as e:
             self.window.OutPut.appendPlainText(f"Error: {str(e)}")  # Log error message
+            print(f"Error: {str(e)}")  # Print error message to console
 
     def getParameters(self) -> tuple:
         """
