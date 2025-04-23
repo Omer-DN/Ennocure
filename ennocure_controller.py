@@ -14,7 +14,7 @@ import PCB_GUI
 class EnnocureEU:
     available_ports = []
 
-    port = [] # fill in right port #com8
+    port = 'COM3' # fill in right port #com8
     baud_rate = 9600
     data_bits = 8
     stop_bits = 1
@@ -58,10 +58,10 @@ class EnnocureEU:
             print("Already connected to the port.")
             return True
         ports = self.find_available_ports()
-        if self.port not in ports:
-            print(f"Error: Port {self.port} is not available. Available ports: {ports}")
-            return False
-
+        #if self.port not in ports:
+        #    print(f"Error: Port {self.port} is not available. Available ports: {ports}")
+        #    return False
+        self.port = ports[0]
         try:
             self.ser.port = self.port
             self.ser.open()  # Open the port
