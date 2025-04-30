@@ -1,0 +1,6 @@
+.idea/
+__pycache__/
+build/
+dist/
+EnnocureApp.spec
+ennocure_eu_logger.txt
