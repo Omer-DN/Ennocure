@@ -52,6 +52,7 @@ class GUI:
     doFlip = False
     toDoEvenFlip = False
     checkboxes = []
+    is_running = False  # משתנה למעקב אחר מצב הריצה
 
     def __init__(self):
 
@@ -154,73 +155,83 @@ class GUI:
             self.logger.addHandler(ch)
             self.logger.addHandler(fh)
             self.PCB = ennocure_controller.EnnocureEU(logger=self.logger)
-        self.PCB.connect_to_port()
+        else:
+            self.PCB.connected_failed = 0
         self.window.OutPut.appendPlainText("Try connecting to hardware")
-        txt_file = open("ennocure_eu_logger.txt", "r")
-        txt_lines = txt_file.readlines()
-        if self.PCB.ser.is_open:
-            self.window.ConnectButton.setStyleSheet("background-color: rgb(0,180,0)")
-            self.window.OutPut.appendPlainText(txt_lines[-1][33:-1])
-            #self.window.OutPut.appendPlainText(txt_lines[-2][33:-2])
-            self.PCB.logger.info("connected successfully")
-            print("connected successfully")
-            #self.window.OutPut.appendPlainText("connected successfully")
+        self.PCB.connect_to_port()
+        if not self.PCB.connected_failed:
+            txt_file = open("ennocure_eu_logger.txt", "r")
+            txt_lines = txt_file.readlines()
+            if self.PCB.ser.is_open:
+                self.window.ConnectButton.setStyleSheet("background-color: rgb(0,180,0)")
+                self.window.OutPut.appendPlainText(txt_lines[-1][33:-1])
+                # self.window.OutPut.appendPlainText(txt_lines[-2][33:-2])
+                self.PCB.logger.info("connected successfully")
+                print("connected successfully")
+                # self.window.OutPut.appendPlainText("connected successfully")
+            else:
+                self.window.OutPut.appendPlainText("Something wrong with connection")
+
+            txt_file.close()
+            self.setPCMode(self.PC_mode)
+            self.setSubMode(self.sub_mode)
+
+            txt_file = open("ennocure_eu_logger.txt", "r")
+            txt_lines = txt_file.readlines()
+            txt_file.close()
+
+            if ('successfully' in txt_lines[-1]):
+                self.window.OutPut.appendPlainText("PC_mode set to 1 (PC control)")
+                self.window.OutPut.appendPlainText("Sub_mode set to 0 (standalone base)")
+                self.setAllLastParameters()
+                self.window.ConnectButton.setEnabled(False)
+
+                # self.toggleAll(True)
+            else:
+                self.window.OutPut.appendPlainText(
+                    "Something wrong with mode setting please check connection and try again")
         else:
-            self.window.OutPut.appendPlainText("Something wrong with connection")
-
-        txt_file.close()
-        self.setPCMode(self.PC_mode)
-        self.setSubMode(self.sub_mode)
-
-        txt_file = open("ennocure_eu_logger.txt", "r")
-        txt_lines = txt_file.readlines()
-        txt_file.close()
-        # if ('successfully' in txt_lines[-1]) & (int(txt_lines[-2][63:65]) == 13):
-
-        if ('successfully' in txt_lines[-1]):
-            self.window.OutPut.appendPlainText("PC_mode set to 1 (PC control)")
-            self.window.OutPut.appendPlainText("Sub_mode set to 0 (standalone base)")
-            self.setAllLastParameters()
-            self.toggleAll(True)
-
-
-        else:
-            self.window.OutPut.appendPlainText(
-                "Something wrong with mode setting please check connection and try again")
+            self.window.OutPut.appendPlainText(self.PCB.print_text)
 
     def closeWindow(self, exit_code):
         print("The program has closed")
         self.logger.info("The program has closed")
         sys.exit(exit_code)
 
-    def mangelines(self,srcLine, snkLine ,shapeOfUsing):
-        self.lines_SRC = srcLine
-        self.lines_SNK = snkLine
-        if shapeOfUsing == "patch":
-            pass\
+    def readFile(self, fileTXT):
+        """
+        Reads the content of the specified file and returns all the lines.
+        """
+        try:
+            with open(fileTXT, "r") as file:
+                return file.readlines()
+        except Exception as e:
+            self.window.OutPut.appendPlainText("The file is empty. No saved states to display.")
+            print(e)
+            return []
 
-    def updateGroupState(self, group_index, state):
-        """Updates the group state and changes all the checkboxes within it"""
-        if state == 2:
-            state = 1
+    def getPort(self):
+        """
+        Retrieves and lists all available ports, sorted by port number.
+        Logs and displays the available ports.
+        """
+        self.available_ports = sorted([p.name for p in list_ports.comports()],
+                                      key=lambda port: int(re.search(r'\d+', port)[0]))
+        self.window.OutPut.appendPlainText(f"Available ports: {self.available_ports}")
+        print(f"Available ports: {self.available_ports}")
 
-        if self.checkboxes[group_index] == state:
-            return
-
-        self.checkboxes[group_index] = state
-        for checkbox in self.group_checkboxes[group_index]:
-            if checkbox.isChecked() != state:
-                checkbox.setChecked(state)
-        # קריאה לפונקציות setLineType ו- setLineActive על פי המצב
-        line = group_index  # הערוץ שתואם לקבוצה (נניח שהקבוצה מייצגת ערוץ)
-
-        if self.checkboxes[group_index] == 1:  # אם המצב 1, אנחנו מדליקים את הערוץ
-            self.setLineActive(1, line)  # הדלקת הערוץ
-            self.setLineType(line, "SRC")  # הגדרת המצב כ-Source (לפי הצורך שלך)
-        else:  # אם המצב 0, אנחנו מכבים את הערוץ
-            self.setLineActive(0, line)  # כיבוי הערוץ
-            self.setLineType(line, "SNK")  # הגדרת המצב כ-Sink (לפי הצורך שלך)
-        self.updateChannels(self.checkboxes)
+    def setEditPort(self):
+        """Updates the port based on user input, while checking the input validity."""
+        editPort = self.window.editPort.text().strip()  # Removes unnecessary spaces
+        if editPort.isdigit():  # Checks if the string contains only digits
+            editPort = int(editPort)
+        else:
+            editPort = 0  # Or any default value you prefer
+        editPort = 'COM' + str(editPort)
+        print(f"EditPort is set to: {editPort}")
+        self.window.OutPut.appendPlainText(f"EditPort is set to: {editPort}")
+        EnnocureEU.port = editPort
+        EnnocureEU.check_port(self, EnnocureEU.port)
 
     def setLineType(self, line, state_id):
         """Sets the line type (Sink/Source) based on the user selection in the interface."""
@@ -250,7 +261,7 @@ class GUI:
         try:
             self.PCB.gen_command_data()
         except Exception as error:
-            self.window.OutPut.appendPlainText("Error in gen_commands11111")
+            self.window.OutPut.appendPlainText("Error in gen_commands")
 
     def setLineActive(self, state, line):
         """Sets a channel to ON or OFF, and updates the state accordingly."""
@@ -263,7 +274,30 @@ class GUI:
             try:
                 self.PCB.gen_command_data(True)
             except Exception as error:
-                self.window.OutPut.appendPlainText("Error in gen_commands22222")
+                self.window.OutPut.appendPlainText("Error in gen_commands")
+
+    def updateGroupState(self, group_index, state):
+        """Updates the group state and changes all the checkboxes within it"""
+        if state == 2:
+            state = 1
+
+        if self.checkboxes[group_index] == state:
+            return
+
+        self.checkboxes[group_index] = state
+        for checkbox in self.group_checkboxes[group_index]:
+            if checkbox.isChecked() != state:
+                checkbox.setChecked(state)
+        # קריאה לפונקציות setLineType ו- setLineActive על פי המצב
+        line = group_index  # הערוץ שתואם לקבוצה (נניח שהקבוצה מייצגת ערוץ)
+
+        if self.checkboxes[group_index] == 1:  # אם המצב 1, אנחנו מדליקים את הערוץ
+            self.setLineActive(1, line)  # הדלקת הערוץ
+            self.setLineType(line, "SRC")  # הגדרת המצב כ-Source (לפי הצורך שלך)
+        else:  # אם המצב 0, אנחנו מכבים את הערוץ
+            self.setLineActive(0, line)  # כיבוי הערוץ
+            self.setLineType(line, "SNK")  # הגדרת המצב כ-Sink (לפי הצורך שלך)
+        self.updateChannels(self.checkboxes)
 
     def toggleCheckbox(self, index, state):
         """
@@ -290,26 +324,14 @@ class GUI:
         try:
             self.PCB.gen_command_data()
         except Exception as error:
-            self.window.OutPut.appendPlainText("Error in gen_commands33333")
+            self.window.OutPut.appendPlainText("Error in gen_commands")
         self.from_toggle_all = False  # מחזיר את הדגל למצב רגיל
 
-
-    def evenFlip(self, state):
-        """Sets the even flip state. Activates if state is 2, deactivates otherwise."""
-        if state == 2:
-            self.toDoEvenFlip = 1
-            self.doFlip = True
-            print("flip ON")
-            self.window.OutPut.appendPlainText("flip ON")
-        else:
-            self.toDoEvenFlip = 0
-            print("flip OFF")
-            self.window.OutPut.appendPlainText("flip OFF")
     """
     def inverse(self):
         "
         Inverts the states of SRC and SNK lines directly (without GUI access),then updates the PCB accordingly."
-        
+
         for i in range(self.numberOfChannels):
             self.lines_SRC[i] = int(not self.lines_SRC[i])
             self.lines_SNK[i] = int(not self.lines_SNK[i])
@@ -333,294 +355,17 @@ class GUI:
 
         self.updateChannels(newList)
 
-
-    def setAllLastParameters(self):
-        """Reads the last saved parameters from a file and updates the UI with the values."""
-        try:
-            lines = self.readFile(file_LastOpening)
-
-            for i, line in enumerate(lines[:4]):
-                if ":" not in line:
-                    print(f"Invalid format in line {i}: {line}")
-                    return
-
-            port = lines[0].split(":", 1)[1].strip()
-            self.window.editPort.setText(port)
-
-            parameters_str = lines[1].split(":", 1)[1].strip()
-            try:
-                param_list = ast.literal_eval(parameters_str)  # המרה לרשימה
-                if not isinstance(param_list, list) or len(param_list) < 4:
-                    raise ValueError("Parameters format is incorrect")
-            except Exception as e:
-                print(f"Error parsing parameters: {e}")
-                return
-
-            mode = lines[2].split(":", 1)[1].strip()
-            self.loadAndApplyState(mode, file_channels)
-            self.window.OutPut.appendPlainText(
-                f"Channel Mode {mode} loaded successfully.")  # Log success message
-            print(f"Channel Mode {mode} loaded successfully.")  # Print success message to console
-            flipState = lines[3].split(":", 1)[1].strip()
-
-            # עדכון ה-UI
-            self.window.ChannelsMode.setCurrentText(mode)
-
-            if flipState == "True":
-                self.window.inverstClick.setChecked(2)
-
-            # המרת period ל-int עם בדיקה
-            period_text = self.window.Period.text().strip("[]'")
-
-            try:
-                self.period = int(period_text)
-            except ValueError:
-                print(f"Could not convert period_text '{period_text}' to int")
-                return
-
-        except Exception as e:
-            print(f"Error: {e}")
-            self.window.OutPut.appendPlainText(f"Error: {e}")
-
-    def saveLastAllParameters(self):
-        """Saves parameters, port, and flip state to a text file."""
-        param, mode = self.getParameters()
-        port = EnnocureEU.port
-        flipState = True if self.toDoEvenFlip == 1 else False
-        content = f"Port: {port[3:]}\nParameters: {param}\nMode: {mode}\nFlipState: {flipState}"
-
-        with open("LastOpening.txt", "w", encoding="utf-8") as file:
-            file.write(content)
-
-    def setEditPort(self):
-        """Updates the port based on user input, while checking the input validity."""
-        editPort = self.window.editPort.text().strip()  # Removes unnecessary spaces
-        if editPort.isdigit():  # Checks if the string contains only digits
-            editPort = int(editPort)
+    def evenFlip(self, state):
+        """Sets the even flip state. Activates if state is 2, deactivates otherwise."""
+        if state == 2:
+            self.toDoEvenFlip = 1
+            self.doFlip = True
+            print("flip ON")
+            self.window.OutPut.appendPlainText("flip ON")
         else:
-            editPort = 0  # Or any default value you prefer
-        editPort = 'COM' + str(editPort)
-        print(f"EditPort is set to: {editPort}")
-        self.window.OutPut.appendPlainText(f"EditPort is set to: {editPort}")
-        EnnocureEU.port = editPort
-        EnnocureEU.check_port(self, EnnocureEU.port)
-
-    def getPort(self):
-        """
-        Retrieves and lists all available ports, sorted by port number.
-        Logs and displays the available ports.
-        """
-        self.available_ports = sorted([p.name for p in list_ports.comports()],
-                                      key=lambda port: int(re.search(r'\d+', port)[0]))
-        self.window.OutPut.appendPlainText(f"Available ports: {self.available_ports}")
-        print(f"Available ports: {self.available_ports}")
-
-    def setCurrentLimit(self):
-        """
-        Sets the current limit from the UI and updates the PCB.
-        Logs and displays the current limit.
-        """
-        self.current_limit = int(self.window.CurrentLimit.text())
-        self.PCB.set_current_limit(self.current_limit)
-        self.window.OutPut.appendPlainText(f'current limitation was set to: {self.current_limit}')
-        self.PCB.gen_command_data(True)
-
-    def setSubMode(self, setMode):
-        """Sets the sub-mode in the system."""
-        self.sub_mode = setMode
-        self.PCB.select_sub_mode(self.sub_mode)
-        self.window.OutPut.appendPlainText(f'Control SubMode is: {setMode}')
-        self.PCB.gen_command_data(True)
-
-    def setPCMode(self, setMode):
-        """Sets the PC mode in the system."""
-        self.PC_mode = setMode
-        self.PCB.set_pc(self.PC_mode)
-        self.window.OutPut.appendPlainText(f'Control Mode is: {setMode}')
-        self.PCB.gen_command_data(True)
-
-    def setTimeUnit(self, input_TimeUnit):
-        """Sets the time units (hours, minutes, seconds)."""
-        self.totalTimeUnits = [0, 0, 0]
-        self.totalTimeUnits[input_TimeUnit] = 1
-        # self.window.OutPut.appendPlainText(f'Your new units are: {self.totalTimeUnits}')
-
-    def setTotalTime(self):
-        """Calculates the total time based on the selected time units."""
-        par = int(self.window.TotalTime.text())
-        factor_vector = sum([self.timeFactorArray[i] * self.totalTimeUnits[i] for i in range(len(self.totalTimeUnits))])
-        self.totalTime = par * factor_vector  # total time in seconds
-        self.window.OutPut.appendPlainText(f'Total time in seconds: {self.totalTime}')
-
-    def setDutyCycle(self):
-        """Sets the duty cycle (the fraction of time the system is active)."""
-        self.dutyCycle = int(self.window.DutyCycle.text()) / 100
-
-    def setPeriod(self):
-        """Sets the period time for each cycle."""
-        self.period = int(self.window.Period.text())
-
-    def turnOnEF(self):
-        """
-        Turns on the electro stimulation and handles even flip logic. Logs the activation time.
-        If the cycle counter reaches the total cycles, the process stops; otherwise, the next cycle begins.
-        """
-        # Even flip logic
-        if self.toDoEvenFlip:
-            if self.doFlip:
-                self.inverse()
-            self.doFlip = not self.doFlip
-
-        # Time and cycle management
-        current_datetime = datetime.datetime.now()
-
-        if self.cycleCounter >= self.cycles:
-            self.StartTimer.stop()  # Stop the timer
-            self.PCB.logger.info("Process has been finished")
-        else:
-            self.cycleCounter += 1
-            self.window.OutPut.appendPlainText(
-                f"Turn on {self.cycleCounter} time from {self.cycles}  :{current_datetime.strftime('%d/%m/%Y  %H:%M:%S')}")
-            self.logger.info(f"Turn on {self.cycleCounter} time from {self.cycles}")
-
-            # Set electro stimulation and trigger next cycle
-            self.lines_status = numpy.ones(self.numberOfChannels)
-            self.StopTimer.singleShot(self.offTime * 1000, self.turnOffEF)
-            self.PCB.set_electrodes(self.lines_status * self.lines_SRC, self.lines_status * self.lines_SNK)
-            self.PCB.gen_command_data(True)
-
-    def turnOffEF(self):
-        """
-        Turns off the electro stimulation and updates the status. Logs the turn-off time and process details.
-        If the cycle count is reached, the process is finished; otherwise, the algorithm continues.
-        """
-        current_datetime = datetime.datetime.now()
-        self.window.OutPut.appendPlainText(
-            f"Turn off {self.cycleCounter} time from {self.cycles}  :{current_datetime.strftime('%d/%m/%Y  %H:%M:%S')}")
-        self.logger.info(f"Turn off {self.cycleCounter} time from {self.cycles}")
-
-        # Reset line status and update PCB
-        self.lines_status = numpy.zeros(self.numberOfChannels)
-        if self.cycleCounter == self.cycles:
-            self.window.OutPut.appendPlainText('Process finished')
-
-        self.PCB.gen_command_data(True)
-
-        # Stop process if the algorithm flag is set
-        if self.algoFlag:
-            self.window.OutPut.appendPlainText(
-                f'Process was stopped at the {self.cycleCounter} time from {self.cycles}')
-            self.StartTimer.stop()
-            self.PCB.logger.info(f'Process was stopped at the {self.cycleCounter} time from {self.cycles}')
-            self.algoFlag = False
-
-    def runAlgo(self):
-        """
-        Starts the algorithm by saving parameters, logging relevant information,
-        resetting algorithm variables, and initiating the timer.
-        """
-        # Save parameters and log information
-        self.logger.info("--------------------------------------------------------------------------------------")
-
-        self.saveLastAllParameters()
-        self.logger.info(self.window.ChannelsMode.currentText())
-        self.logger.info(f"SRC: {self.lines_SRC}")
-        self.logger.info(f"SNK: {self.lines_SNK}")
-        self.logger.info(f"period: {self.period} | dutyCycle: {self.dutyCycle} | totalTime: {self.totalTime}")
-
-        # Reset algorithm and set initial values
-        self.resetAlgorithm()
-        self.period = int(self.window.Period.text())
-        self.dutyCycle = int(self.window.DutyCycle.text())/100
-        self.algoFlag = False
-        self.cycleCounter = 0
-        self.setTotalTime()
-        self.offTime = self.period * self.dutyCycle
-        self.cycles = int(self.totalTime / self.period)
-
-        # Start the timer
-        self.StartTimer.timeout.connect(self.turnOnEF)
-        self.turnOnEF()
-        self.StartTimer.start(self.period * 1000)
-
-    def resetAlgorithm(self):
-        """
-        Resets all algorithm-related variables and stops the timer.
-        """
-        # Reset variables
-        #self.offTime = 0
-        #self.cycles = 0
-        #self.totalTime = 0
-
-        # Stop and disconnect the timer
-        self.StartTimer.stop()
-        self.StartTimer.timeout.disconnect()
-
-    def readFile(self, fileTXT):
-        """
-        Reads the content of the specified file and returns all the lines.
-
-        """
-        try:
-            with open(fileTXT, "r") as file:
-                return file.readlines()
-        except Exception as e:
-            self.window.OutPut.appendPlainText("The file is empty. No saved states to display.")
-            print(e)
-            return []
-
-    def raiseFlag(self):
-        """Sets a flag to stop the algorithm."""
-        current_datetime = datetime.datetime.now()
-        self.window.OutPut.appendPlainText(
-            f"Flag raised - process has been stopped :{current_datetime.strftime('%d/%m/%Y  %H:%M:%S')}")
-        self.logger.info("process stopped")
-        self.algoFlag = True
-        self.StartTimer.stop()
-        evenFlip = False
-        numberForEvenFlip = 1
-
-    def saveChannels(self):
-        """
-        Saves the current channel configuration to the file. Updates the mode's data based on
-        the selected ComboBox values and writes the changes back to the file. If the file does
-        not exist, it creates an empty file.
-
-        Raises:
-            AttributeError: If the ComboBox for a channel is not found.
-        """
-        try:
-            if not os.path.exists(file_channels):
-                with open(file_channels, "w") as file:
-                    pass  # Create empty file if not exists
-
-            with open(file_channels, "r") as file:
-                lines = file.readlines()
-
-            # Get selected mode and update its data
-            self.selected_mode = self.window.ChannelsMode.currentText()
-            selected_mode_number = int(self.selected_mode.replace("Mode ", "").strip())
-            newList = []
-
-            for i in range(self.numberOfChannels):
-                combo = getattr(self.window, f"Line{i}_type", None)
-                if combo is None:
-                    raise AttributeError(f"ComboBox for Line{i}_type not found.")
-                state = "1" if combo.currentIndex() == 1 else "0"
-                newList.append(state)
-
-            mode_data = f"Mode {selected_mode_number}: [{', '.join(newList)}]"
-            lines[selected_mode_number - 1] = mode_data + "\n"
-
-            with open(file_channels, "w") as file:
-                file.writelines(lines)
-
-            # self.setParameters()
-            self.window.OutPut.appendPlainText(f"Mode {selected_mode_number} saved successfully.")
-
-        except Exception as e:
-            print(f"An error occurred: {e}")
-            self.window.OutPut.appendPlainText(f"An error occurred: {e}")
+            self.toDoEvenFlip = 0
+            print("flip OFF")
+            self.window.OutPut.appendPlainText("flip OFF")
 
     def updateChannels(self, state_values):
         """
@@ -648,7 +393,7 @@ class GUI:
             else:  # Unrecognized value
                 self.lines_SRC[i], self.lines_SNK[i] = 0, 0
             self.toggleCheckbox(i, int(value))
-            #self.PCB.set_electrodes(self.lines_status * self.lines_SRC, self.lines_status * self.lines_SNK)
+            self.PCB.set_electrodes(self.lines_status * self.lines_SRC, self.lines_status * self.lines_SNK)
 
     def getStateInFile(self, mode_number, file):
         """
@@ -695,6 +440,275 @@ class GUI:
             self.window.OutPut.appendPlainText(f"Error: {str(e)}")  # Log error message
             print(f"Error: {str(e)}")  # Print error message to console
 
+    def setAllLastParameters(self):
+        """Reads the last saved parameters from a file and updates the UI with the values."""
+        try:
+            lines = self.readFile(file_LastOpening)
+
+            for i, line in enumerate(lines[:4]):
+                if ":" not in line:
+                    print(f"Invalid format in line {i}: {line}")
+                    return
+
+            # port = lines[0].split(":", 1)[1].strip()
+            # self.window.editPort.setText(port)
+
+            parameters_str = lines[1].split(":", 1)[1].strip()
+            try:
+                param_list = ast.literal_eval(parameters_str)  # המרה לרשימה
+                if not isinstance(param_list, list) or len(param_list) < 4:
+                    raise ValueError("Parameters format is incorrect")
+            except Exception as e:
+                print(f"Error parsing parameters: {e}")
+                return
+
+            mode = lines[2].split(":", 1)[1].strip()
+            self.loadAndApplyState(mode, file_channels)
+            self.window.OutPut.appendPlainText(
+                f"Channel Mode {mode} loaded successfully.")  # Log success message
+            print(f"Channel Mode {mode} loaded successfully.")  # Print success message to console
+            flipState = lines[3].split(":", 1)[1].strip()
+
+            # עדכון ה-UI
+            self.window.ChannelsMode.setCurrentText(mode)
+
+            if flipState == "True":
+                self.window.inverstClick.setChecked(2)
+
+            # המרת period ל-int עם בדיקה
+            period_text = self.window.Period.text().strip("[]'")
+
+            try:
+                self.period = int(period_text)
+            except ValueError:
+                print(f"Could not convert period_text '{period_text}' to int")
+                return
+
+        except Exception as e:
+            print(f"Error: {e}")
+            self.window.OutPut.appendPlainText(f"Error: {e}")
+
+    def setCurrentLimit(self):
+        """
+        Sets the current limit from the UI and updates the PCB.
+        Logs and displays the current limit.
+        """
+        self.current_limit = int(self.window.CurrentLimit.text())
+        self.PCB.set_current_limit(self.current_limit)
+        self.window.OutPut.appendPlainText(f'current limitation was set to: {self.current_limit}')
+        self.PCB.gen_command_data(True)
+
+    def setSubMode(self, setMode):
+        """Sets the sub-mode in the system."""
+        self.sub_mode = setMode
+        self.PCB.select_sub_mode(self.sub_mode)
+        self.window.OutPut.appendPlainText(f'Control SubMode is: {setMode}')
+        self.PCB.gen_command_data(True)
+
+    def setPCMode(self, setMode):
+        """Sets the PC mode in the system."""
+        self.PC_mode = setMode
+        self.PCB.set_pc(self.PC_mode)
+        self.window.OutPut.appendPlainText(f'Control Mode is: {setMode}')
+        self.PCB.gen_command_data(True)
+
+    def setTimeUnit(self, input_TimeUnit):
+        """Sets the time units (hours, minutes, seconds)."""
+        self.totalTimeUnits = [0, 0, 0]
+        self.totalTimeUnits[input_TimeUnit] = 1
+        # self.window.OutPut.appendPlainText(f'Your new units are: {self.totalTimeUnits}')
+
+    def setTotalTime(self):
+        """Calculates the total time based on the selected time units."""
+        par = int(self.window.TotalTime.text())
+        factor_vector = sum([self.timeFactorArray[i] * self.totalTimeUnits[i] for i in range(len(self.totalTimeUnits))])
+        self.totalTime = par * factor_vector  # total time in seconds
+        self.window.OutPut.appendPlainText(f'Total time in seconds: {self.totalTime}')
+
+    def setDutyCycle(self):
+        """Sets the duty cycle (the fraction of time the system is active)."""
+        self.dutyCycle = int(self.window.DutyCycle.text()) / 100
+
+    def setPeriod(self):
+        """Sets the period time for each cycle."""
+        self.period = int(self.window.Period.text())
+
+    def runAlgo(self):
+        """
+        Starts the algorithm by saving parameters, logging relevant information,
+        resetting algorithm variables, and initiating the timer.
+        """
+        if self.is_running:
+            self.window.OutPut.appendPlainText("Algorithm is already running!")
+            return
+        self.is_running = True
+        self.window.RunSenario.setEnabled(False)  # השבתת הכפתור
+        self.logger.info("--------------------------------------------------------------------------------------")
+        self.saveLastAllParameters()
+        self.logger.info(self.window.ChannelsMode.currentText())
+        self.logger.info(f"SRC: {self.lines_SRC}")
+        self.logger.info(f"SNK: {self.lines_SNK}")
+        self.logger.info(f"period: {self.period} | dutyCycle: {self.dutyCycle} | totalTime: {self.totalTime}")
+
+        # Reset algorithm to ensure clean state
+        self.resetAlgo()
+
+        # Set initial values
+        self.period = int(self.window.Period.text())
+        self.dutyCycle = int(self.window.DutyCycle.text()) / 100
+        self.algoFlag = False
+        self.cycleCounter = 0
+        self.setTotalTime()
+        self.offTime = self.period * self.dutyCycle
+        self.cycles = int(self.totalTime / self.period)
+
+        # Connect timer to turnOnEF (only once)
+        self.StartTimer.timeout.connect(self.turnOnEF)
+
+        # Start the timer
+        self.turnOnEF()
+        self.StartTimer.start(self.period * 1000)
+
+    def resetAlgo(self):
+        """
+        Resets all algorithm-related variables and stops the timer.
+        """
+        # Stop the timer if it's running
+        if self.StartTimer.isActive():
+            self.StartTimer.stop()
+
+        # Disconnect all connections to StartTimer.timeout safely
+        try:
+            self.StartTimer.timeout.disconnect()
+        except TypeError:
+            pass  # No connections to disconnect, safe to ignore
+
+        # Reset algorithm variables
+        self.cycleCounter = 0
+        self.algoFlag = False
+        self.offTime = 0
+        self.cycles = 0
+        self.totalTime = 0
+
+    def turnOnEF(self):
+        """
+        Turns on the electro stimulation and handles even flip logic. Logs the activation time.
+        If the cycle counter reaches the total cycles, the process stops; otherwise, the next cycle begins.
+        """
+        current_datetime = datetime.datetime.now()
+
+        if self.cycleCounter >= self.cycles:
+            self.StartTimer.stop()  # Stop the timer
+            self.PCB.logger.info("Process has been finished")
+            self.window.OutPut.appendPlainText(
+                f"Flag raised - process has been stopped :{current_datetime.strftime('%d/%m/%Y  %H:%M:%S')}")
+            return
+
+        self.cycleCounter += 1
+        self.window.OutPut.appendPlainText(
+            f"Turn on {self.cycleCounter} time from {self.cycles}  :{current_datetime.strftime('%d/%m/%Y  %H:%M:%S')}")
+        self.logger.info(f"Turn on {self.cycleCounter} time from {self.cycles}")
+
+        # Set electro stimulation and schedule turn off
+        self.lines_status = numpy.ones(self.numberOfChannels)
+        self.StopTimer.singleShot(self.offTime * 1000, self.turnOffEF)
+        self.PCB.set_electrodes(self.lines_status * self.lines_SRC, self.lines_status * self.lines_SNK)
+        self.PCB.gen_command_data(True)
+
+    def turnOffEF(self):
+        current_datetime = datetime.datetime.now()
+        self.window.OutPut.appendPlainText(
+            f"Turn off {self.cycleCounter} time from {self.cycles}  :{current_datetime.strftime('%d/%m/%Y  %H:%M:%S')}")
+        self.logger.info(f"Turn off {self.cycleCounter} time from {self.cycles}")
+
+        self.lines_status = numpy.zeros(self.numberOfChannels)
+        if self.cycleCounter == self.cycles:
+            self.window.OutPut.appendPlainText('Process finished')
+            self.is_running = False
+            self.window.RunSenario.setEnabled(True)  # הפעלת הכפתור מחדש
+
+        self.PCB.set_electrodes(self.lines_status * self.lines_SRC, self.lines_status * self.lines_SNK)
+        self.PCB.gen_command_data(True)
+
+        if self.toDoEvenFlip:
+            if self.doFlip:
+                self.inverse()
+                self.window.OutPut.appendPlainText(f"Inversion occurred after cycle {self.cycleCounter}")
+            self.doFlip = not self.doFlip
+
+        if self.algoFlag:
+            self.window.OutPut.appendPlainText(
+                f'Process was stopped at the {self.cycleCounter} time from {self.cycles}')
+            self.StartTimer.stop()
+            self.PCB.logger.info(f'Process was stopped at the {self.cycleCounter} time from {self.cycles}')
+            self.algoFlag = False
+            self.is_running = False
+            self.window.RunSenario.setEnabled(True)  # הפעלת הכפתור מחדש
+
+    def raiseFlag(self):
+        current_datetime = datetime.datetime.now()
+        self.window.OutPut.appendPlainText(
+            f"Flag raised - process has been stopped :{current_datetime.strftime('%d/%m/%Y  %H:%M:%S')}")
+        self.logger.info("process stopped")
+        self.algoFlag = True
+        self.StartTimer.stop()
+        self.is_running = False
+        self.window.RunSenario.setEnabled(True)  # הפעלת הכפתור מחדש
+        self.toDoEvenFlip = False
+        self.numberForEvenFlip = 1
+
+    def saveChannels(self):
+        """
+        Saves the current channel configuration to the file. Updates the mode's data based on
+        the selected ComboBox values and writes the changes back to the file. If the file does
+        not exist, it creates an empty file.
+
+        Raises:
+            AttributeError: If the ComboBox for a channel is not found.
+        """
+        try:
+            if not os.path.exists(file_channels):
+                with open(file_channels, "w") as file:
+                    pass  # Create empty file if not exists
+
+            with open(file_channels, "r") as file:
+                lines = file.readlines()
+
+            # Get selected mode and update its data
+            self.selected_mode = self.window.ChannelsMode.currentText()
+            selected_mode_number = int(self.selected_mode.replace("Mode ", "").strip())
+            newList = []
+
+            for i in range(self.numberOfChannels):
+                combo = getattr(self.window, f"Line{i}_type", None)
+                if combo is None:
+                    raise AttributeError(f"ComboBox for Line{i}_type not found.")
+                state = "1" if combo.currentIndex() == 1 else "0"
+                newList.append(state)
+
+            mode_data = f"Mode {selected_mode_number}: [{', '.join(newList)}]"
+            lines[selected_mode_number - 1] = mode_data + "\n"
+
+            with open(file_channels, "w") as file:
+                file.writelines(lines)
+
+            # self.setParameters()
+            self.window.OutPut.appendPlainText(f"Mode {selected_mode_number} saved successfully.")
+
+        except Exception as e:
+            print(f"An error occurred: {e}")
+            self.window.OutPut.appendPlainText(f"An error occurred: {e}")
+
+    def saveLastAllParameters(self):
+        """Saves parameters, port, and flip state to a text file."""
+        param, mode = self.getParameters()
+        port = EnnocureEU.port
+        flipState = True if self.toDoEvenFlip == 1 else False
+        content = f"Port: {port[3:]}\nParameters: {param}\nMode: {mode}\nFlipState: {flipState}"
+
+        with open("LastOpening.txt", "w", encoding="utf-8") as file:
+            file.write(content)
+
     def getParameters(self) -> tuple:
         """
         Retrieves parameter values from the UI.
@@ -709,6 +723,3 @@ class GUI:
         allParameters = [getPeriod, getDutyCycle, getTotalTime, getTimeUnit]
         self.selected_mode = self.window.ChannelsMode.currentText()
         return allParameters, self.selected_mode
-
-    def hello(self):
-        print("hello")
